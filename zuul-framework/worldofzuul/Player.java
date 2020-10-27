@@ -6,11 +6,13 @@ public class Player {
     private int points, health;
     private Inventory inventory;
     private Tasks tasks;
+    private String name;
 
     //constructors
-    private Player(int points, int health) {
+    public Player(int points, int health , String name) {
         this.points = points;
         this.health = health;
+        this.name = name;
 
     }
 
@@ -56,8 +58,5 @@ public class Player {
 
     }
 
-    public static void main(String[] args) {
-
-    }
 
 }

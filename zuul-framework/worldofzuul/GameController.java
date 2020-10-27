@@ -3,13 +3,18 @@ package worldofzuul;
 public class GameController {
 
     //attributes for game controller
-    private Player;
-    private Room;
+    private Player player;
+    private Room room;
 
 
 
-    //methods
+    //method
     public void addPlayer() {
+        new Player(1, 2 , "Preben");
+    }
+
+    public static void main(String[] args) {
+
     }
 
     public void addRoom() {

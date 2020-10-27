@@ -9,9 +9,9 @@ public class Characters extends InteractiveObjects {
     int Tasks[];
     String InteractWith;
 
-    //Constructor - creates characters
-    Characters() {
-    }
+  //  Constructor - creates characters
+  //  Characters() {
+ //   }
 
 //    //Provides a name
 //     void Name(String newName) {
