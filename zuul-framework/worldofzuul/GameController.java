@@ -10,7 +10,6 @@ public class GameController {
 
     //methods
     public void addPlayer() {
-
     }
 
     public void addRoom() {
