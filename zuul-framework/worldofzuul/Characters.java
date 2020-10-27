@@ -6,7 +6,7 @@ public class Characters extends InteractiveObjects {
 
     //Created a Wizard
     public void Wizard() {
-        new InteractiveObjects("Wizard", "Welcome") //info: add playername
+        new InteractiveObjects("Wizard", "Welcome"); //info: add playername
     }
 
     //Created a poor man
