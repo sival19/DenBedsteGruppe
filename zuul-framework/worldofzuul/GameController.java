@@ -22,5 +22,10 @@ public class GameController {
 
     }
 
+    //Method to create add characters
+    public void addCharacter() {
+        new InteractiveObjects("","");
+    }
+
 
 }

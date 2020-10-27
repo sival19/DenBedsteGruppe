@@ -4,6 +4,13 @@ import java.util.ArrayList;
 
 public class Characters extends InteractiveObjects {
 
+    //Constructor
+    public Characters(String name, String info) {
+        super (name, info);
+    }
+
+
+
     //Created a Wizard
     public void Wizard() {
         new InteractiveObjects("Wizard", "Welcome"); //info: add playername
