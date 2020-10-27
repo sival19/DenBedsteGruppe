@@ -18,8 +18,8 @@ public class Characters extends InteractiveObjects {
 
     //Created a poor man
     public void PoorMan() {
-            new InteractiveObjects("S.U. modtager", "I'm poor."); //edit info
-        }
+        new InteractiveObjects("S.U. modtager", "I'm poor."); //edit info
+    }
 
     //Created a rich man
     public void RichMan() {
@@ -30,4 +30,3 @@ public class Characters extends InteractiveObjects {
     int Tasks[];
     String InteractWith;
 }
-
