@@ -2,6 +2,8 @@ package worldofzuul;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+//HEJ DETTE ER EN TEST!!!!!
+
 public class Inventory {
     //Item items[] = new Item[5];
     ArrayList<Item> items2 = new ArrayList<Item>();
