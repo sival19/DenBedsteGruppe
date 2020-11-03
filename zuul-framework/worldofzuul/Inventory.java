@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Inventory {
     //Item items[] = new Item[5];
-    ArrayList<Item> items2 = new ArrayList<Item>();
+    static ArrayList<Item> items2 = new ArrayList<Item>();
 
     /*public Item[] getItems() {
         return this.items;
@@ -28,7 +28,7 @@ public class Inventory {
             items[index] = item;
     }*/
 
-    public void addItem2(Item item) {
+    public static void addItem2(Item item) {
         if (items2.size() < 5) {
             items2.add(item);
         } else {
@@ -51,7 +51,7 @@ public class Inventory {
         inventory.printInventory();
 
         Item i1 = new Item("apple", "er sød", 0);
-        Item i2 = new Item("pear", "er sød",1);
+        Item i2 = new Item("pear", "er sød",5);
         Item i3 = new Item("noget", "er sød",2);
         Item i4 = new Item("Nadia", "er sød",3);
         Item i5 = new Item("jeg", "er sød",4);

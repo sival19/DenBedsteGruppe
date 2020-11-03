@@ -4,12 +4,28 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
+    Inventory inventory = new Inventory();
+
+
+
+
         
 
     public Game() 
     {
         createRooms();
         parser = new Parser();
+    }
+
+    public void createItems (){
+
+        Item æble;
+
+        æble = new Item("æble", "det er rødt", 1);
+    }
+
+    private void pickUp(){
+
     }
 
 
@@ -87,11 +103,15 @@ public class Game
         else if (commandWord == CommandWord.GO) {
             goRoom(command);
         }
+        else if (commandWord == CommandWord.PICKUP){
+            pickUp();
+        }
         else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
         }
         return wantToQuit;
     }
+
 
     private void printHelp() 
     {
