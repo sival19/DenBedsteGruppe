@@ -10,7 +10,7 @@ public class GameController {
 
     //method
     public void addPlayer() {
-        new Player(1, 2 , "Preben");
+        Player p1 = new Player(1, 2 , "Preben");
     }
 
     public static void main(String[] args) {

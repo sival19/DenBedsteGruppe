@@ -3,7 +3,8 @@ package worldofzuul;
 public class Player {
 
     //attributes
-    private int points, health;
+    private static int points;
+    private static int health;
     private Inventory inventory;
     private Tasks tasks;
     private String name;
@@ -20,7 +21,7 @@ public class Player {
     //methods
 
 
-    public int getPoints() {
+    public static int getPoints() {
         return points;
     }
 
@@ -28,31 +29,30 @@ public class Player {
         this.points = points;
     }
 
-    public int getHealth() {
+    public static int getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
+   /* public void setHealth(int health) {
         this.health = health;
-    }
+   }
+   */
 
     public int totalPoints(int points) {
         return getPoints();
     }
 
-    public int totalHealth(int health) {
-        return getHealth();
-    }
 
-    public int addPoints(int points) {
+    public static int addPoints(int points) {
         points = getPoints();
         points += 1; //missing from where to add points and howmany
         return points;
 
     }
 
-    public int addHealth(int health) {
-        health = getPoints();
+//medtode tilføje/fjerne health
+    public static int addHealth(int health) {
+        health = 100;
         health += 1; //missing from where to add health and howmuch
         return health;
 

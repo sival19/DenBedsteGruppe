@@ -13,30 +13,36 @@ public class Game
     }
 
 
+
+
     private void createRooms()
     {
-        Room outside, theatre, pub, lab, office;
+        Room station, skole, bibliotek, restaurant, fattiggården, rigmandsgård;
       
-        outside = new Room("outside the main entrance of the university");
-        theatre = new Room("in a lecture theatre");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
+        station = new Room("på stationen");
+        skole = new Room("på skolen");
+        bibliotek = new Room("på biblioteket");
+        restaurant = new Room("på restauranten");
+        fattiggården = new Room("på fattiggården");
+        rigmandsgård = new Room("på rigmandsgården");
         
-        outside.setExit("east", theatre);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
+        station.setExit("skole", skole);
+        station.setExit("restaurant", restaurant);
+        station.setExit("bibliotek", bibliotek);
+        station.setExit("fattiggården", fattiggården);
 
-        theatre.setExit("west", outside);
+        skole.setExit("station", station);
 
-        pub.setExit("east", outside);
+        bibliotek.setExit("station", station);
 
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
+        restaurant.setExit("station", station);
 
-        office.setExit("west", lab);
+        fattiggården.setExit("rigmandsgård", rigmandsgård);
+        fattiggården.setExit("station" , station);
 
-        currentRoom = outside;
+        rigmandsgård.setExit("fattiggård", fattiggården);
+
+        currentRoom = station;
     }
 
     public void play() 
@@ -51,6 +57,8 @@ public class Game
         }
         System.out.println("Thank you for playing.  Good bye.");
     }
+
+
 
     private void printWelcome()
     {
