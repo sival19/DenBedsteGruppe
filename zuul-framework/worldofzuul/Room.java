@@ -1,19 +1,27 @@
 package worldofzuul;
 
-import java.util.Set;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
 
 
 public class Room 
 {
     private String description;
     private HashMap<String, Room> exits;
+    private List<Item> itemsRoom = new ArrayList<Item>();
 
-    public Room(String description) 
+    public void addItemRoom(Item item){
+        itemsRoom.add(item);
+    }
+
+    public List<Item> getItemsRoom(){
+        return Collections.unmodifiableList(itemsRoom); //hvorfor gør vi det?!?!?!?!?!
+    }
+
+    public Room(String description)
     {
         this.description = description;
         exits = new HashMap<String, Room>();
+
     }
 
     public void setExit(String direction, Room neighbor) 

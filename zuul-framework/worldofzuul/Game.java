@@ -7,10 +7,6 @@ public class Game
     Inventory inventory = new Inventory();
 
 
-
-
-        
-
     public Game() 
     {
         createRooms();
