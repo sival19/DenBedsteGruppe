@@ -1,32 +1,20 @@
 package worldofzuul;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Characters extends InteractiveObjects {
 
-    //Constructor
+
+    //characters constructor
     public Characters(String name, String info) {
-        super (name, info);
+        super(name, info);
+
     }
 
-
-
-    //Created a Wizard
-    public void Wizard() {
-        new InteractiveObjects("Wizard", "Welcome"); //info: add playername
+    @Override
+    public String toString() {
+        return getName() + ", " + getInfo();
     }
 
-    //Created a poor man
-    public void PoorMan() {
-        new InteractiveObjects("S.U. modtager", "I'm poor."); //edit info
-    }
-
-    //Created a rich man
-    public void RichMan() {
-        new InteractiveObjects("Joakim von And", "I'm rich.");
-    }
-
-
-    int Tasks[];
-    String InteractWith;
 }

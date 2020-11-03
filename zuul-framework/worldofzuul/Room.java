@@ -17,6 +17,20 @@ public class Room
         return itemsRoom;
     }
 
+    //add characters
+
+    private List<Characters> character = new ArrayList<Characters>();
+
+    public void addCharacter(Characters characters){
+        character.add(characters);
+    }
+
+    //see characters
+
+    public List<Characters> getCharacter(){
+        return character;
+    }
+
     public Room(String description)
     {
         this.description = description;

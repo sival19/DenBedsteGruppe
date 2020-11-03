@@ -1,12 +1,17 @@
 package worldofzuul;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GameController {
 
-    //attributes for game controller
+
+
+
+/*
+//attributes for game controller
     private Player player;
     private Room room;
-
-
 
     //method
     public void addPlayer() {
@@ -27,5 +32,5 @@ public class GameController {
         new InteractiveObjects("","");
     }
 
-
+*/
 }
