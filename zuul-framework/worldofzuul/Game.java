@@ -18,13 +18,16 @@ public class Game
         Item æble;
 
         æble = new Item("æble", "det er rødt", 1);
+        æble.addItemRoom()
+    }
+
+    private void seeItems(){
+        System.out.println(Room.getItemsRoom());
     }
 
     private void pickUp(){
 
     }
-
-
 
 
     private void createRooms()
@@ -98,6 +101,9 @@ public class Game
         }
         else if (commandWord == CommandWord.GO) {
             goRoom(command);
+        }
+        else if (commandWord == CommandWord.SEEITEMS){
+            seeItems();
         }
         else if (commandWord == CommandWord.PICKUP){
             pickUp();

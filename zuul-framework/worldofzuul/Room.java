@@ -7,13 +7,13 @@ public class Room
 {
     private String description;
     private HashMap<String, Room> exits;
-    private List<Item> itemsRoom = new ArrayList<Item>();
+    private static List<Item> itemsRoom = new ArrayList<Item>();
 
-    public void addItemRoom(Item item){
+    public static void addItemRoom(Item item){
         itemsRoom.add(item);
     }
 
-    public List<Item> getItemsRoom(){
+    public static List<Item> getItemsRoom(){
         return Collections.unmodifiableList(itemsRoom); //hvorfor gør vi det?!?!?!?!?!
     }
 
