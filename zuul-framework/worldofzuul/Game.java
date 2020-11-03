@@ -13,52 +13,66 @@ public class Game
         parser = new Parser();
     }
 
-    public void createItems (){
-
+    /*public Item createItems (){
         Item æble;
 
         æble = new Item("æble", "det er rødt", 1);
-        æble.addItemRoom()
-    }
+
+    }*/
 
     private void seeItems(){
-        System.out.println(Room.getItemsRoom());
+        System.out.println(currentRoom.getItems());
     }
 
     private void pickUp(){
 
     }
-
-
     private void createRooms()
     {
-        Room station, skole, bibliotek, restaurant, fattiggården, rigmandsgård;
+        // Create rooms
+        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgård;
       
         station = new Room("på stationen");
         skole = new Room("på skolen");
         bibliotek = new Room("på biblioteket");
         restaurant = new Room("på restauranten");
-        fattiggården = new Room("på fattiggården");
+        fattiggård = new Room("på fattiggården");
         rigmandsgård = new Room("på rigmandsgården");
-        
-        station.setExit("skole", skole);
-        station.setExit("restaurant", restaurant);
-        station.setExit("bibliotek", bibliotek);
-        station.setExit("fattiggården", fattiggården);
 
-        skole.setExit("station", station);
+        // Create room relationships
+        station.setExit("skolen", skole);
+        station.setExit("restauranten", restaurant);
+        station.setExit("biblioteket", bibliotek);
+        station.setExit("fattiggården", fattiggård);
 
-        bibliotek.setExit("station", station);
+        skole.setExit("stationen", station);
+        bibliotek.setExit("stationen", station);
+        restaurant.setExit("stationen", station);
 
-        restaurant.setExit("station", station);
+        fattiggård.setExit("rigmandsgården", rigmandsgård);
+        fattiggård.setExit("stationen" , station);
 
-        fattiggården.setExit("rigmandsgård", rigmandsgård);
-        fattiggården.setExit("station" , station);
-
-        rigmandsgård.setExit("fattiggård", fattiggården);
+        rigmandsgård.setExit("fattiggården", fattiggård);
 
         currentRoom = station;
+
+        // Create items
+        Item æble, penge, medicin, bog;
+
+        æble = new Item("æble", "det er rødt", 1);
+        penge = new Item("penge", "der er mange", 2);
+        medicin = new Item("medicin", "det er piller", 3);
+        bog = new Item("bog", "den er tung", 4);
+
+        // Add items to rooms
+        station.addItem(æble);
+        bibliotek.addItem(penge);
+        skole.addItem(medicin);
+        restaurant.addItem(bog);
+        fattiggård.addItem(bog);
+        rigmandsgård.addItem(bog);
     }
+
 
     public void play() 
     {            

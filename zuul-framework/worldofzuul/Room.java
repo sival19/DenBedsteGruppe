@@ -7,14 +7,14 @@ public class Room
 {
     private String description;
     private HashMap<String, Room> exits;
-    private static List<Item> itemsRoom = new ArrayList<Item>();
+    private List<Item> itemsRoom = new ArrayList<Item>();
 
-    public static void addItemRoom(Item item){
+    public void addItem(Item item){
         itemsRoom.add(item);
     }
 
-    public static List<Item> getItemsRoom(){
-        return Collections.unmodifiableList(itemsRoom); //hvorfor gør vi det?!?!?!?!?!
+    public List<Item> getItems(){
+        return itemsRoom;
     }
 
     public Room(String description)
@@ -24,7 +24,7 @@ public class Room
 
     }
 
-    public void setExit(String direction, Room neighbor) 
+    public void setExit(String direction, Room neighbor)
     {
         exits.put(direction, neighbor);
     }

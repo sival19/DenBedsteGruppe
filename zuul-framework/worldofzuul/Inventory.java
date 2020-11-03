@@ -44,7 +44,7 @@ public class Inventory {
         }
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Inventory inventory = new Inventory();
 
         //To test
@@ -69,5 +69,5 @@ public class Inventory {
         inventory.removeItem2(i3);
 
         inventory.printInventory();
-    }
+    }*/
 }

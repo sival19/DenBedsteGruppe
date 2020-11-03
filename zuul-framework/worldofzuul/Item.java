@@ -11,7 +11,7 @@ public class Item extends InteractiveObjects {
 
     @Override
     public String toString() {
-        return "noget " + getName() + " " + getInfo() + " noget";
+        return getName() + ", " + getInfo();
     }
 
 }

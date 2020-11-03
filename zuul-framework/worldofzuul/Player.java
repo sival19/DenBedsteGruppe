@@ -17,10 +17,7 @@ public class Player {
 
     }
 
-
     //methods
-
-
     public static int getPoints() {
         return points;
     }
