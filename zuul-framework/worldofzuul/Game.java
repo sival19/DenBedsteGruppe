@@ -13,13 +13,7 @@ public class Game
         parser = new Parser();
     }
 
-    /*public Item createItems (){
-        Item æble;
-
-        æble = new Item("æble", "det er rødt", 1);
-
-    }*/
-
+    
     private void seeItems(){
         System.out.println(currentRoom.getItems());
     }
