@@ -14,7 +14,6 @@ public class Tasks {
             Player.addHealth(-1);
             System.out.println("thank you");
         }
-
     }
 
     public void getInfo() {
