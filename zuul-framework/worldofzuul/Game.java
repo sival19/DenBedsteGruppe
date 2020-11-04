@@ -30,12 +30,12 @@ public class Game
         // Create rooms
         Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgård;
       
-        station = new Room("på stationen");
-        skole = new Room("på skolen");
-        bibliotek = new Room("på biblioteket");
-        restaurant = new Room("på restauranten");
-        fattiggård = new Room("på fattiggården");
-        rigmandsgård = new Room("på rigmandsgården");
+        station = new Room("på stationen" );
+        skole = new Room("på skolen, du ser nogen gemme sig bag porten, og måske gemmer der sig en ting her");
+        bibliotek = new Room("på biblioteket, der er nogen på biblioteket, og mon ikke der også er nogle ting");
+        restaurant = new Room("på restauranten, og du ser en meget velklædt person, mon ikke der er noget brugebart her");
+        fattiggård = new Room("på fattiggården, du ser en skikkelse i den bagerste og mørkeste hjørne ");
+        rigmandsgård = new Room("på rigmandsgården, og du ser en AND!");
 
         // Create room relationships
         station.setExit("skolen", skole);
@@ -64,26 +64,28 @@ public class Game
 
         // Add items to rooms
         station.addItem(æble);
-        bibliotek.addItem(penge);
-        skole.addItem(medicin);
-        restaurant.addItem(bog);
+        bibliotek.addItem(bog);
+        skole.addItem(penge);
+        restaurant.addItem(æble);
         fattiggård.addItem(bog);
-        rigmandsgård.addItem(bog);
+        rigmandsgård.addItem(medicin);
 
         //create characters
-        Characters waiter, boy, richSnob, poorFuck;
+        Characters waiter, boy, richGuy, poorGuy, librarian;
 
         waiter = new Characters("tjener", "bestikslav");
         boy = new Characters("dreng", "lille stakel");
-        richSnob = new Characters("onkel Joachim", "lidt for rig");
-        poorFuck = new Characters("Total hjemløs", "så syg...");
+        richGuy = new Characters("Onkel Joachim", "lidt for rig");
+        poorGuy = new Characters("Total hjemløs", "så syg...");
+        librarian = new Characters("Bibliotekar ", "Har kæmpe store briller på");
 
         //add characters to rooms
 
         skole.addCharacter(boy);
         restaurant.addCharacter(waiter);
-        rigmandsgård.addCharacter(richSnob);
-        fattiggård.addCharacter(poorFuck);
+        rigmandsgård.addCharacter(richGuy);
+        fattiggård.addCharacter(poorGuy);
+        bibliotek.addCharacter(librarian);
     }
 
 
@@ -105,9 +107,10 @@ public class Game
     private void printWelcome()
     {
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
-        System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
+        System.out.println("Velkommen til den bedste spil i verden!");
+        System.out.println("Det er den sejeste spil du nogensinde kommer til at spille.");
+        System.out.println("Efter du har spillet det her bliver du aldrig en der forskelsbehandler!");
+        System.out.println("Skriv '" + CommandWord.HELP + "' for at finde ud af hvordan du kommer videre.");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
@@ -147,10 +150,9 @@ public class Game
 
     private void printHelp() 
     {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println("Du har det godt, du går lidt rundt og kigger");
         System.out.println();
-        System.out.println("Your command words are:");
+        System.out.println("Dine mulige komandoer er:");
         parser.showCommands();
     }
 
@@ -166,7 +168,7 @@ public class Game
         Room nextRoom = currentRoom.getExit(direction);
 
         if (nextRoom == null) {
-            System.out.println("There is no door!");
+            System.out.println("Der er ingen dør!");
         }
         else {
             currentRoom = nextRoom;
