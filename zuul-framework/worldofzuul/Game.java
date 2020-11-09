@@ -14,13 +14,17 @@ public class Game
     }
 
     
-    private void seeItems(){
+    private void seeItems()
+    {
         System.out.println(currentRoom.getItems());
     }
 
-    private void pickUp(){
+    // THIS method does nothing YET
+    private void pickUp()
+    {
 
     }
+
     private void createRooms()
     {
         // Create rooms
