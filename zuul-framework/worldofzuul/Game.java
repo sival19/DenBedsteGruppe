@@ -4,13 +4,14 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
-    Inventory inventory = new Inventory();
-
+    private Player player;
 
     public Game() 
     {
         createRooms();
         parser = new Parser();
+        player = new Player(0,0,"Palle");
+
     }
     //see characters
     private void seeCharacters(){
@@ -22,9 +23,35 @@ public class Game
         System.out.println(currentRoom.getItems());
     }
 
-    private void pickUp(){
+
+    private void pickUp(Command c){
+        if(!c.hasSecondWord()){
+            System.out.println("hvad vil du samle op??");
+            return;
+        }
+
+        //Herfr ved vi at der er et Second Word
+        String secondWord = c.getSecondWord();
+        Item itemToadd = null;
+        for(Item i: this.currentRoom.getItems()){
+            String itemId = Integer.toString(i.getId());
+
+            if(secondWord.equals(itemId)){
+                itemToadd = i;
+                break;
+            }
+        }
+
+        if(itemToadd != null){
+            player.addItem(itemToadd);
+            System.out.println("tilføjet til inventory ");
+        }else{
+            System.out.println("Det indtastede item blev ikke fundet.");
+        }
+
 
     }
+
     private void createRooms()
     {
         // Create rooms
@@ -133,7 +160,7 @@ public class Game
             seeItems();
         }
         else if (commandWord == CommandWord.PICKUP){
-            pickUp();
+            pickUp(command);
         }
         else if (commandWord == CommandWord.SEECHARACTERS){
             seeCharacters();

@@ -3,7 +3,7 @@ package worldofzuul;
 import java.util.*;
 
 
-public class Room 
+public class Room
 {
     private String description;
     private HashMap<String, Room> exits;

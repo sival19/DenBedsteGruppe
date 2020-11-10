@@ -6,7 +6,11 @@ public class Item extends InteractiveObjects {
     //Constructor
     public Item(String name, String info, int id){
         super (name,info);
-        id = this.id;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
