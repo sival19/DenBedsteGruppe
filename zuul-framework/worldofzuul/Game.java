@@ -4,40 +4,88 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
-        
+    Inventory inventory = new Inventory();
+
 
     public Game() 
     {
         createRooms();
         parser = new Parser();
     }
+    //see characters
+    private void seeCharacters(){
+        System.out.println(currentRoom.getCharacter());
+    }
 
+    
+    private void seeItems(){
+        System.out.println(currentRoom.getItems());
+    }
 
+    private void pickUp(){
+
+    }
     private void createRooms()
     {
-        Room outside, theatre, pub, lab, office;
+        // Create rooms
+        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgård;
       
-        outside = new Room("outside the main entrance of the university");
-        theatre = new Room("in a lecture theatre");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
-        
-        outside.setExit("east", theatre);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
+        station = new Room("på stationen");
+        skole = new Room("på skolen");
+        bibliotek = new Room("på biblioteket");
+        restaurant = new Room("på restauranten");
+        fattiggård = new Room("på fattiggården");
+        rigmandsgård = new Room("på rigmandsgården");
 
-        theatre.setExit("west", outside);
+        // Create room relationships
+        station.setExit("skolen", skole);
+        station.setExit("restauranten", restaurant);
+        station.setExit("biblioteket", bibliotek);
+        station.setExit("fattiggården", fattiggård);
 
-        pub.setExit("east", outside);
+        skole.setExit("stationen", station);
+        bibliotek.setExit("stationen", station);
+        restaurant.setExit("stationen", station);
 
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
+        fattiggård.setExit("rigmandsgården", rigmandsgård);
+        fattiggård.setExit("stationen" , station);
 
-        office.setExit("west", lab);
+        rigmandsgård.setExit("fattiggården", fattiggård);
 
-        currentRoom = outside;
+        currentRoom = station;
+
+        // Create items
+        Item æble, penge, medicin, bog;
+
+        æble = new Item("æble", "det er rødt", 1);
+        penge = new Item("penge", "der er mange", 2);
+        medicin = new Item("medicin", "det er piller", 3);
+        bog = new Item("bog", "den er tung", 4);
+
+        // Add items to rooms
+        station.addItem(æble);
+        bibliotek.addItem(penge);
+        skole.addItem(medicin);
+        restaurant.addItem(bog);
+        fattiggård.addItem(bog);
+        rigmandsgård.addItem(bog);
+
+        //create characters
+        Characters waiter, boy, richSnob, poorFuck;
+
+        waiter = new Characters("tjener", "bestikslav");
+        boy = new Characters("dreng", "lille stakel");
+        richSnob = new Characters("onkel Joachim", "lidt for rig");
+        poorFuck = new Characters("Total hjemløs", "så syg...");
+
+        //add characters to rooms
+
+        skole.addCharacter(boy);
+        restaurant.addCharacter(waiter);
+        rigmandsgård.addCharacter(richSnob);
+        fattiggård.addCharacter(poorFuck);
     }
+
 
     public void play() 
     {            
@@ -51,6 +99,8 @@ public class Game
         }
         System.out.println("Thank you for playing.  Good bye.");
     }
+
+
 
     private void printWelcome()
     {
@@ -79,11 +129,21 @@ public class Game
         else if (commandWord == CommandWord.GO) {
             goRoom(command);
         }
+        else if (commandWord == CommandWord.SEEITEMS){
+            seeItems();
+        }
+        else if (commandWord == CommandWord.PICKUP){
+            pickUp();
+        }
+        else if (commandWord == CommandWord.SEECHARACTERS){
+            seeCharacters();
+        }
         else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
         }
         return wantToQuit;
     }
+
 
     private void printHelp() 
     {
