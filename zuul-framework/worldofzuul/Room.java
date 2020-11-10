@@ -9,11 +9,13 @@ public class Room
     private HashMap<String, Room> exits;
     private List<Item> itemsRoom = new ArrayList<Item>();
 
-    public void addItem(Item item){
+    public void addItem(Item item)
+    {
         itemsRoom.add(item);
     }
 
-    public List<Item> getItems(){
+    public List<Item> getItems()
+    {
         return itemsRoom;
     }
 
