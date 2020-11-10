@@ -12,19 +12,19 @@ public class Game
         createRooms();
         parser = new Parser();
     }
+    //see characters
+    private void seeCharacters(){
+        System.out.println(currentRoom.getCharacter());
+    }
 
     
-    private void seeItems()
-    {
+    private void seeItems(){
         System.out.println(currentRoom.getItems());
     }
 
-    // THIS method does nothing YET
-    private void pickUp()
-    {
+    private void pickUp(){
 
     }
-
     private void createRooms()
     {
         // Create rooms
@@ -69,6 +69,21 @@ public class Game
         restaurant.addItem(bog);
         fattiggård.addItem(bog);
         rigmandsgård.addItem(bog);
+
+        //create characters
+        Characters waiter, boy, richSnob, poorFuck;
+
+        waiter = new Characters("tjener", "bestikslav");
+        boy = new Characters("dreng", "lille stakel");
+        richSnob = new Characters("onkel Joachim", "lidt for rig");
+        poorFuck = new Characters("Total hjemløs", "så syg...");
+
+        //add characters to rooms
+
+        skole.addCharacter(boy);
+        restaurant.addCharacter(waiter);
+        rigmandsgård.addCharacter(richSnob);
+        fattiggård.addCharacter(poorFuck);
     }
 
 
@@ -119,6 +134,9 @@ public class Game
         }
         else if (commandWord == CommandWord.PICKUP){
             pickUp();
+        }
+        else if (commandWord == CommandWord.SEECHARACTERS){
+            seeCharacters();
         }
         else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);

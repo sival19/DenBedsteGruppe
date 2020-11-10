@@ -9,6 +9,11 @@ public class Characters extends InteractiveObjects {
         super (name, info);
     }
 
+    @Override
+    public String toString() {
+        return getName() + ", " + getInfo();
+    }
+
 
 
     //Created a Wizard

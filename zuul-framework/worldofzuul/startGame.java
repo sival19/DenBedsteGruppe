@@ -1,10 +1,8 @@
 package worldofzuul;
 
-public class startGame
-{
+public class startGame {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Game myGame = new Game();
         myGame.play();
     }
