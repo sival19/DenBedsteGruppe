@@ -23,8 +23,14 @@ public class Room
         return character;
     }
 
+    //add and remove items to room
+
     public void addItem(Item item){
         itemsRoom.add(item);
+    }
+
+    public void removeItem(Item item){
+        itemsRoom.remove(item);
     }
 
     public List<Item> getItems(){

@@ -60,6 +60,12 @@ public class Player {
 
 
     //tilgå inventory
+
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
     public void addItem(Item i){
         inventory.addToInventory(i);
     }
@@ -71,6 +77,5 @@ public class Player {
     public void seeInventory(){
         inventory.printInventory();
     }
-
 
 }
