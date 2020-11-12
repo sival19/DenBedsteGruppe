@@ -90,10 +90,10 @@ public class Game
         // Create items
         Item æble, penge, medicin, bog;
 
-        æble = new Item("æble", "det er rødt", 1);
-        penge = new Item("penge", "der er mange", 2);
-        medicin = new Item("medicin", "det er piller", 3);
-        bog = new Item("bog", "den er tung", 4);
+        æble = new Item("æble", "det er rødt");
+        penge = new Item("penge", "der er mange");
+        medicin = new Item("medicin", "det er piller");
+        bog = new Item("bog", "den er tung");
 
         // Add items to rooms
         station.addItem(æble);
