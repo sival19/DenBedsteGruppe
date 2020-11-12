@@ -58,9 +58,14 @@ public class Player {
     }
 
 
+
     //tilgå inventory
     public void addItem(Item i){
         inventory.addToInventory(i);
+    }
+
+    public void seeInventory(){
+        inventory.printInventory();
     }
 
 

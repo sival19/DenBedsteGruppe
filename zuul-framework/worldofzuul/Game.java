@@ -24,7 +24,9 @@ public class Game
     }
 
     private void seeInventory(){
-        
+
+        player.seeInventory();
+
     }
 
 
@@ -38,9 +40,9 @@ public class Game
         String secondWord = c.getSecondWord();
         Item itemToadd = null;
         for(Item i: this.currentRoom.getItems()){
-            String itemId = Integer.toString(i.getId());
+            String itemName = i.getName();
 
-            if(secondWord.equals(itemId)){
+            if(secondWord.equals(itemName)){
                 itemToadd = i;
                 break;
             }
