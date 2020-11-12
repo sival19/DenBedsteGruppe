@@ -23,6 +23,10 @@ public class Game
         System.out.println(currentRoom.getItems());
     }
 
+    private void seeInventory(){
+        
+    }
+
 
     private void pickUp(Command c){
         if(!c.hasSecondWord()){
@@ -161,6 +165,9 @@ public class Game
         }
         else if (commandWord == CommandWord.PICKUP){
             pickUp(command);
+        }
+        else if (commandWord == CommandWord.SEEINVENTORY){
+            seeInventory();
         }
         else if (commandWord == CommandWord.SEECHARACTERS){
             seeCharacters();
