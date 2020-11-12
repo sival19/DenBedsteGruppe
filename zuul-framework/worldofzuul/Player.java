@@ -64,6 +64,10 @@ public class Player {
         inventory.addToInventory(i);
     }
 
+    public void removeItems(Item i){
+        inventory.removeItem(i);
+    }
+
     public void seeInventory(){
         inventory.printInventory();
     }

@@ -28,8 +28,35 @@ public class Game
         player.seeInventory();
 
     }
+//remove items from inventory
+    private void remove(Command c){
+        if(!c.hasSecondWord()){
+            System.out.println("hvad vil du fjerne?");
+            return;
+        }
+
+        //Herfr ved vi at der er et Second Word
+        String secondWord = c.getSecondWord();
+        Item itemToRemove = null;
+        for(Item i: this.currentRoom.getItems()){
+            String itemName = i.getName();
+
+            if(secondWord.equals(itemName)){
+                itemToRemove = i;
+                break;
+            }
+        }
+
+        if(itemToRemove != null){
+            player.removeItems(itemToRemove);
+            System.out.println("fjernet fra tasken ");
+        }else{
+            System.out.println("Det indtastede item blev ikke fundet.");
+        }
 
 
+    }
+//make a method to picup
     private void pickUp(Command c){
         if(!c.hasSecondWord()){
             System.out.println("hvad vil du samle op??");
@@ -171,6 +198,9 @@ public class Game
         else if (commandWord == CommandWord.SEEINVENTORY){
             seeInventory();
         }
+        else if (commandWord == CommandWord.REMOVEITEMS)
+            remove(command);
+
         else if (commandWord == CommandWord.SEECHARACTERS){
             seeCharacters();
         }
