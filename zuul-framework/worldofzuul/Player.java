@@ -1,5 +1,7 @@
 package worldofzuul;
 
+import java.util.ArrayList;
+
 public class Player {
 
     //attributes
@@ -10,11 +12,11 @@ public class Player {
     private String name;
 
     //constructors
-    public Player(int points, int health , String name) {
+    public Player(int points, int health, String name) {
         this.points = points;
         this.health = health;
         this.name = name;
-
+        inventory = new Inventory(new ArrayList<>());
     }
 
     //methods
@@ -55,5 +57,25 @@ public class Player {
 
     }
 
+
+
+    //tilgå inventory
+
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void addItem(Item i){
+        inventory.addToInventory(i);
+    }
+
+    public void removeItems(Item i){
+        inventory.removeItem(i);
+    }
+
+    public void seeInventory(){
+        inventory.printInventory();
+    }
 
 }

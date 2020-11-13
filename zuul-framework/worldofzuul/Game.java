@@ -4,13 +4,15 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
-    Inventory inventory = new Inventory();
-
+    private Player player;
+    private Inventory inventory;
 
     public Game() 
     {
         createRooms();
         parser = new Parser();
+        player = new Player(0,0,"Palle");
+
     }
     //see characters
     private void seeCharacters(){
@@ -22,9 +24,70 @@ public class Game
         System.out.println(currentRoom.getItems());
     }
 
-    private void pickUp(){
+    private void seeInventory(){
+
+        player.seeInventory();
 
     }
+//remove items from inventory
+    private void remove(Command c){
+        if(!c.hasSecondWord()){
+            System.out.println("hvad vil du fjerne?");
+            return;
+        }
+
+        //Herfr ved vi at der er et Second Word
+        String secondWord = c.getSecondWord();
+        Item itemToRemove = null;
+        for(Item i: this.player.getInventory().getInventoryList()){
+            String itemName = i.getName();
+
+            if(secondWord.equals(itemName)){
+                itemToRemove = i;
+                break;
+            }
+        }
+
+        if(itemToRemove != null){
+            currentRoom.addItem(itemToRemove);
+            player.removeItems(itemToRemove);
+            System.out.println("fjernet fra tasken ");
+        }else{
+            System.out.println("Det indtastede item blev ikke fundet.");
+        }
+
+
+    }
+//make a method to picup
+    private void pickUp(Command c){
+        if(!c.hasSecondWord()){
+            System.out.println("hvad vil du samle op??");
+            return;
+        }
+
+        //Herfr ved vi at der er et Second Word
+        String secondWord = c.getSecondWord();
+        Item itemToadd = null;
+        for(Item i: this.currentRoom.getItems()){
+            String itemName = i.getName();
+
+            if(secondWord.equals(itemName)){
+                itemToadd = i;
+                break;
+            }
+        }
+
+        if(itemToadd != null){
+            player.addItem(itemToadd);
+            currentRoom.removeItem(itemToadd);
+            System.out.println("tilføjet til inventory ");
+        }else{
+            System.out.println("Det indtastede item blev ikke fundet.");
+        }
+
+
+    }
+
     private void createRooms()
     {
         // Create rooms
@@ -57,10 +120,10 @@ public class Game
         // Create items
         Item æble, penge, medicin, bog;
 
-        æble = new Item("æble", "det er rødt", 1);
-        penge = new Item("penge", "der er mange", 2);
-        medicin = new Item("medicin", "det er piller", 3);
-        bog = new Item("bog", "den er tung", 4);
+        æble = new Item("æble", "det er rødt");
+        penge = new Item("penge", "der er mange");
+        medicin = new Item("medicin", "det er piller");
+        bog = new Item("bog", "den er tung");
 
         // Add items to rooms
         station.addItem(æble);
@@ -133,8 +196,14 @@ public class Game
             seeItems();
         }
         else if (commandWord == CommandWord.PICKUP){
-            pickUp();
+            pickUp(command);
         }
+        else if (commandWord == CommandWord.SEEINVENTORY){
+            seeInventory();
+        }
+        else if (commandWord == CommandWord.REMOVEITEMS)
+            remove(command);
+
         else if (commandWord == CommandWord.SEECHARACTERS){
             seeCharacters();
         }

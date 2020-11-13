@@ -3,7 +3,7 @@ package worldofzuul;
 import java.util.*;
 
 
-public class Room 
+public class Room
 {
     private String description;
     private HashMap<String, Room> exits;
@@ -23,8 +23,14 @@ public class Room
         return character;
     }
 
+    //add and remove items to room
+
     public void addItem(Item item){
         itemsRoom.add(item);
+    }
+
+    public void removeItem(Item item){
+        itemsRoom.remove(item);
     }
 
     public List<Item> getItems(){
