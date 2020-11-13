@@ -39,7 +39,7 @@ public class Game
         //Herfr ved vi at der er et Second Word
         String secondWord = c.getSecondWord();
         Item itemToRemove = null;
-        for(Item i: this.player.getInventory().getInventoryList()){
+        for(Item i: this.player.getInventory().getInventoryList()){  //access players inventory
             String itemName = i.getName();
 
             if(secondWord.equals(itemName)){
@@ -47,10 +47,10 @@ public class Game
                 break;
             }
         }
-
+//remove item from inventory and add to room
         if(itemToRemove != null){
-            currentRoom.addItem(itemToRemove);
-            player.removeItems(itemToRemove);
+            currentRoom.addItem(itemToRemove); //add to room
+            player.removeItems(itemToRemove);  //remove from room
             System.out.println("fjernet fra tasken ");
         }else{
             System.out.println("Det indtastede item blev ikke fundet.");
@@ -76,10 +76,10 @@ public class Game
                 break;
             }
         }
-
+//add item to player inventory and remove from the room
         if(itemToadd != null){
-            player.addItem(itemToadd);
-            currentRoom.removeItem(itemToadd);
+            player.addItem(itemToadd);  //add to inventory
+            currentRoom.removeItem(itemToadd);  //remove to inventory
             System.out.println("tilføjet til inventory ");
         }else{
             System.out.println("Det indtastede item blev ikke fundet.");
