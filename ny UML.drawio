@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-17T09:59:08.888Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="fFFi4QkCKznvAOLB9OJu" version="13.9.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-17T10:08:41.710Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="KE6mrCg2CwGoz9X9a6dR" version="13.9.9" type="github">
   <diagram id="9ntyrfn0GXn9pHeFvZ6M" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -64,7 +64,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="3REQTL-Von2pY2Shwjhd-25" value="Game" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="370" y="390" width="180" height="310" as="geometry" />
+          <mxGeometry x="320" y="306" width="180" height="310" as="geometry" />
         </mxCell>
         <mxCell id="3REQTL-Von2pY2Shwjhd-26" value="- Parser&#xa;- Room&#xa;- Player" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3REQTL-Von2pY2Shwjhd-25">
           <mxGeometry y="26" width="180" height="54" as="geometry" />
@@ -74,6 +74,18 @@
         </mxCell>
         <mxCell id="3REQTL-Von2pY2Shwjhd-28" value="+ game()&#xa;+ seeCharacters() void&#xa;+ seeItems() void&#xa;+ seeInventory() void&#xa;- remove(): void&#xa;- pickup(): void&#xa;- createRooms(): void&#xa;- play(): void&#xa;- printWelcome(): void&#xa;- processCommand(): boolean&#xa;- printHelp(): void&#xa;- goRoom(): void&#xa;- quit(): boolean&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3REQTL-Von2pY2Shwjhd-25">
           <mxGeometry y="88" width="180" height="222" as="geometry" />
+        </mxCell>
+        <mxCell id="3REQTL-Von2pY2Shwjhd-29" value="Room" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="530" width="160" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="3REQTL-Von2pY2Shwjhd-30" value="- description: String&#xa;- exits: &lt;HashMap&gt;&#xa;- itemsRoom &lt;ArrayList&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3REQTL-Von2pY2Shwjhd-29">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="3REQTL-Von2pY2Shwjhd-31" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="3REQTL-Von2pY2Shwjhd-29">
+          <mxGeometry y="90" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="3REQTL-Von2pY2Shwjhd-32" value="+ addCharacter(): void&#xa;+ getCharacter(): &#xa;+ addItem(): void&#xa;+ removeItem(): void&#xa;+ getItems(): void&#xa;+ Room():&#xa;+ setExit(): void&#xa;+ getLongDescription" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3REQTL-Von2pY2Shwjhd-29">
+          <mxGeometry y="98" width="160" height="152" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
