@@ -13,37 +13,7 @@ import javafx.stage.Stage;
 public class LibraryController {
 
 
-
-    
-
     @FXML private Button button;
-    private ZuulGame test;
 
-    @FXML
-    public void initialize () {
-
-
-        test = new Game();
-
-
-
-    }
-
-
-
-    @FXML
-    public void goSkole(){
-
-        //use command go and go to skolen
-        test.processCommand(CommandWord.GO, "skolen");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("poorroom.fxml"));
-
-
-    }
-
-    @FXML
-    public void backpack(){
-        test.seeInventory();
-    }
 
     }

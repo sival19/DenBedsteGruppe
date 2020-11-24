@@ -2,37 +2,52 @@ package worldofzuul;
 
 import sample.ZuulGame;
 
-public class Game implements ZuulGame
-{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Game implements ZuulGame {
     private Parser parser;
     private Room currentRoom;
     private Player player;
 
-    public Game() 
-    {
+    public Game() {
         createRooms();
         parser = new Parser();
-        player = new Player(0,0,"Palle");
+        player = new Player(0, 0, "Palle");
 
     }
+
+    // Get message from character info. Search by name
+    public String getCharMessage(String charName) {
+        ArrayList<Character> characters = currentRoom.getCharacters();
+        for (int i = 0; i < characters.size(); i++) {
+            if (characters.get(i).name.equals(charName)) {
+                return characters.get(i).info;
+            }
+        }
+        return "";
+    }
+
+
     //see characters
-    private void seeCharacters(){
-        System.out.println(currentRoom.getCharacter());
+    private void seeCharacters() {
+        System.out.println(currentRoom.getCharacters());
     }
 
-    
-    private void seeItems(){
+
+    private void seeItems() {
         System.out.println(currentRoom.getItems());
     }
 
-    public void seeInventory(){
+    public void seeInventory() {
 
         player.seeInventory();
 
     }
-//remove items from inventory
-    private void remove(Command c){
-        if(!c.hasSecondWord()){
+
+    //remove items from inventory
+    private void remove(Command c) {
+        if (!c.hasSecondWord()) {
             System.out.println("hvad vil du fjerne?");
             return;
         }
@@ -40,28 +55,29 @@ public class Game implements ZuulGame
         //Herfr ved vi at der er et Second Word
         String secondWord = c.getSecondWord();
         Item itemToRemove = null;
-        for(Item i: this.player.getInventory().getItems()){
+        for (Item i : this.player.getInventory().getItems()) {
             String itemName = i.getName();
 
-            if(secondWord.equals(itemName)){
+            if (secondWord.equals(itemName)) {
                 itemToRemove = i;
                 break;
             }
         }
 
-        if(itemToRemove != null){
+        if (itemToRemove != null) {
             currentRoom.addItem(itemToRemove);
             player.removeItems(itemToRemove);
             System.out.println(itemToRemove.getName() + " fjernet fra tasken ");
-        }else{
+        } else {
             System.out.println("Det indtastede item blev ikke fundet.");
         }
 
 
     }
-//make a method to picup
-    private void pickUp(Command c){
-        if(!c.hasSecondWord()){
+
+    //make a method to picup
+    private void pickUp(Command c) {
+        if (!c.hasSecondWord()) {
             System.out.println("hvad vil du samle op??");
             return;
         }
@@ -69,52 +85,65 @@ public class Game implements ZuulGame
         //Herfr ved vi at der er et Second Word
         String secondWord = c.getSecondWord();
         Item itemToadd = null;
-        for(Item i: this.currentRoom.getItems()){
+        for (Item i : this.currentRoom.getItems()) {
             String itemName = i.getName();
 
-            if(secondWord.equals(itemName)){
+            if (secondWord.equals(itemName)) {
                 itemToadd = i;
                 break;
             }
         }
 
-        if(itemToadd != null){
+        if (itemToadd != null) {
             player.addItem(itemToadd);
             currentRoom.removeItem(itemToadd);
             System.out.println(itemToadd.getName() + " tilføjet til inventory ");
-        }else{
+        } else {
             System.out.println("Det indtastede item blev ikke fundet.");
         }
 
 
     }
 
-    public void createRooms()
-    {
+    public void createRooms() {
         // Create rooms
-        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgård;
-      
+        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgård, apotek;
+
         station = new Room("på stationen");
         skole = new Room("på skolen");
         bibliotek = new Room("på biblioteket");
         restaurant = new Room("på restauranten");
         fattiggård = new Room("på fattiggården");
         rigmandsgård = new Room("på rigmandsgården");
+        apotek = new Room("på apoteket");
 
         // Create room relationships
+        station.setExit("apoteket", apotek);
         station.setExit("skolen", skole);
-        station.setExit("restauranten", restaurant);
-        station.setExit("biblioteket", bibliotek);
         station.setExit("fattiggården", fattiggård);
 
         skole.setExit("stationen", station);
-        bibliotek.setExit("stationen", station);
+        skole.setExit("rigmandsgården" , rigmandsgård);
+        skole.setExit("biblioteket", bibliotek);
+        skole.setExit("apoteket", apotek);
+        skole.setExit("fattiggården", fattiggård);
+
+        bibliotek.setExit("rigmandsgården", rigmandsgård);
+        bibliotek.setExit("skolen", skole);
+
         restaurant.setExit("stationen", station);
 
-        fattiggård.setExit("rigmandsgården", rigmandsgård);
-        fattiggård.setExit("stationen" , station);
+        fattiggård.setExit("skolen", skole);
+        fattiggård.setExit("stationen", station);
 
-        rigmandsgård.setExit("fattiggården", fattiggård);
+        rigmandsgård.setExit("skolen", skole);
+        rigmandsgård.setExit("biblioteket", bibliotek);
+        rigmandsgård.setExit("apoteket" , apotek);
+
+
+        apotek.setExit("rigmandsgården" , rigmandsgård);
+        apotek.setExit("stationen", station);
+        apotek.setExit("skolen", skole);
 
         currentRoom = station;
 
@@ -135,12 +164,12 @@ public class Game implements ZuulGame
         rigmandsgård.addItem(bog);
 
         //create characters
-        Characters waiter, boy, richSnob, poorFuck;
+        Character waiter, boy, richSnob, poorFuck;
 
-        waiter = new Characters("tjener", "bestikslav");
-        boy = new Characters("dreng", "lille stakel");
-        richSnob = new Characters("onkel Joachim", "lidt for rig");
-        poorFuck = new Characters("Total hjemløs", "så syg...");
+        waiter = new Character("tjener", "bestikslav");
+        boy = new Character("dreng", "lille stakel");
+        richSnob = new Character("onkel Joachim", "lidt for rig");
+        poorFuck = new Character("Total hjemløs", "så syg...");
 
         //add characters to rooms
 
@@ -151,13 +180,12 @@ public class Game implements ZuulGame
     }
 
 
-    public void play() 
-    {            
+    public void play() {
         printWelcome();
 
-                
+
         boolean finished = false;
-        while (! finished) {
+        while (!finished) {
             Command command = parser.getCommand();
             finished = processCommand(command);
         }
@@ -165,9 +193,7 @@ public class Game implements ZuulGame
     }
 
 
-
-    private void printWelcome()
-    {
+    private void printWelcome() {
         System.out.println();
         System.out.println("Welcome to the World of Zuul!");
         System.out.println("World of Zuul is a new, incredibly boring adventure game.");
@@ -177,53 +203,44 @@ public class Game implements ZuulGame
     }
 
     //makes it possible to simply write what command and what to do in it in GUI
-    public boolean processCommand(CommandWord commandWord, String secondWord)
-    {
+    public boolean processCommand(CommandWord commandWord, String secondWord) {
         return processCommand(new Command(commandWord, secondWord));
     }
 
 
-    public boolean processCommand(Command command)
-    {
+    public boolean processCommand(Command command) {
         boolean wantToQuit = false;
 
         CommandWord commandWord = command.getCommandWord();
 
-        if(commandWord == CommandWord.UNKNOWN) {
+        if (commandWord == CommandWord.UNKNOWN) {
             System.out.println("I don't know what you mean...");
             return false;
         }
 
         if (commandWord == CommandWord.HELP) {
             printHelp();
-        }
-        else if (commandWord == CommandWord.GO) {
+        } else if (commandWord == CommandWord.GO) {
             goRoom(command);
-        }
-        else if (commandWord == CommandWord.SEEITEMS){
+        } else if (commandWord == CommandWord.SEEITEMS) {
             seeItems();
-        }
-        else if (commandWord == CommandWord.PICKUP){
+        } else if (commandWord == CommandWord.PICKUP) {
             pickUp(command);
-        }
-        else if (commandWord == CommandWord.SEEINVENTORY){
+        } else if (commandWord == CommandWord.SEEINVENTORY) {
             seeInventory();
-        }
-        else if (commandWord == CommandWord.REMOVEITEMS)
+        } else if (commandWord == CommandWord.REMOVEITEMS)
             remove(command);
 
-        else if (commandWord == CommandWord.SEECHARACTERS){
+        else if (commandWord == CommandWord.SEECHARACTERS) {
             seeCharacters();
-        }
-        else if (commandWord == CommandWord.QUIT) {
+        } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
         }
         return wantToQuit;
     }
 
 
-    private void printHelp() 
-    {
+    private void printHelp() {
         System.out.println("You are lost. You are alone. You wander");
         System.out.println("around at the university.");
         System.out.println();
@@ -231,9 +248,8 @@ public class Game implements ZuulGame
         parser.showCommands();
     }
 
-    public void goRoom(Command command)
-    {
-        if(!command.hasSecondWord()) {
+    public void goRoom(Command command) {
+        if (!command.hasSecondWord()) {
             System.out.println("Go where?");
             return;
         }
@@ -244,20 +260,17 @@ public class Game implements ZuulGame
 
         if (nextRoom == null) {
             System.out.println("There is no door!");
-        }
-        else {
+        } else {
             currentRoom = nextRoom;
             System.out.println(currentRoom.getLongDescription());
         }
     }
 
-    private boolean quit(Command command) 
-    {
-        if(command.hasSecondWord()) {
+    private boolean quit(Command command) {
+        if (command.hasSecondWord()) {
             System.out.println("Quit what?");
             return false;
-        }
-        else {
+        } else {
             return true;
         }
     }
