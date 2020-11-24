@@ -13,6 +13,10 @@ import java.io.IOException;
 
 public class StationController {
 
+    public ZuulGame getTest() {
+        return test;
+    }
+
     private ZuulGame test;
 
     @FXML
