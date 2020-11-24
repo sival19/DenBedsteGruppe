@@ -25,13 +25,15 @@ public class LibraryController {
 
     private ZuulGame test;
 
+    public ZuulGame getTest() {
+        return test;
+    }
+
     @FXML
     public void initialize () {
 
 
         test = new Game();
-
-
 
     }
 

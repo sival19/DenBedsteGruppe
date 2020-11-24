@@ -2,10 +2,16 @@ package sample;
 
 import javafx.fxml.FXML;
 
-public class PoorroomController {
+public class PoorroomController extends LibraryController {
+
+
 
     @FXML
     public void talkChild(){
+
+        getTest().seeInventory();
+
+
 
     }
 
