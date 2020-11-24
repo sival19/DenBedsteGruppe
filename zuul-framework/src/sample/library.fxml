@@ -26,7 +26,7 @@
                            <Image url="@../images/backpack.png" />
                         </image>
                      </ImageView>
-                            <Button fx:id="skole" layoutX="680.0" layoutY="220.0" mnemonicParsing="false" onAction="#goSkole" prefHeight="27.0" prefWidth="61.0" text="Skole" AnchorPane.bottomAnchor="192.66666666666666" AnchorPane.rightAnchor="8.666666666666629" />
+                            <Button fx:id="skole2" layoutX="680.0" layoutY="220.0" mnemonicParsing="false" onAction="#goSkole" prefHeight="27.0" prefWidth="61.0" text="Skole" AnchorPane.bottomAnchor="192.66666666666666" AnchorPane.rightAnchor="8.666666666666629" />
                         </children>
                     </AnchorPane>
                 </children>

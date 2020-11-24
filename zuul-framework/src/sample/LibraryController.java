@@ -1,13 +1,17 @@
 package sample;
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import worldofzuul.*;
-import javafx.application.Platform;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import worldofzuul.*;
 
+import java.io.IOException;
 
 
 public class LibraryController {
@@ -16,7 +20,9 @@ public class LibraryController {
 
     
 
-    @FXML private Button button;
+    @FXML
+    Button skole;
+
     private ZuulGame test;
 
     @FXML
@@ -32,11 +38,15 @@ public class LibraryController {
 
 
     @FXML
-    public void goSkole(){
+    public void goSkole() throws IOException {
 
         //use command go and go to skolen
         test.processCommand(CommandWord.GO, "skolen");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("poorroom.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
+        Stage stage = (Stage) skole.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
+
 
 
     }
