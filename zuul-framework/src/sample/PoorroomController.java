@@ -2,11 +2,16 @@ package sample;
 
 import javafx.fxml.FXML;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class PoorroomController {
 
-    @FXML
-    public void talkChild(){
+    @FXML private Button poorChild;
 
+
+    @FXML
+    public void talkPoorChild() {
     }
 
     @FXML

@@ -13,22 +13,13 @@ import javafx.stage.Stage;
 public class LibraryController {
 
 
-
-    
-
     @FXML private Button button;
     private ZuulGame test;
 
     @FXML
     public void initialize () {
-
-
         test = new Game();
-
-
-
     }
-
 
 
     @FXML
