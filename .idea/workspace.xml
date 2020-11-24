@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="16fa27a1-029d-459e-99cf-c0683e1cb353" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/zuul-framework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-framework/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b5168a33-a619-47fb-8588-f16aacfe1e86" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,30 +28,72 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1k5yl4OwEQk7TXWlIKWZUBpoVml" />
+  <component name="ProjectId" id="1jSGiQZquRDt12vMdzwdJFkpvwH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/zuul-framework" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="16fa27a1-029d-459e-99cf-c0683e1cb353" name="Default Changelist" comment="" />
-      <created>1605004894659</created>
+      <changelist id="b5168a33-a619-47fb-8588-f16aacfe1e86" name="Default Changelist" comment="" />
+      <created>1603790207285</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605004894659</updated>
+      <updated>1603790207285</updated>
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="748" y="276" key="FileChooserDialogImpl" timestamp="1605004905203">
-      <screen x="0" y="0" width="1920" height="1035" />
+    <state x="520" y="241" key="#Notifications" timestamp="1604840782358">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="748" y="276" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1605004905203" />
+    <state x="520" y="241" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1604840782358" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1604840849780">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1604840849780" />
+    <state x="549" y="169" key="FileChooserDialogImpl" timestamp="1604841095663">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603792041246" />
+    <state x="549" y="169" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1604841095663" />
+    <state x="439" y="121" width="703" height="591" key="NewModule_or_Project.wizard" timestamp="1604841115226">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="439" y="121" width="703" height="591" key="NewModule_or_Project.wizard/0.0.1536.834@0.0.1536.834" timestamp="1604841115226" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1604841122432">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1604841122432" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603790314640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1603790314640" />
+    <state x="407" y="37" key="new project wizard" timestamp="1604841059192">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="407" y="37" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1604841059192" />
   </component>
 </project>
