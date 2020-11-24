@@ -17,7 +17,7 @@ public class SchoolController extends StationController {
     @FXML
     public void goLibrary() throws IOException {
 
-        //use command go and go to skolen
+        // go library button
         getTest().processCommand(CommandWord.GO, "biblioteket");
         Parent loader = FXMLLoader.load(getClass().getResource("library.fxml"));
         Stage stage = (Stage) bib_skole.getScene().getWindow();

@@ -112,7 +112,7 @@ public class Game implements ZuulGame {
         station = new Room("på stationen");
         skole = new Room("på skolen");
         bibliotek = new Room("på biblioteket");
-        //restaurant = new Room("på restauranten");
+        restaurant = new Room("på restauranten");
         fattiggård = new Room("på fattiggården");
         rigmandsgård = new Room("på rigmandsgården");
         apotek = new Room("på apoteket");
@@ -131,7 +131,7 @@ public class Game implements ZuulGame {
         bibliotek.setExit("rigmandsgården", rigmandsgård);
         bibliotek.setExit("skolen", skole);
 
-        //restaurant.setExit("stationen", station);
+        restaurant.setExit("stationen", station);
 
         fattiggård.setExit("skolen", skole);
         fattiggård.setExit("stationen", station);
@@ -159,7 +159,7 @@ public class Game implements ZuulGame {
         station.addItem(æble);
         bibliotek.addItem(penge);
         skole.addItem(medicin);
-        //restaurant.addItem(bog);
+        restaurant.addItem(bog);
         fattiggård.addItem(bog);
         rigmandsgård.addItem(bog);
 
@@ -174,7 +174,7 @@ public class Game implements ZuulGame {
         //add characters to rooms
 
         skole.addCharacter(boy);
-        //restaurant.addCharacter(waiter);
+        restaurant.addCharacter(waiter);
         rigmandsgård.addCharacter(richSnob);
         fattiggård.addCharacter(poorFuck);
     }

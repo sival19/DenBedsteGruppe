@@ -13,11 +13,13 @@ import java.io.IOException;
 
 public class StationController {
 
+
+
+    private ZuulGame test;
+
     public ZuulGame getTest() {
         return test;
     }
-
-    private ZuulGame test;
 
     @FXML
     Button skole_tr;
