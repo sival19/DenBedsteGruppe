@@ -8,19 +8,16 @@ public class Room
     private String description;
     private HashMap<String, Room> exits;
     private List<Item> itemsRoom = new ArrayList<Item>();
+    private ArrayList<Character> characters = new ArrayList<Character>();
 
-    //add characters
-
-    private List<Characters> character = new ArrayList<Characters>();
-
-    public void addCharacter(Characters characters){
-        character.add(characters);
+    public void addCharacter(Character character){
+        this.characters.add(character);
     }
 
     //see characters
 
-    public List<Characters> getCharacter(){
-        return character;
+    public ArrayList<Character> getCharacters(){
+        return characters;
     }
 
     //add and remove items to room

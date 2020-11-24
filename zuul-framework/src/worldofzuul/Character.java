@@ -2,10 +2,10 @@ package worldofzuul;
 
 import java.util.ArrayList;
 
-public class Characters extends InteractiveObjects {
+public class Character extends InteractiveObjects {
 
     //Constructor
-    public Characters(String name, String info) {
+    public Character(String name, String info) {
         super (name, info);
     }
 

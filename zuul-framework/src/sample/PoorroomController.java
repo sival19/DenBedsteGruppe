@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
@@ -10,6 +9,7 @@ import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.shape.Circle;
+import worldofzuul.Character;
 
 public class PoorroomController {
 
@@ -20,8 +20,15 @@ public class PoorroomController {
     @FXML
     private TextField text;
     public void talkPoorChild() {
-        text.setText("Jeg er sulten");
+        poorChild.getId();
+        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
+        text.setText("Jeg er sulten"); // set text to getCharMessage return value
+
+        // 
     }
+
+    // TEST
+     Character name = new Character("kaj","er sej");
 
     @FXML
     public void talkWoman(){
