@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.stage.Stage?>
+
+<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LibraryController">
+    <scene>
+        <Scene>
+            <VBox>
+                <children>
+                    <AnchorPane prefHeight="439.0" prefWidth="731.0">
+                        <children>
+                     <ImageView fitHeight="440.0" fitWidth="750.0">
+                        <image>
+                           <Image url="@../images/library.PNG" />
+                        </image>
+                     </ImageView>
+                            <Button fx:id="skole" layoutX="555.0" layoutY="85.0" mnemonicParsing="false" onAction="#goSkole" prefHeight="57.0" prefWidth="115.0" text="Skole" AnchorPane.bottomAnchor="297.0" AnchorPane.rightAnchor="77.0" />
+                     <ImageView fitHeight="113.0" fitWidth="124.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#backpack">
+                        <image>
+                           <Image url="@../images/backpack.png" />
+                        </image>
+                     </ImageView>
+                            <Button fx:id="skole" layoutX="680.0" layoutY="220.0" mnemonicParsing="false" onAction="#goSkole" prefHeight="27.0" prefWidth="61.0" text="Skole" AnchorPane.bottomAnchor="192.66666666666666" AnchorPane.rightAnchor="8.666666666666629" />
+                        </children>
+                    </AnchorPane>
+                </children>
+            </VBox>
+        </Scene>
+    </scene>
+</Stage>
