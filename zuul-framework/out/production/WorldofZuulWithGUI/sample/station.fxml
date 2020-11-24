@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StationController">
     <scene>
         <Scene>
             <AnchorPane prefHeight="404.0" prefWidth="710.0">
@@ -16,6 +17,7 @@
                      <Image url="@../images/station.PNG" />
                   </image>
                </ImageView>
+               <Button fx:id="skole_tr" layoutX="648.0" layoutY="177.0" mnemonicParsing="false" onAction="#goSkolen" text="Skole" />
             </children></AnchorPane>
         </Scene>
     </scene>

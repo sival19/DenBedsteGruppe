@@ -6,9 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <scene>
-        <Scene>
+
             <AnchorPane prefHeight="376.0" prefWidth="706.0">
             <children>
                <ImageView fitHeight="409.0" fitWidth="728.0" layoutX="-2.0">
@@ -17,6 +15,4 @@
                   </image>
                </ImageView>
             </children></AnchorPane>
-        </Scene>
-    </scene>
-</Stage>
+    

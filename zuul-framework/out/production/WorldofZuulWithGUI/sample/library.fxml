@@ -8,10 +8,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LibraryController">
-    <scene>
-        <Scene>
-            <VBox>
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LibraryController">
+                <VBox>
                 <children>
                     <AnchorPane prefHeight="439.0" prefWidth="731.0">
                         <children>
@@ -20,7 +18,6 @@
                            <Image url="@../images/library.PNG" />
                         </image>
                      </ImageView>
-                            <Button fx:id="skole" layoutX="555.0" layoutY="85.0" mnemonicParsing="false" onAction="#goSkole" prefHeight="57.0" prefWidth="115.0" text="Skole" AnchorPane.bottomAnchor="297.0" AnchorPane.rightAnchor="77.0" />
                      <ImageView fitHeight="113.0" fitWidth="124.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#backpack">
                         <image>
                            <Image url="@../images/backpack.png" />
@@ -31,6 +28,4 @@
                     </AnchorPane>
                 </children>
             </VBox>
-        </Scene>
-    </scene>
-</Stage>
+</AnchorPane>
