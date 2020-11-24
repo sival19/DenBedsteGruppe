@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.stage.Stage?>
 
 <Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
@@ -16,25 +17,26 @@
                 <children>
                     <AnchorPane prefHeight="415.0" prefWidth="740.0">
                         <children>
-                     <ImageView fitHeight="439.0" fitWidth="740.0">
-                        <image>
-                           <Image url="@../images/poorroom.PNG" />
-                        </image>
-                     </ImageView>
-                     <ImageView fitHeight="209.0" fitWidth="68.0" layoutX="115.0" layoutY="229.0">
-                        <image>
-                           <Image url="@../images/poorman.png" />
-                        </image>
-                     </ImageView>
-                     <ImageView fitHeight="190.0" fitWidth="116.0" layoutX="399.0" layoutY="238.0" onMouseClicked="#talkWoman">
-                        <image>
-                           <Image url="@../images/poorwoman.png" />
-                        </image>
-                     </ImageView>
-                     <Button layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild" opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild" />
+                            <ImageView fitHeight="439.0" fitWidth="740.0">
+                                <image>
+                                    <Image url="@../images/poorroom.PNG" />
+                                </image>
+                            </ImageView>
+                            <ImageView fitHeight="209.0" fitWidth="68.0" layoutX="115.0" layoutY="229.0">
+                                <image>
+                                    <Image url="@../images/poorman.png" />
+                                </image>
+                            </ImageView>
+                            <ImageView fitHeight="190.0" fitWidth="116.0" layoutX="399.0" layoutY="238.0" onMouseClicked="#talkWoman">
+                                <image>
+                                    <Image url="@../images/poorwoman.png" />
+                                </image>
+                            </ImageView>
+                            <Button fx:id="poorChild" layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild" opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild" />
+                     <Circle fx:id="apple" fill="DODGERBLUE" layoutX="651.0" layoutY="353.0" onDragDetected="#handleDragDetection" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
                         </children>
                     </AnchorPane>
-               <TextField />
+                    <TextField fx:id="text" />
                 </children>
             </VBox>
         </Scene>

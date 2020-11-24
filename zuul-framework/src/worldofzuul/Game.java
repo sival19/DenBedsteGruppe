@@ -15,6 +15,13 @@ public class Game implements ZuulGame
         player = new Player(0,0,"Palle");
 
     }
+
+    public void talkTo(){ //Få det her til at virke
+        System.out.println("Av");
+
+    }
+
+
     //see characters
     private void seeCharacters(){
         System.out.println(currentRoom.getCharacter());
