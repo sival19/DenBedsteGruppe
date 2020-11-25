@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -8,12 +7,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.stage.Stage?>
 
-
-            <VBox prefHeight="467.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
+<VBox prefHeight="467.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
                 <children>
-                    <AnchorPane prefHeight="415.0" prefWidth="740.0" >
+                    <AnchorPane prefHeight="415.0" prefWidth="740.0">
                         <children>
                             <ImageView fitHeight="439.0" fitWidth="740.0">
                                 <image>
@@ -32,9 +29,10 @@
                             </ImageView>
                             <Button fx:id="dreng" layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild" opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild" />
                      <Circle fx:id="apple" fill="DODGERBLUE" layoutX="651.0" layoutY="353.0" onDragDetected="#handleDragDetection" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button fx:id="station_poor" layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
+            <Button fx:id="school_poor" layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
                         </children>
                     </AnchorPane>
                     <TextField fx:id="text" />
                 </children>
             </VBox>
-
