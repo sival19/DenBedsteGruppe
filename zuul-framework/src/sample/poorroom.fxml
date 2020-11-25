@@ -10,12 +10,10 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
-    <scene>
-        <Scene>
-            <VBox prefHeight="467.0" prefWidth="740.0">
+
+            <VBox prefHeight="467.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
                 <children>
-                    <AnchorPane prefHeight="415.0" prefWidth="740.0">
+                    <AnchorPane prefHeight="415.0" prefWidth="740.0" >
                         <children>
                             <ImageView fitHeight="439.0" fitWidth="740.0">
                                 <image>
@@ -39,6 +37,4 @@
                     <TextField fx:id="text" />
                 </children>
             </VBox>
-        </Scene>
-    </scene>
-</Stage>
+

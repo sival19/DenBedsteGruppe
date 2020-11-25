@@ -107,14 +107,14 @@ public class Game implements ZuulGame {
 
     public void createRooms() {
         // Create rooms
-        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgård, apotek;
+        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgården, apotek;
 
         station = new Room("på stationen");
         skole = new Room("på skolen");
         bibliotek = new Room("på biblioteket");
         restaurant = new Room("på restauranten");
         fattiggård = new Room("på fattiggården");
-        rigmandsgård = new Room("på rigmandsgården");
+        rigmandsgården = new Room("på rigmandsgården");
         apotek = new Room("på apoteket");
 
         // Create room relationships
@@ -123,12 +123,12 @@ public class Game implements ZuulGame {
         station.setExit("fattiggården", fattiggård);
 
         skole.setExit("stationen", station);
-        skole.setExit("rigmandsgården" , rigmandsgård);
+        skole.setExit("rigmandsgården" , rigmandsgården);
         skole.setExit("biblioteket", bibliotek);
         skole.setExit("apoteket", apotek);
         skole.setExit("fattiggården", fattiggård);
 
-        bibliotek.setExit("rigmandsgården", rigmandsgård);
+        bibliotek.setExit("rigmandsgården", rigmandsgården);
         bibliotek.setExit("skolen", skole);
 
         restaurant.setExit("stationen", station);
@@ -136,12 +136,12 @@ public class Game implements ZuulGame {
         fattiggård.setExit("skolen", skole);
         fattiggård.setExit("stationen", station);
 
-        rigmandsgård.setExit("skolen", skole);
-        rigmandsgård.setExit("biblioteket", bibliotek);
-        rigmandsgård.setExit("apoteket" , apotek);
+        rigmandsgården.setExit("skolen", skole);
+        rigmandsgården.setExit("biblioteket", bibliotek);
+        rigmandsgården.setExit("apoteket" , apotek);
 
 
-        apotek.setExit("rigmandsgården" , rigmandsgård);
+        apotek.setExit("rigmandsgården" , rigmandsgården);
         apotek.setExit("stationen", station);
         apotek.setExit("skolen", skole);
 
@@ -161,7 +161,7 @@ public class Game implements ZuulGame {
         skole.addItem(medicin);
         restaurant.addItem(bog);
         fattiggård.addItem(bog);
-        rigmandsgård.addItem(bog);
+        rigmandsgården.addItem(bog);
 
         //create characters
         Character waiter, boy, richSnob, poorFuck;
@@ -175,7 +175,7 @@ public class Game implements ZuulGame {
 
         skole.addCharacter(boy);
         restaurant.addCharacter(waiter);
-        rigmandsgård.addCharacter(richSnob);
+        rigmandsgården.addCharacter(richSnob);
         fattiggård.addCharacter(poorFuck);
     }
 

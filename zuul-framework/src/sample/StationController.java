@@ -20,14 +20,18 @@ public class StationController {
     public ZuulGame getTest() {
         return test;
     }
-
-    @FXML
-    Button skole_tr;
-
     @FXML
     public void initialize () {
         test = new Game();
+
     }
+
+    @FXML
+    Button skole_tr, pharmacy_station, pooroom_station;
+
+
+
+
 
 
     @FXML
@@ -40,9 +44,30 @@ public class StationController {
 
         stage.setScene(new Scene(loader, 731, 439));
 
+    }
+
+    @FXML
+    public void goPharmacy() throws IOException{
+        test.processCommand(CommandWord.GO, "apoteket");
+        Parent loader = FXMLLoader.load(getClass().getResource("pharmacy.fxml"));
+        Stage stage = (Stage) pharmacy_station.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
+
+    }
+
+    @FXML
+    public void goPoorRoom() throws IOException{
+        test.processCommand(CommandWord.GO, "fattiggården");
+        Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
+        Stage stage = (Stage) pooroom_station.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
+
 
 
     }
+
 
     @FXML
     public void backpack(){

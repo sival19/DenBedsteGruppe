@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.stage.Stage?>
 
-
-
-            <AnchorPane prefHeight="376.0" prefWidth="706.0">
+<AnchorPane prefHeight="376.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
             <children>
                <ImageView fitHeight="379.0" fitWidth="708.0" layoutX="-2.0" layoutY="-1.0">
                   <image>
                      <Image url="@../images/pharmacy.PNG" />
                   </image>
                </ImageView>
+      <Button fx:id="richroom_pharmacy" layoutX="584.0" layoutY="68.0" mnemonicParsing="false" onAction="#goRichroom" text="Rigmandsgård" />
+      <Button fx:id="station_pharmacy" layoutX="54.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
+      <Button fx:id="school_pharmacy" layoutX="584.0" layoutY="315.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
             </children></AnchorPane>
-

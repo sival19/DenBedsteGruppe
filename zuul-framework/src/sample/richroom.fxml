@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
-    <scene>
-        <Scene>
-            <VBox>
-                <children>
-                    <AnchorPane prefHeight="436.0" prefWidth="739.0">
+<AnchorPane prefHeight="436.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
                   <children>
                      <ImageView fitHeight="452.0" fitWidth="740.0" layoutY="-1.0">
                         <image>
@@ -25,11 +17,8 @@
                            <Image url="@../images/richman.png" />
                         </image>
                      </ImageView>
-                     <Button layoutX="681.0" layoutY="221.0" mnemonicParsing="false" text="Gaden" />
+                     <Button fx:id="library_rich" layoutX="471.0" layoutY="396.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
+      <Button fx:id="school_rich" layoutX="96.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
+      <Button fx:id="pharmacy_rich" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" />
                   </children>
                     </AnchorPane>
-                </children>
-            </VBox>
-        </Scene>
-    </scene>
-</Stage>

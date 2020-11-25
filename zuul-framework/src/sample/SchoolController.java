@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class SchoolController extends StationController {
 
-    public Button bib_skole;
+    public Button bib_skole, pharmacy_school, richroom_school, pooroom_school, station_school;
 
     @FXML
     public void goLibrary() throws IOException {
@@ -24,7 +24,44 @@ public class SchoolController extends StationController {
 
         stage.setScene(new Scene(loader, 731, 439));
 
+    }
 
+    @FXML
+    public void goPharmacySchool() throws IOException{
+        getTest().processCommand(CommandWord.GO, "apoteket");
+        Parent loader = FXMLLoader.load(getClass().getResource("pharmacy.fxml"));
+        Stage stage = (Stage) pharmacy_school.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
+
+    }
+
+    @FXML
+    public void goRichRoomSchool() throws IOException{
+        getTest().processCommand(CommandWord.GO, "rigmandsgården");
+        Parent loader = FXMLLoader.load(getClass().getResource("richroom.fxml"));
+        Stage stage = (Stage) richroom_school.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
+
+    }
+    @FXML
+    public void goPoorroomSchool() throws IOException{
+        getTest().processCommand(CommandWord.GO, "fattiggården");
+        Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
+        Stage stage = (Stage) pooroom_school.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
+
+    }
+//made new station FXML, cant load new scene with stage :(
+    @FXML
+    public void goStationSchool() throws IOException{
+        getTest().processCommand(CommandWord.GO, "stationen");
+        Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
+        Stage stage = (Stage) station_school.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
 
     }
 }
