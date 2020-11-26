@@ -118,9 +118,13 @@ public class Game implements ZuulGame {
         apotek = new Room("på apoteket");
 
         // Create room relationships
+        //added all exits to station, to make it work in GUI
         station.setExit("apoteket", apotek);
         station.setExit("skolen", skole);
         station.setExit("fattiggården", fattiggård);
+        station.setExit("biblioteket", bibliotek);
+        station.setExit("rigmandsgården" , rigmandsgården);
+        station.setExit("stationen", station);
 
         skole.setExit("stationen", station);
         skole.setExit("rigmandsgården" , rigmandsgården);
