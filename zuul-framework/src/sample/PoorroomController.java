@@ -20,7 +20,10 @@ import java.io.IOException;
 
 public class PoorroomController extends StationController {
 
-    @FXML private Button poorChild, school_poor, station_poor;
+    @FXML private Button poorChild, school_poor, station_poor, dreng;
+    @FXML private Circle apple;
+
+
     @FXML
     public void goStation() throws IOException {
         getTest().processCommand(CommandWord.GO, "stationen");
@@ -43,33 +46,29 @@ public class PoorroomController extends StationController {
 
     }
 
-    @FXML private Circle apple;
+
 
     @FXML
     private TextField text;
     public void talkPoorChild() {
-        poorChild.getId();
+        dreng.getId();
         // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
         text.setText("Jeg er sulten"); // set text to getCharMessage return value
 
         // 
     }
 
-    // TEST
-     Character name = new Character("kaj","er sej");
+
 
     @FXML
     public void talkWoman(){
 
     }
 
-    public void handleDragDetection(MouseEvent mouseEvent) {
-        Dragboard db = apple.startDragAndDrop(TransferMode.ANY);
+    public void handleMouseClicked() {
+        getTest().processCommand(CommandWord.PICKUP, "æble");
+        apple.setVisible(false);
+        getTest().seeInventory();
 
-        ClipboardContent content = new ClipboardContent();
-        content.putString("Does not matter");
-        db.setContent(content);
-
-        mouseEvent.consume();
     }
 }

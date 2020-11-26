@@ -28,7 +28,7 @@
                                 </image>
                             </ImageView>
                             <Button fx:id="dreng" layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild" opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild" />
-                     <Circle fx:id="apple" fill="DODGERBLUE" layoutX="651.0" layoutY="353.0" onDragDetected="#handleDragDetection" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="apple" fill="DODGERBLUE" layoutX="651.0" layoutY="353.0" onMouseClicked="#handleMouseClicked" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
             <Button fx:id="station_poor" layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
             <Button fx:id="school_poor" layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
                         </children>
