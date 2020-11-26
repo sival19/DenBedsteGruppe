@@ -11,13 +11,15 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 
-    private static final String UI_FILE = "library.fxml";
+    private static final String UI_FILE = "station.fxml";
 
     @Override
     public void start (Stage stage_dummy) throws Exception {
         Stage stage = FXMLLoader.load(getClass().getResource(UI_FILE));
         stage.show();
     }
+
+
     public static void main (String[] args) {
         launch(args);
     }

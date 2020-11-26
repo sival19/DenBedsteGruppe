@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="376.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SchoolController">
+            <children>
+               <ImageView fitHeight="409.0" fitWidth="728.0" layoutX="-2.0">
+                  <image>
+                     <Image url="@../images/school.PNG" />
+                  </image>
+               </ImageView>
+      <Button fx:id="bib_skole" layoutX="654.0" layoutY="192.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
+      <Button fx:id="richroom_school" layoutX="571.0" layoutY="14.0" mnemonicParsing="false" onAction="#goRichRoomSchool" text="Rigmandsgård" />
+      <Button fx:id="pharmacy_school" layoutX="149.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacySchool" text="Apotek" />
+      <Button fx:id="station_school" layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#goStationSchool" text="Station" />
+      <Button fx:id="pooroom_school" layoutX="348.0" layoutY="370.0" mnemonicParsing="false" onAction="#goPoorroomSchool" text="Fattigrum" />
+            </children></AnchorPane>

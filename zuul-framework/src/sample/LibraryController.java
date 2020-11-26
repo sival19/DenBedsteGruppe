@@ -1,61 +1,41 @@
 package sample;
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
 import worldofzuul.*;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
 
-public class LibraryController {
+public class LibraryController extends StationController {
 
 
-
-    
+    @FXML private Button school_lib, richroom_lib;
 
     @FXML
-    Button skole;
+    public void goSchool() throws IOException{
+        getTest().processCommand(CommandWord.GO, "skolen");
+        Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
+        Stage stage = (Stage) school_lib.getScene().getWindow();
 
-    private ZuulGame test;
-
-    public ZuulGame getTest() {
-        return test;
+        stage.setScene(new Scene(loader, 731, 439));
     }
 
     @FXML
-    public void initialize () {
+    public void goRichroom() throws IOException {
 
-
-        test = new Game();
-
-    }
-
-
-
-    @FXML
-    public void goSkole() throws IOException {
-
-        //use command go and go to skolen
-        test.processCommand(CommandWord.GO, "skolen");
-        Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
-        Stage stage = (Stage) skole.getScene().getWindow();
+        getTest().processCommand(CommandWord.GO, "rigmandsgården");
+        Parent loader = FXMLLoader.load(getClass().getResource("richroom.fxml"));
+        Stage stage = (Stage) richroom_lib.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
 
-
-
     }
 
-    @FXML
-    public void backpack(){
-        test.seeInventory();
-    }
 
     }
