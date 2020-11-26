@@ -19,7 +19,7 @@ public class PoorroomController {
     public void talkPoorChild() {
         dreng.getId();
         // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
-        text.setText("Jeg er sulten"); // set text to getCharMessage return value
+        text.setText("Jeg har ikke spist i flere dage, har du måske noget mad jeg kan få?"); // set text to getCharMessage return value
 
         //
     }

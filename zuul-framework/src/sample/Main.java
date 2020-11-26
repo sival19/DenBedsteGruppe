@@ -11,7 +11,7 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 
-    private static final String UI_FILE = "station.fxml";
+    private static final String UI_FILE = "poorroom.fxml";
 
     @Override
     public void start (Stage stage_dummy) throws Exception {

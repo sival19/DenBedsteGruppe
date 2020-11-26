@@ -33,6 +33,7 @@
                                 </image>
                             </ImageView>
                             <Button fx:id="dreng" layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild" onDragDropped="#handleDragDropped" opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild" />
+                     <Button layoutX="415.0" layoutY="321.0" mnemonicParsing="false" onAction="#talkWoman" opacity="0.0" prefHeight="33.0" prefWidth="87.0" text="poorWoman" />
                      <Circle fx:id="apple" fill="DODGERBLUE" layoutX="651.0" layoutY="353.0" onDragDetected="#handleDragDetection" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
                         </children>
                     </AnchorPane>
