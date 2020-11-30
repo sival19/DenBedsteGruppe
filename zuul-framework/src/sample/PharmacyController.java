@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import worldofzuul.Command;
 import worldofzuul.CommandWord;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class PharmacyController extends StationController {
     @FXML Button richroom_pharmacy, station_pharmacy, school_pharmacy;
 
     public void goRichroom() throws IOException{
-        getTest().processCommand(CommandWord.GO, "rigmandsgården");
+        getTest().goRoom(new Command(CommandWord.GO, "rigmandsgården"));
         Parent loader = FXMLLoader.load(getClass().getResource("richroom.fxml"));
         Stage stage = (Stage) richroom_pharmacy.getScene().getWindow();
 
@@ -23,7 +24,7 @@ public class PharmacyController extends StationController {
     }
 
     public void goSchool() throws IOException{
-        getTest().processCommand(CommandWord.GO, "skolen");
+        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
         Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
         Stage stage = (Stage) school_pharmacy.getScene().getWindow();
 
@@ -33,7 +34,7 @@ public class PharmacyController extends StationController {
 
     public void goStation() throws IOException {
 
-        getTest().processCommand(CommandWord.GO, "stationen");
+        getTest().goRoom(new Command(CommandWord.GO, "stationen"));
         Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
         Stage stage = (Stage) station_pharmacy.getScene().getWindow();
 

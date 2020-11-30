@@ -20,5 +20,10 @@
                      <Button fx:id="library_rich" layoutX="471.0" layoutY="396.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
       <Button fx:id="school_rich" layoutX="96.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
       <Button fx:id="pharmacy_rich" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" />
+      <ImageView fx:id="backpack" fitHeight="104.0" fitWidth="93.0" layoutX="171.0" layoutY="65.0" onMouseClicked="#seeInventory">
+         <image>
+            <Image url="@../images/backpack.png" />
+         </image>
+      </ImageView>
                   </children>
                     </AnchorPane>

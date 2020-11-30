@@ -76,7 +76,7 @@ public class Game implements ZuulGame {
     }
 
     //make a method to picup
-    private void pickUp(Command c) {
+    public void pickUp(Command c) {
         if (!c.hasSecondWord()) {
             System.out.println("hvad vil du samle op??");
             return;
@@ -122,9 +122,7 @@ public class Game implements ZuulGame {
         station.setExit("apoteket", apotek);
         station.setExit("skolen", skole);
         station.setExit("fattiggården", fattiggård);
-        station.setExit("biblioteket", bibliotek);
-        station.setExit("rigmandsgården" , rigmandsgården);
-        station.setExit("stationen", station);
+
 
         skole.setExit("stationen", station);
         skole.setExit("rigmandsgården" , rigmandsgården);
@@ -164,7 +162,7 @@ public class Game implements ZuulGame {
         bibliotek.addItem(penge);
         skole.addItem(medicin);
         restaurant.addItem(bog);
-        fattiggård.addItem(bog);
+        fattiggård.addItem(æble);
         rigmandsgården.addItem(bog);
 
         //create characters

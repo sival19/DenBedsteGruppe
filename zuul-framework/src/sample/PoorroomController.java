@@ -15,6 +15,7 @@ import javafx.scene.input.TransferMode;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import worldofzuul.Character;
+import worldofzuul.Command;
 import worldofzuul.CommandWord;
 
 
@@ -29,7 +30,7 @@ public class PoorroomController extends StationController {
 
     @FXML
     public void goStation() throws IOException {
-        getTest().processCommand(CommandWord.GO, "stationen");
+        getTest().goRoom(new Command(CommandWord.GO, "stationen"));
         Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
         Stage stage = (Stage) station_poor.getScene().getWindow();
 
@@ -41,7 +42,7 @@ public class PoorroomController extends StationController {
     public void goSchool() throws IOException {
 
         //use command go and go to skolen
-        getTest().processCommand(CommandWord.GO, "skolen");
+        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
         Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
         Stage stage = (Stage) school_poor.getScene().getWindow();
 
@@ -67,10 +68,16 @@ public class PoorroomController extends StationController {
     @FXML
     public void talkWoman(){
 
+
+    }
+
+    @FXML
+    public void seeInventory(){
+        getTest().seeInventory();
     }
 
     public void pickApple() {
-        getTest().processCommand(CommandWord.PICKUP, "æble");
+        getTest().pickUp(new Command(CommandWord.PICKUP , "æble"));
         apple.setVisible(false);
         appleInv.setVisible(true);
         getTest().seeInventory();

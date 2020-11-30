@@ -43,6 +43,11 @@
                   <Image url="@../images/apple.png" />
                </image>
             </ImageView>
+            <ImageView fx:id="backppack" fitHeight="93.0" fitWidth="100.0" layoutX="232.0" layoutY="92.0" onMouseClicked="#seeInventory">
+               <image>
+                  <Image url="@../images/backpack.png" />
+               </image>
+            </ImageView>
                         </children>
                     </AnchorPane>
                     <TextField fx:id="text" />
