@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.prism.Image;
 import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
@@ -20,8 +22,8 @@ import java.io.IOException;
 
 public class PoorroomController extends StationController {
 
-    @FXML private Button poorChild, school_poor, station_poor, dreng;
-    @FXML private Circle apple;
+    @FXML private Button poorChild, school_poor, station_poor, dreng, poorWoman;
+    @FXML private ImageView apple;
 
 
     @FXML
@@ -47,7 +49,6 @@ public class PoorroomController extends StationController {
     }
 
 
-
     @FXML
     private TextField text;
     public void talkPoorChild() {
@@ -58,11 +59,11 @@ public class PoorroomController extends StationController {
         // 
     }
 
-
-
     @FXML
-    public void talkWoman(){
-
+    public void talkPoorWoman(){
+        poorWoman.getId();
+        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
+        text.setText("Åh hvor jeg fryser"); // set text to getCharMessage return value
     }
 
     public void handleMouseClicked() {
