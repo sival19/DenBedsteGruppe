@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.prism.Image;
 import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
@@ -21,7 +23,7 @@ import java.io.IOException;
 public class PoorroomController extends StationController {
 
     @FXML private Button poorChild, school_poor, station_poor, dreng;
-    @FXML private Circle apple;
+    @FXML private ImageView apple;
 
 
     @FXML
