@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
@@ -16,12 +17,14 @@ import javafx.stage.Stage;
 import worldofzuul.Character;
 import worldofzuul.CommandWord;
 
+
 import java.io.IOException;
 
 public class PoorroomController extends StationController {
 
     @FXML private Button poorChild, school_poor, station_poor, dreng;
-    @FXML private Circle apple;
+    @FXML private ImageView apple, appleInv;
+
 
 
     @FXML
@@ -41,6 +44,7 @@ public class PoorroomController extends StationController {
         getTest().processCommand(CommandWord.GO, "skolen");
         Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
         Stage stage = (Stage) school_poor.getScene().getWindow();
+
 
         stage.setScene(new Scene(loader, 731, 439));
 
@@ -65,10 +69,20 @@ public class PoorroomController extends StationController {
 
     }
 
-    public void handleMouseClicked() {
+    public void pickApple() {
         getTest().processCommand(CommandWord.PICKUP, "æble");
         apple.setVisible(false);
+        appleInv.setVisible(true);
         getTest().seeInventory();
+
+    }
+
+    public void removeApple() {
+
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
+        appleInv.setVisible(false);
+        apple.setVisible(true);
+
 
     }
 }
