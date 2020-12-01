@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import worldofzuul.Command;
 import worldofzuul.CommandWord;
@@ -15,6 +16,8 @@ public class RichroomController extends StationController {
 
     @FXML
     Button library_rich, school_rich, pharmacy_rich;
+    @FXML
+    ImageView money, moneyInv;
 
     @FXML
     public void talkRichman() {
@@ -33,7 +36,6 @@ public class RichroomController extends StationController {
         Stage stage = (Stage) pharmacy_rich.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
-
     }
 
     @FXML
@@ -43,7 +45,6 @@ public class RichroomController extends StationController {
         Stage stage = (Stage) school_rich.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
-
     }
 
     @FXML
@@ -53,7 +54,19 @@ public class RichroomController extends StationController {
         Stage stage = (Stage) library_rich.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
+    }
 
+    public void pickMoney() {
+        getTest().pickUp(new Command(CommandWord.PICKUP , "penge"));
+        money.setVisible(false);
+        moneyInv.setVisible(true);
+        getTest().seeInventory();
+    }
+
+    public void removeMoney() {
+        getTest().processCommand(CommandWord.REMOVEITEMS, "penge");
+        moneyInv.setVisible(false);
+        money.setVisible(true);
     }
 
 

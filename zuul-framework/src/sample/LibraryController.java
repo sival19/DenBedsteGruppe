@@ -2,6 +2,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.image.ImageView;
 import worldofzuul.*;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -16,6 +17,8 @@ public class LibraryController extends StationController {
 
 
     @FXML private Button school_lib, richroom_lib;
+    @FXML
+    ImageView book, bookInv;
 
     @FXML
     public void goSchool() throws IOException{
@@ -35,6 +38,19 @@ public class LibraryController extends StationController {
 
         stage.setScene(new Scene(loader, 731, 439));
 
+    }
+
+    public void pickBook() {
+        getTest().pickUp(new Command(CommandWord.PICKUP , "bog"));
+        book.setVisible(false);
+        bookInv.setVisible(true);
+        getTest().seeInventory();
+    }
+
+    public void removeBook() {
+        getTest().processCommand(CommandWord.REMOVEITEMS, "bog");
+        bookInv.setVisible(false);
+        book.setVisible(true);
     }
 
 
