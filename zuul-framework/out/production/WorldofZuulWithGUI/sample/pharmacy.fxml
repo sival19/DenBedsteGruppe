@@ -12,6 +12,12 @@
                      <Image url="@../images/pharmacy.PNG" />
                   </image>
                </ImageView>
+                <ImageView fx:id="medicine" fitHeight="102.0" fitWidth="123.0" layoutX="562.0" layoutY="310.0"
+                           onMouseClicked="#handleMouseClicked">
+                    <image>
+                        <Image url="@../images/medicine.png"/>
+                    </image>
+                </ImageView>
       <Button fx:id="richroom_pharmacy" layoutX="584.0" layoutY="68.0" mnemonicParsing="false" onAction="#goRichroom" text="Rigmandsgård" />
       <Button fx:id="station_pharmacy" layoutX="54.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
       <Button fx:id="school_pharmacy" layoutX="584.0" layoutY="315.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
