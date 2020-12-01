@@ -27,7 +27,7 @@ public class Main extends Application {
         return this.scenes.get(roomName);
     }
 
-    private static final String UI_FILE = "station.fxml";
+    private static final String UI_FILE = "startPage.fxml";
 
     @Override
     public void start (Stage stage_dummy) throws Exception {
