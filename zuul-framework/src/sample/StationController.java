@@ -17,8 +17,10 @@ public class StationController extends Main {
 
 
 
+    //forsøg på at lave en genbrugelig skifte rum metode!
+    //tager String som room name, String til fxmlfil og Button til knap
     public void changeRooms(String roomName, String fxmlFile, Button button) throws IOException{
-        getTest().processCommand(CommandWord.GO, roomName);
+        getTest().goRoom(new Command(CommandWord.GO, roomName));
         Parent loader = FXMLLoader.load(getClass().getResource(fxmlFile));
         Stage stage = (Stage) button.getScene().getWindow();
 
@@ -34,7 +36,7 @@ public class StationController extends Main {
     Button skole_tr, pharmacy_station, pooroom_station;
 
 
-//forsøg på at skifte rum!!!
+//forsøg på at skifte rum med den tidligere metode...meeeen virker ikke!!!
     @FXML
     public void goSkolen() throws IOException {
 
@@ -44,6 +46,7 @@ public class StationController extends Main {
 
     }
 
+    //den her metode virker til at skifte rum med!
     @FXML
     public void goPharmacy() throws IOException{
         getTest().goRoom(new Command(CommandWord.GO, "apoteket"));
