@@ -169,7 +169,7 @@ public class Game implements ZuulGame {
         Character waiter, boy, richSnob, poorFuck;
 
         waiter = new Character("tjener", "bestikslav");
-        boy = new Character("dreng", "lille stakel");
+        boy = new Character("dreng", "lille stakkel");
         richSnob = new Character("onkel Joachim", "lidt for rig");
         poorFuck = new Character("Total hjemløs", "så syg...");
 
