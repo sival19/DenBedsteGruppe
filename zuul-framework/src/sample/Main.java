@@ -20,7 +20,7 @@ public class Main extends Application {
         return test;
     }
 
-
+//hashmap for rooms
     private HashMap<String, Parent> scenes = new HashMap<>();
 
 
@@ -38,6 +38,7 @@ public class Main extends Application {
         Parent poorroom = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
         Parent station = FXMLLoader.load(getClass().getResource("station.fxml"));
 
+        //når man bruger getScene() andre steder istedet for FXMLLoader..... burde det virke meeeen, det er javaFX, så nej :(
         scenes.put("richroom", richroom);
         scenes.put("poorroom", poorroom);
         scenes.put("station", station);

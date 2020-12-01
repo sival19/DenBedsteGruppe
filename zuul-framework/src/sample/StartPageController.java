@@ -19,6 +19,9 @@ public class StartPageController extends Main {
     @FXML
     public void startGame() throws IOException {
 
+
+        //den som er udkommenteret gidder ikke at funge, kig i Main>>start og getScene methods
+
         Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
         //Parent loader = getScene("station");
         Stage stage = (Stage) start.getScene().getWindow();
