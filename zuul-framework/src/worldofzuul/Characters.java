@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Characters extends InteractiveObjects {
 
     //Constructor
-    public Characters(String name, String info) {
-        super (name, info);
+    public Characters(String name, String info, int itemNeed) {
+        super (name, info, itemNeed);
     }
 
     @Override
@@ -15,10 +15,9 @@ public class Characters extends InteractiveObjects {
     }
 
 
-
-
-
-
     int Tasks[];
     String InteractWith;
 }
+
+
+
