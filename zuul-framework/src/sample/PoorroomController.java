@@ -23,7 +23,7 @@ import java.io.IOException;
 
 public class PoorroomController extends StationController {
 
-    @FXML private Button poorChild, school_poor, station_poor, dreng;
+    @FXML private Button poorChild, school_poor, station_poor, dreng, poorWoman;
     @FXML private ImageView apple, appleInv;
 
 
@@ -51,8 +51,6 @@ public class PoorroomController extends StationController {
 
     }
 
-
-
     @FXML
     private TextField text;
     public void talkPoorChild() {
@@ -60,16 +58,15 @@ public class PoorroomController extends StationController {
         // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
         text.setText("Jeg er sulten"); // set text to getCharMessage return value
 
-        // 
     }
-
-
 
     @FXML
-    public void talkWoman(){
-
-
+    public void talkPoorWoman(){
+        poorWoman.getId();
+        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
+        text.setText("Åh hvor jeg fryser"); // set text to getCharMessage return value
     }
+
 
     public void pickApple() {
         getTest().pickUp(new Command(CommandWord.PICKUP , "æble"));

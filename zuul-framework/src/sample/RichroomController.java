@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import worldofzuul.Command;
 import worldofzuul.CommandWord;
@@ -14,12 +15,16 @@ import java.io.IOException;
 public class RichroomController extends StationController {
 
     @FXML
-    Button library_rich, school_rich, pharmacy_rich;
+    Button library_rich, school_rich, pharmacy_rich, richman;
 
     @FXML
-    public void talkRichman() {
-
+    private TextField text;
+    public void talkRichman(){
+        richman.getId();
+        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
+        text.setText("Det er fedt at være rig, men også et ensomt liv. Det ville være rart med en ven."); // set text to getCharMessage return value
     }
+
 
     @FXML
     public void seeInventory(){
