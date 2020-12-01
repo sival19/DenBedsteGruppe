@@ -158,13 +158,16 @@ public class Game implements ZuulGame {
         bog = new Item("bog", "den er tung");
 
         // Add items to rooms
-        station.addItem(æble);
+        apotek.addItem(medicin);
+        fattiggård.addItem(æble);
+        rigmandsgården.addItem(penge);
+        bibliotek.addItem(bog);
+
+        /*station.addItem(æble);
         bibliotek.addItem(penge);
         skole.addItem(medicin);
         restaurant.addItem(bog);
-        apotek.addItem(medicin);
-        fattiggård.addItem(æble);
-        rigmandsgården.addItem(bog);
+        rigmandsgården.addItem(bog);*/
 
         //create characters
         Character waiter, boy, richSnob, poorFuck;
