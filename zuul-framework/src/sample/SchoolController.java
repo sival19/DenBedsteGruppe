@@ -59,7 +59,7 @@ public class SchoolController extends StationController {
     @FXML
     public void goStationSchool() throws IOException{
         getTest().goRoom(new Command(CommandWord.GO, "stationen"));
-        Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
         Stage stage = (Stage) station_school.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));

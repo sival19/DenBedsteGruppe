@@ -19,7 +19,7 @@ public class StartPageController extends StationController {
     @FXML
     public void startGame() throws IOException {
 
-        Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
         Stage stage = (Stage) start.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));

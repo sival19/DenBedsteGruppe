@@ -31,7 +31,7 @@ public class PoorroomController extends StationController {
     @FXML
     public void goStation() throws IOException {
         getTest().goRoom(new Command(CommandWord.GO, "stationen"));
-        Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
         Stage stage = (Stage) station_poor.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
