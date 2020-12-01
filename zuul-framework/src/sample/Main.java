@@ -31,11 +31,23 @@ public class Main extends Application {
 
     @Override
     public void start (Stage stage_dummy) throws Exception {
-        Stage stage = FXMLLoader.load(getClass().getResource(UI_FILE));
+
         scenes = new HashMap<>();
+
         Parent richroom = FXMLLoader.load(getClass().getResource("richroom.fxml"));
+        Parent poorroom = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
 
         scenes.put("richroom", richroom);
+        scenes.put("poorroom", poorroom);
+
+
+
+
+        Stage stage = FXMLLoader.load(getClass().getResource(UI_FILE));
+
+
+
+
         stage.show();
     }
 
