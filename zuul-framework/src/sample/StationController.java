@@ -17,25 +17,30 @@ public class StationController extends Main {
 
 
 
+    public void changeRooms(String roomName, String fxmlFile, Button button) throws IOException{
+        getTest().processCommand(CommandWord.GO, roomName);
+        Parent loader = FXMLLoader.load(getClass().getResource(fxmlFile));
+        Stage stage = (Stage) button.getScene().getWindow();
+
+        stage.setScene(new Scene(loader, 731, 439));
+
+    }
+
+
+
 
 
     @FXML
     Button skole_tr, pharmacy_station, pooroom_station;
 
 
-
-
-
-
+//forsøg på at skifte rum!!!
     @FXML
     public void goSkolen() throws IOException {
 
         //use command go and go to skolen
-        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
-        Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
-        Stage stage = (Stage) skole_tr.getScene().getWindow();
-
-        stage.setScene(new Scene(loader, 731, 439));
+        //skolen school.fxml skole_tr
+        changeRooms("skolen", "school.fxm", skole_tr);
 
     }
 
