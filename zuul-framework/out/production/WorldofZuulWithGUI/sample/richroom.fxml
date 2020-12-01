@@ -6,7 +6,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<<<<<<< HEAD
 <AnchorPane prefHeight="468.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
+=======
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="436.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
+>>>>>>> SV
                   <children>
                      <ImageView fitHeight="442.0" fitWidth="740.0" layoutY="-1.0">
                         <image>
@@ -18,8 +23,25 @@
                            <Image url="@../images/richman.png" />
                         </image>
                      </ImageView>
+<<<<<<< HEAD
                       <Button fx:id="richman" layoutX="420.0" layoutY="278.0" mnemonicParsing="false" onAction="#talkRichman" opacity="0.0" prefHeight="62.0" prefWidth="95.0" text="rigmand" />
                      <Button fx:id="library_rich" layoutX="468.0" layoutY="396.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
+=======
+                      <VBox layoutX="14.0" layoutY="378.0" prefHeight="101.0" prefWidth="104.0">
+                          <children>
+                              <ImageView fx:id="moneyInv" fitHeight="87.0" fitWidth="104.0" onMouseClicked="#removeMoney" visible="false">
+                                  <image>
+                                      <Image url="@../images/money.png" />
+                                  </image>
+                              </ImageView>
+                          </children></VBox>
+                      <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="56.0" layoutY="179.0" onMouseClicked="#pickMoney">
+                          <image>
+                              <Image url="@../images/money.png" />
+                          </image>
+                      </ImageView>
+                     <Button fx:id="library_rich" layoutX="471.0" layoutY="396.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
+>>>>>>> SV
       <Button fx:id="school_rich" layoutX="96.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
       <Button fx:id="pharmacy_rich" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" />
       <ImageView fx:id="backpack" fitHeight="104.0" fitWidth="93.0" layoutX="171.0" layoutY="65.0" onMouseClicked="#seeInventory">
