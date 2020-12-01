@@ -21,7 +21,8 @@ public class Main extends Application {
     }
 
 
-    private HashMap<String, Parent> scenes;
+    private HashMap<String, Parent> scenes = new HashMap<>();
+
 
     public Parent getScene(String roomName) {
         return this.scenes.get(roomName);
@@ -32,13 +33,16 @@ public class Main extends Application {
     @Override
     public void start (Stage stage_dummy) throws Exception {
 
-        scenes = new HashMap<>();
 
         Parent richroom = FXMLLoader.load(getClass().getResource("richroom.fxml"));
         Parent poorroom = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
+        Parent station = FXMLLoader.load(getClass().getResource("station.fxml"));
 
         scenes.put("richroom", richroom);
         scenes.put("poorroom", poorroom);
+        scenes.put("station", station);
+
+
 
 
 

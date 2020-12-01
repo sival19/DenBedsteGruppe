@@ -11,7 +11,7 @@ import worldofzuul.CommandWord;
 
 import java.io.IOException;
 
-public class StartPageController extends StationController {
+public class StartPageController extends Main {
 
     @FXML
     Button start;
@@ -20,6 +20,7 @@ public class StartPageController extends StationController {
     public void startGame() throws IOException {
 
         Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
+        //Parent loader = getScene("station");
         Stage stage = (Stage) start.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
