@@ -4,15 +4,33 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="376.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
+
+        <AnchorPane prefHeight="376.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
             <children>
-               <ImageView fitHeight="379.0" fitWidth="708.0" layoutX="-2.0" layoutY="-1.0">
-                  <image>
-                     <Image url="@../images/pharmacy.PNG" />
-                  </image>
-               </ImageView>
-      <Button fx:id="richroom_pharmacy" layoutX="584.0" layoutY="68.0" mnemonicParsing="false" onAction="#goRichroom" text="Rigmandsgård" />
-      <Button fx:id="station_pharmacy" layoutX="54.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
-      <Button fx:id="school_pharmacy" layoutX="584.0" layoutY="315.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
-            </children></AnchorPane>
+                <ImageView fitHeight="379.0" fitWidth="708.0" layoutX="-2.0" layoutY="-1.0">
+                    <image>
+                <Image url="@../images/pharmacy.PNG"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="medicineInv" fitHeight="77.0" fitWidth="88.0" onMouseClicked="#removeMedicine" visible="false">
+            <image>
+                <Image url="@../images/medicine.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="medicine" fitHeight="87.0" fitWidth="104.0" layoutX="597.0" layoutY="323.0"
+                   onMouseClicked="#pickMedicine">
+            <image>
+                <Image url="@../images/medicine.png"/>
+            </image>
+        </ImageView>
+
+        <Button fx:id="richroom_pharmacy" layoutX="584.0" layoutY="68.0" mnemonicParsing="false" onAction="#goRichroom"
+                text="Rigmandsgård"/>
+        <Button fx:id="station_pharmacy" layoutX="54.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation"
+                text="Station"/>
+        <Button fx:id="school_pharmacy" layoutX="584.0" layoutY="315.0" mnemonicParsing="false" onAction="#goSchool"
+                text="Skole"/>
+    </children>
+</AnchorPane>

@@ -71,25 +71,16 @@ public class PoorroomController extends StationController {
 
     }
 
-    @FXML
-    public void seeInventory(){
-        getTest().seeInventory();
-    }
-
     public void pickApple() {
         getTest().pickUp(new Command(CommandWord.PICKUP , "æble"));
         apple.setVisible(false);
         appleInv.setVisible(true);
         getTest().seeInventory();
-
     }
 
     public void removeApple() {
-
         getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
         appleInv.setVisible(false);
         apple.setVisible(true);
-
-
     }
 }

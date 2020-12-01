@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import worldofzuul.Command;
 import worldofzuul.CommandWord;
@@ -14,6 +16,8 @@ import java.io.IOException;
 public class PharmacyController extends StationController {
 
     @FXML Button richroom_pharmacy, station_pharmacy, school_pharmacy;
+    @FXML
+    ImageView medicine, medicineInv;
 
     public void goRichroom() throws IOException{
         getTest().goRoom(new Command(CommandWord.GO, "rigmandsgården"));
@@ -41,5 +45,18 @@ public class PharmacyController extends StationController {
 
         stage.setScene(new Scene(loader, 731, 439));
 
+    }
+
+    public void pickMedicine() {
+        getTest().pickUp(new Command(CommandWord.PICKUP , "medicin"));
+        medicine.setVisible(false);
+        medicineInv.setVisible(true);
+        getTest().seeInventory();
+    }
+
+    public void removeMedicine() {
+        getTest().processCommand(CommandWord.REMOVEITEMS, "medicin");
+        medicineInv.setVisible(false);
+        medicine.setVisible(true);
     }
 }
