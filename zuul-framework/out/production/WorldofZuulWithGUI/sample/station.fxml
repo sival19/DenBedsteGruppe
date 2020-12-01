@@ -7,10 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StationController">
-    <scene>
-        <Scene>
-            <AnchorPane prefHeight="404.0" prefWidth="710.0">
+
+            <AnchorPane prefHeight="404.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StationController">
             <children>
                <ImageView fitHeight="404.0" fitWidth="715.0" layoutX="-1.0">
                   <image>
@@ -21,6 +19,4 @@
                <Button fx:id="pharmacy_station" layoutX="331.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" />
                <Button fx:id="pooroom_station" layoutX="331.0" layoutY="351.0" mnemonicParsing="false" onAction="#goPoorRoom" text="Fattiggården" />
             </children></AnchorPane>
-        </Scene>
-    </scene>
-</Stage>
+

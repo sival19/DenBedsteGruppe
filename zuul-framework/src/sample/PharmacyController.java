@@ -40,7 +40,7 @@ public class PharmacyController extends StationController {
     public void goStation() throws IOException {
 
         getTest().goRoom(new Command(CommandWord.GO, "stationen"));
-        Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
         Stage stage = (Stage) station_pharmacy.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
