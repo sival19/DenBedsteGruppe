@@ -17,8 +17,8 @@ public class PharmacyController extends StationController {
 
     public void goRichroom() throws IOException{
         getTest().goRoom(new Command(CommandWord.GO, "rigmandsgården"));
-        //Parent loader = FXMLLoader.load(getClass().getResource("richroom.fxml"));
-        Parent loader = getScene("richroom");
+        Parent loader = FXMLLoader.load(getClass().getResource("richroom.fxml"));
+        //Parent loader = getScene("richroom");
         Stage stage = (Stage) richroom_pharmacy.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
