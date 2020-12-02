@@ -5,12 +5,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
-
 <?import javafx.scene.layout.VBox?>
+
 <AnchorPane prefHeight="436.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
                   <children>
-                     <ImageView fitHeight="442.0" fitWidth="740.0" layoutY="-1.0">
+      <ImageView fx:id="backpack" fitHeight="104.0" fitWidth="93.0" layoutX="171.0" layoutY="65.0" onMouseClicked="#seeInventory">
+         <image>
+            <Image url="@../images/backpack.png" />
+         </image>
+      </ImageView>
+                     <ImageView fitHeight="452.0" fitWidth="740.0" layoutY="-1.0">
                         <image>
                            <Image url="@../images/richroom.PNG" />
                         </image>
@@ -30,7 +34,7 @@
                                   </image>
                               </ImageView>
                           </children></VBox>
-                      <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="56.0" layoutY="179.0" onMouseClicked="#pickMoney">
+                      <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="574.0" layoutY="342.0" onMouseClicked="#pickMoney">
                           <image>
                               <Image url="@../images/money.png" />
                           </image>
