@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
-import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import worldofzuul.Command;
@@ -16,18 +15,9 @@ import java.io.IOException;
 
 public class PharmacyController extends StationController {
 
-    @FXML Button richroom_pharmacy, station_pharmacy, school_pharmacy, doctor;
+    @FXML Button richroom_pharmacy, station_pharmacy, school_pharmacy;
     @FXML
     ImageView medicine, medicineInv;
-
-    @FXML
-    private TextField text;
-    public void talkDoctor() {
-        doctor.getId();
-        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
-        text.setText("Er der noget jeg kan hjælpe med?"); // set text to getCharMessage return value
-
-    }
 
     public void goRichroom() throws IOException{
         getTest().goRoom(new Command(CommandWord.GO, "rigmandsgården"));

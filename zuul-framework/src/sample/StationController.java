@@ -60,10 +60,10 @@ public class StationController extends Main {
     @FXML
     public void goPoorRoom() throws IOException{
         getTest().goRoom(new Command(CommandWord.GO, "fattiggården"));
-        Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
-        Stage stage = (Stage) pooroom_station.getScene().getWindow();
-
-        stage.setScene(new Scene(loader, 731, 439));
+        //Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
+        Scene scene = pooroom_station.getScene();
+        Parent root = scenes.get("poorroom");
+        scene.setRoot(root);
 
 
 

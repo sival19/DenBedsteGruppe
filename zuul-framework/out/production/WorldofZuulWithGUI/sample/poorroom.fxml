@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="470.0" prefWidth="750" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
+<VBox prefHeight="522.0" prefWidth="731" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
                 <children>
-                    <AnchorPane prefHeight="470.0" prefWidth="750.0">
+                    <AnchorPane prefHeight="498.0" prefWidth="731.0">
                         <children>
                             <ImageView fitHeight="428.0" fitWidth="731">
                                 <image>

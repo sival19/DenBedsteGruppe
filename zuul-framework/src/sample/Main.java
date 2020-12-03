@@ -21,7 +21,7 @@ public class Main extends Application {
     }
 
 //hashmap for rooms
-    private HashMap<String, Parent> scenes = new HashMap<>();
+    public static HashMap<String, Parent> scenes = new HashMap<>();
 
 
     public Parent getScene(String roomName) {

@@ -21,7 +21,7 @@ import worldofzuul.CommandWord;
 
 import java.io.IOException;
 
-public class PoorroomController extends StationController {
+public class PoorroomController extends Main {
 
     @FXML private Button poorChild, school_poor, station_poor, dreng, poorWoman;
     @FXML private ImageView apple, appleInv;
@@ -31,10 +31,10 @@ public class PoorroomController extends StationController {
     @FXML
     public void goStation() throws IOException {
         getTest().goRoom(new Command(CommandWord.GO, "stationen"));
-        Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
-        Stage stage = (Stage) station_poor.getScene().getWindow();
-
-        stage.setScene(new Scene(loader, 731, 439));
+        //Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
+        Scene scene = school_poor.getScene();
+        Parent root = scenes.get("station");
+        scene.setRoot(root);
 
     }
 
