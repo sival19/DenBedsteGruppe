@@ -4,6 +4,9 @@ public abstract class InteractiveObjects {
     String name;
     String info;
     int itemType;
+    int itemNeed;
+    String name1;
+    String info1;
 
 
     //Constructor
@@ -11,8 +14,14 @@ public abstract class InteractiveObjects {
         this.name = name;
         this.info = info;
         this.itemType = itemType;
-
     }
+
+//    //Constructor
+//    public InteractiveObjects1 (String name1, String info1, int itemNeed) {
+//        this.name = name1;
+//        this.info = info1;
+//        this.itemNeed = itemNeed;
+//    }
 
     //Get methods
     public String getInfo() {
@@ -23,6 +32,12 @@ public abstract class InteractiveObjects {
         return name;
     }
 
-    public int getItemType() { return itemType;}
+    public int getItemType() {
+        return itemType;
+    }
+
+    public int getItemNeed() {
+        return getItemNeed();
+    }
 }
 

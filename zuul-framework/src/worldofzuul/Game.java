@@ -3,7 +3,6 @@ package worldofzuul;
 import sample.ZuulGame;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Game implements ZuulGame {
     private Parser parser;
@@ -14,7 +13,6 @@ public class Game implements ZuulGame {
         createRooms();
         parser = new Parser();
         player = new Player(0, 0, "Palle");
-
     }
 
     // Get message from character info. Search by name
@@ -45,6 +43,13 @@ public class Game implements ZuulGame {
 
     }
 
+    public void giveItem(Command command) {
+        Rewards rewards = new Rewards("","", 0);
+
+        rewards.gainPoints();
+        player.removeItems(rewards.item);
+    }
+
     //remove items from inventory
     private void remove(Command c) {
         if (!c.hasSecondWord()) {
@@ -52,7 +57,7 @@ public class Game implements ZuulGame {
             return;
         }
 
-        //Herfr ved vi at der er et Second Word
+        //Her fra ved vi at der er et Second Word
         String secondWord = c.getSecondWord();
         Item itemToRemove = null;
         for (Item i : this.player.getInventory().getItems()) {
@@ -75,33 +80,32 @@ public class Game implements ZuulGame {
 
     }
 
-    //make a method to picup
+    //make a method to pickup
     public void pickUp(Command c) {
         if (!c.hasSecondWord()) {
             System.out.println("hvad vil du samle op??");
             return;
         }
 
-        //Herfr ved vi at der er et Second Word
+        //Her fra ved vi at der er et Second Word
         String secondWord = c.getSecondWord();
-        Item itemToadd = null;
+        Item itemToAdd = null;
         for (Item i : this.currentRoom.getItems()) {
             String itemName = i.getName();
 
             if (secondWord.equals(itemName)) {
-                itemToadd = i;
+                itemToAdd = i;
                 break;
             }
         }
 
-        if (itemToadd != null) {
-            player.addItem(itemToadd);
-            currentRoom.removeItem(itemToadd);
-            System.out.println(itemToadd.getName() + " tilføjet til inventory ");
+        if (itemToAdd != null) {
+            player.addItem(itemToAdd);
+            currentRoom.removeItem(itemToAdd);
+            System.out.println(itemToAdd.getName() + " tilføjet til inventory ");
         } else {
             System.out.println("Det indtastede item blev ikke fundet.");
         }
-
 
     }
 
@@ -168,10 +172,10 @@ public class Game implements ZuulGame {
         //create characters
         Character waiter, boy, richSnob, poorFuck;
 
-        waiter = new Character("tjener", "bestikslav");
-        boy = new Character("dreng", "lille stakkel");
-        richSnob = new Character("onkel Joachim", "lidt for rig");
-        poorFuck = new Character("Total hjemløs", "så syg...");
+        waiter = new Character("tjener", "bestikslav", 0);
+        boy = new Character("dreng", "lille stakkel", 1);
+        richSnob = new Character("onkel Joachim", "lidt for rig", 2);
+        poorFuck = new Character("Total hjemløs", "så syg...", 3);
 
         //add characters to rooms
 
@@ -232,14 +236,19 @@ public class Game implements ZuulGame {
             seeInventory();
         } else if (commandWord == CommandWord.REMOVEITEMS)
             remove(command);
-
         else if (commandWord == CommandWord.SEECHARACTERS) {
             seeCharacters();
         } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
         }
+        else if (commandWord == CommandWord.GIEFITEM) {
+            giveItem(command);
+        }
+
         return wantToQuit;
     }
+
+
 
 
     private void printHelp() {
