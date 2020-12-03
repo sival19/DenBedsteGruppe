@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
 <?import javafx.scene.layout.VBox?>
+
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LibraryController">
                 <children>
-                    <AnchorPane prefHeight="439.0" prefWidth="731.0">
+                    <AnchorPane prefHeight="467.0" prefWidth="750.0">
                         <children>
                      <ImageView fitHeight="440.0" fitWidth="750.0">
                         <image>
@@ -30,6 +31,13 @@
                             </ImageView>
             <Button fx:id="richroom_lib" layoutX="77.0" layoutY="34.0" mnemonicParsing="false" onAction="#goRichroom" text="Rigmandsgården" />
             <Button fx:id="school_lib" layoutX="14.0" layoutY="208.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
+            <ImageView fitHeight="192.0" fitWidth="200.0" layoutX="84.0" layoutY="233.0">
+               <image>
+                  <Image url="@../images/ladyknitting.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="oldLady" layoutX="153.0" layoutY="312.0" mnemonicParsing="false" onAction="#talkOldLady" opacity="0.0" prefHeight="60.0" prefWidth="91.0" text="dame" />
+            <TextField fx:id="text" layoutX="3.0" layoutY="440.0" prefHeight="25.0" prefWidth="743.0" />
                         </children>
                     </AnchorPane>
                 </children>

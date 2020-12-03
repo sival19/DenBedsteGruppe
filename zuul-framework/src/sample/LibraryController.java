@@ -2,6 +2,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import worldofzuul.*;
 import javafx.application.Platform;
@@ -16,9 +17,18 @@ import java.io.IOException;
 public class LibraryController extends StationController {
 
 
-    @FXML private Button school_lib, richroom_lib;
+    @FXML private Button school_lib, richroom_lib, oldLady;
     @FXML
     ImageView book, bookInv;
+
+    @FXML
+    private TextField text;
+    public void talkOldLady() {
+        oldLady.getId();
+        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
+        text.setText("Jeg har strukket for mange halstørklæder, kender du nogen som kan bruge dem?"); // set text to getCharMessage return value
+
+    }
 
     @FXML
     public void goSchool() throws IOException{
