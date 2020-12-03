@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- Hele spillet ligger her, opdelt i Panes. Det vil kun være 1 rum, der er synligt ad gangen.-->
+
+<AnchorPane prefHeight="520.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TestController">
+    <!--School fxml-->
+    <AnchorPane fx:id="school" prefHeight="410.0" prefWidth="731.0">
+        <ImageView fitHeight="409.0" fitWidth="728.0" layoutX="-2.0">
+            <Image url="@../images/school.PNG" />
+        </ImageView>
+
+        <Button layoutX="654.0" layoutY="192.0" mnemonicParsing="false" onAction="#goLibrarySchool" text="Bibliotek" />
+        <Button layoutX="571.0" layoutY="14.0" mnemonicParsing="false" onAction="#goRichRoomSchool" text="Rigmandsgård" />
+        <Button layoutX="149.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacySchool" text="Apotek" />
+        <Button layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#goStationSchool" text="Station" />
+        <Button layoutX="348.0" layoutY="370.0" mnemonicParsing="false" onAction="#goPoorRoomSchool" text="Fattigrum" />
+    </AnchorPane>
+
+    <!--pooroom-->
+    <AnchorPane fx:id="poorroom" prefHeight="427.0" prefWidth="750.0">
+        <ImageView fitHeight="428.0" fitWidth="731">
+            <Image url="@../images/poorroom.PNG" />
+        </ImageView>
+        <ImageView fitHeight="209.0" fitWidth="68.0" layoutX="115.0" layoutY="229.0">
+            <Image url="@../images/poorman.png" />
+        </ImageView>
+        <ImageView fitHeight="190.0" fitWidth="116.0" layoutX="399.0" layoutY="238.0">
+            <Image url="@../images/poorwoman.png" />
+        </ImageView>
+        <Button fx:id="poorChild" layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild" opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild" />
+        <Button fx:id="poorWoman" layoutX="423.0" layoutY="293.0" mnemonicParsing="false" onAction="#talkPoorWoman" opacity="0.0" prefHeight="40.0" prefWidth="65.0" text="poorWoman" />
+        <Button fx:id="station_poor" layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStationPoorRoom" text="Station" />
+        <Button fx:id="school_poor" layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchoolStation" text="Skole" />
+        <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="597.0" layoutY="323.0" onMouseClicked="#pickApple">
+            <Image url="@../images/apple.png" />
+        </ImageView>
+
+    </AnchorPane>
+
+    <!--Station fxml-->
+    <AnchorPane fx:id="station">
+        <ImageView fitHeight="404.0" fitWidth="731.0" layoutX="-1.0">
+            <Image url="@../images/station.PNG" />
+        </ImageView>
+
+        <Button layoutX="648.0" layoutY="177.0" mnemonicParsing="false" onAction="#goSchoolStation" text="Skole" />
+        <Button layoutX="331.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacyStation" text="Apotek" />
+        <Button layoutX="331.0" layoutY="351.0" mnemonicParsing="false" onAction="#goPoorRoomStation" text="Fattiggården" />
+    </AnchorPane>
+
+    <Label fx:id="text" layoutX="1.0" layoutY="418.0" prefHeight="39.0" prefWidth="729.0" />
+
+    <!--Fordi alt er i en scene vil det her aldrig forsvinde, når vi skifter rum: -->
+
+    <!--inventory-->
+    <AnchorPane layoutX="1.0" layoutY="470.0" prefHeight="68.0" prefWidth="731.0">
+        <ImageView fx:id="appleInv" fitHeight="69.0" fitWidth="88.0" onMouseClicked="#removeApple" visible="false">
+            <Image url="@../images/apple2.png" />
+        </ImageView>
+    </AnchorPane>
+
+
+</AnchorPane>
