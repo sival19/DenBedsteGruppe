@@ -62,7 +62,7 @@ public class StationController extends Main {
         getTest().goRoom(new Command(CommandWord.GO, "fattiggården"));
         //Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
         Scene scene = pooroom_station.getScene();
-        Parent root = scenes.get("poorroom");
+        Parent root = getScene("poorroom");
         scene.setRoot(root);
 
 

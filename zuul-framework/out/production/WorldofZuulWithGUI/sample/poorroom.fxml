@@ -7,45 +7,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="522.0" prefWidth="731" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
-                <children>
-                    <AnchorPane prefHeight="498.0" prefWidth="731.0">
-                        <children>
-                            <ImageView fitHeight="428.0" fitWidth="731">
-                                <image>
-                                    <Image url="@../images/poorroom.PNG" />
-                                </image>
-                            </ImageView>
-                            <ImageView fitHeight="209.0" fitWidth="68.0" layoutX="115.0" layoutY="229.0">
-                                <image>
-                                    <Image url="@../images/poorman.png" />
-                                </image>
-                            </ImageView>
-                            <ImageView fitHeight="190.0" fitWidth="116.0" layoutX="399.0" layoutY="238.0">
-                                <image>
-                                    <Image url="@../images/poorwoman.png" />
-                                </image>
-                            </ImageView>
-                            <Button fx:id="dreng" layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild" opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild" />
-                            <Button fx:id="poorWoman" layoutX="423.0" layoutY="293.0" mnemonicParsing="false" onAction="#talkPoorWoman" opacity="0.0" prefHeight="40.0" prefWidth="65.0" text="poorWoman" />
-                            <Button fx:id="station_poor" layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
-            <Button fx:id="school_poor" layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
-            <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="597.0" layoutY="323.0" onMouseClicked="#pickApple">
-               <image>
-                  <Image url="@../images/apple.png" />
-               </image>
-            </ImageView>
-                          <TextField fx:id="text" layoutY="428.0" prefHeight="25.0" prefWidth="731.0" />
-                        </children>
-                    </AnchorPane>
-      <VBox prefHeight="26.0" prefWidth="726.0">
-         <children>
-            <ImageView fx:id="appleInv" fitHeight="4.0" fitWidth="88.0" onMouseClicked="#removeApple" visible="false">
-               <image>
-                  <Image url="@../images/apple2.png" />
-               </image>
-            </ImageView>
-         </children>
-      </VBox>
-                </children>
-            </VBox>
+<VBox prefHeight="522.0" prefWidth="731" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.PoorroomController">
+    <children>
+        <AnchorPane prefHeight="498.0" prefWidth="731.0">
+            <children>
+                <ImageView fitHeight="428.0" fitWidth="731">
+                    <image>
+                        <Image url="@../images/poorroom.PNG"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="209.0" fitWidth="68.0" layoutX="115.0" layoutY="229.0">
+                    <image>
+                        <Image url="@../images/poorman.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="190.0" fitWidth="116.0" layoutX="399.0" layoutY="238.0">
+                    <image>
+                        <Image url="@../images/poorwoman.png"/>
+                    </image>
+                </ImageView>
+                <Button fx:id="dreng" layoutX="116.0" layoutY="304.0" mnemonicParsing="false" onAction="#talkPoorChild"
+                        opacity="0.0" prefHeight="38.0" prefWidth="65.0" text="poorChild"/>
+                <Button fx:id="poorWoman" layoutX="423.0" layoutY="293.0" mnemonicParsing="false"
+                        onAction="#talkPoorWoman" opacity="0.0" prefHeight="40.0" prefWidth="65.0" text="poorWoman"/>
+                <Button fx:id="station_poor" layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation"
+                        text="Station"/>
+                <Button fx:id="school_poor" layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool"
+                        text="Skole"/>
+                <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="597.0" layoutY="323.0"
+                           onMouseClicked="#pickApple">
+                    <image>
+                        <Image url="@../images/apple.png"/>
+                    </image>
+                </ImageView>
+                <TextField fx:id="text" layoutY="428.0" prefHeight="25.0" prefWidth="731.0"/>
+            </children>
+        </AnchorPane>
+        <VBox prefHeight="26.0" prefWidth="726.0">
+            <children>
+                <ImageView fx:id="appleInv" fitHeight="4.0" fitWidth="88.0" onMouseClicked="#removeApple"
+                           visible="false">
+                    <image>
+                        <Image url="@../images/apple2.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+    </children>
+</VBox>

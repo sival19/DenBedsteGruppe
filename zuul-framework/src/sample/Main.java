@@ -21,18 +21,17 @@ public class Main extends Application {
     }
 
 //hashmap for rooms
-    public static HashMap<String, Parent> scenes = new HashMap<>();
+    private static HashMap<String, Parent> scenes = new HashMap<>();
 
 
-    public Parent getScene(String roomName) {
-        return this.scenes.get(roomName);
+    public static Parent getScene(String roomName) {
+        return scenes.get(roomName);
     }
 
     private static final String UI_FILE = "startPage.fxml";
 
     @Override
     public void start (Stage stage_dummy) throws Exception {
-
 
         Parent richroom = FXMLLoader.load(getClass().getResource("richroom.fxml"));
         Parent poorroom = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
@@ -43,15 +42,7 @@ public class Main extends Application {
         scenes.put("poorroom", poorroom);
         scenes.put("station", station);
 
-
-
-
-
-
         Stage stage = FXMLLoader.load(getClass().getResource(UI_FILE));
-
-
-
 
         stage.show();
     }

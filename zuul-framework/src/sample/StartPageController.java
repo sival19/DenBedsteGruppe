@@ -23,7 +23,7 @@ public class StartPageController extends Main {
         //den som er udkommenteret gidder ikke at funge, kig i Main>>start og getScene methods
 
         //Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
-        Parent loader = scenes.get("station");
+        Parent loader = getScene("station");
         Stage stage = (Stage) start.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));

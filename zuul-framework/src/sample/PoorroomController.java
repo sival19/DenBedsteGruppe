@@ -33,7 +33,7 @@ public class PoorroomController extends Main {
         getTest().goRoom(new Command(CommandWord.GO, "stationen"));
         //Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
         Scene scene = school_poor.getScene();
-        Parent root = scenes.get("station");
+        Parent root = getScene("station");
         scene.setRoot(root);
 
     }
