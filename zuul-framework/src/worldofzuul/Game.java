@@ -2,6 +2,7 @@ package worldofzuul;
 
 import sample.ZuulGame;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Game implements ZuulGame {
@@ -43,11 +44,48 @@ public class Game implements ZuulGame {
 
     }
 
-    public void giveItem(Command command) {
-        Rewards rewards = new Rewards("","", 0);
+    public void giveItem(Command c) {
+
+        if (!c.hasSecondWord()) {
+            System.out.println("Hvad vil du give væk?");
+            return;
+        }
+        String secondWord = c.getSecondWord();
+
+        Item item = new Item("", "", 0);
+        Rewards rewards = new Rewards("", "", 0);
+
+        int itemType;
+        int itemNeed;
+
+        //    int itemNeed = rewards.itemNeed;
+
+        for (Item i: this.player.getInventory().getItems()) {
+            itemType = i.itemType;
+            break;
+        }
+
+        for (Character i: this.currentRoom.getCharacters())
+        {
+            itemNeed = i.itemNeed;
+            break;
+        }
 
         rewards.gainPoints();
-        player.removeItems(rewards.item);
+
+        double points = rewards.gainPoints;
+
+        System.out.println(points);
+
+        Item itemGIven = null;
+        for (Item j : this.player.getInventory().getItems()) {
+            String itemName = j.getName();
+
+            if (secondWord.equals(itemName)) {
+                itemGIven = j;
+                break;
+            }
+        }
     }
 
     //remove items from inventory
@@ -156,7 +194,7 @@ public class Game implements ZuulGame {
         // Create items
         Item æble, penge, medicin, bog;
 
-        æble = new Item("æble", "det er rødt", 0);
+        æble = new Item("æble", "det er rødt", 32);
         penge = new Item("penge", "der er mange", 1);
         medicin = new Item("medicin", "det er piller",2 );
         bog = new Item("bog", "den er tung",3 );

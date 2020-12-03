@@ -8,7 +8,7 @@ public class Rewards extends InteractiveObjects {
     Character character = new Character(name, info, 1);
 
     //Points you begin with
-    final int initialPoints = 100;
+    final int initialPoints = 10;
     double gainPoints;
 
 
@@ -27,31 +27,21 @@ public class Rewards extends InteractiveObjects {
 
     //Method for gaining points
     public int gainPoints() {
-        int i = itemType;
-        int j = itemNeed;
 
-        int itemType = Array.getInt(item.type, i);
-        int personNeeds = Array.getInt(item.type, j);
-//        int junk = Character.junk;
+        int pointsModifier;
 
-        double pointsModifier;
-
-
-        if(itemType == personNeeds){
-
-            pointsModifier = 2.0;
-
-//        }else if (itemType == junk)
-//        {
-            pointsModifier = 0.5;
-        }else // Hvis det ikke er JUNK (aka semi needed)
+        if (itemNeed == itemType)
         {
-            pointsModifier = 1.0;
+            pointsModifier = 2;
+        } else
+        {
+            pointsModifier = 1;
         }
+
 
         gainPoints = initialPoints * pointsModifier;
 
 
-     return gainPoints();
+    return gainPoints();
     }
 }

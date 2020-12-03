@@ -3,8 +3,8 @@ package worldofzuul;
 public class Character extends InteractiveObjects {
 
     //Constructor
-    public Character(String name, String info, int i) {
-        super (name, info, i);
+    public Character(String name, String info, int itemNeed) {
+        super (name, info, itemNeed);
     }
 
     @Override

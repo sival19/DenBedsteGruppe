@@ -18,4 +18,10 @@ public class Item extends InteractiveObjects {
         return getName() + ", " + getInfo();
     }
 
+    public int getItemType()
+    {
+        itemType = itemType;
+        return itemType;
+    }
+
 }
