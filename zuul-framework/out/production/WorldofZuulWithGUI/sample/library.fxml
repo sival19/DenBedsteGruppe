@@ -9,7 +9,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LibraryController">
                 <children>
-                    <AnchorPane prefHeight="467.0" prefWidth="750.0">
+                    <AnchorPane prefHeight="470.0" prefWidth="750.0">
                         <children>
                      <ImageView fitHeight="440.0" fitWidth="750.0">
                         <image>

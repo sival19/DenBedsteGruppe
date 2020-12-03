@@ -13,20 +13,20 @@
 <Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartPageController">
     <scene>
         <Scene>
-<AnchorPane prefHeight="343.0" prefWidth="621.0">
+<AnchorPane prefHeight="470.0" prefWidth="750.0">
    <children>
-               <ImageView fitHeight="350.0" fitWidth="622.0">
+               <ImageView fitHeight="470.0" fitWidth="750.0">
                   <image>
                      <Image url="@../images/inequality.png" />
                   </image>
                </ImageView>
-               <Text fill="#233b2f" layoutX="163.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Game Name">
+               <Text fill="#233b2f" layoutX="153.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Game Name">
                   <font>
-                     <Font size="40.0" />
+                     <Font size="60.0" />
                   </font>
                </Text>
-      <TextField layoutX="241.0" layoutY="160.0" prefHeight="58.0" prefWidth="118.0" text="bla bla bla bla bla" />
-      <Button fx:id="start" layoutX="268.0" layoutY="247.0" mnemonicParsing="false" onAction="#startGame" text="Start Spil" />
+      <TextField layoutX="315.0" layoutY="223.0" prefHeight="58.0" prefWidth="118.0" text="bla bla bla bla bla" />
+      <Button fx:id="start" layoutX="343.0" layoutY="332.0" mnemonicParsing="false" onAction="#startGame" text="Start Spil" />
    </children>
 </AnchorPane>
         </Scene>

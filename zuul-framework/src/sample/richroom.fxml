@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="436.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
+<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
                   <children>
       <ImageView fx:id="backpack" fitHeight="104.0" fitWidth="93.0" layoutX="171.0" layoutY="65.0" onMouseClicked="#seeInventory">
          <image>
