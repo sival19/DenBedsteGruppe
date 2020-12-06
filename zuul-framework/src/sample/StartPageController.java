@@ -18,6 +18,10 @@ public class StartPageController extends Main {
 
     @FXML
     public void startGame() throws IOException {
+        /* Metoder er/skal flyttes til test.fxml.
+        * Indtil videre er det bare nogle ting, som er flyttet for at se om det virkede
+        *
+         */
 
 
         //den som er udkommenteret gidder ikke at funge, kig i Main>>start og getScene methods
@@ -27,8 +31,5 @@ public class StartPageController extends Main {
         Stage stage = (Stage) start.getScene().getWindow();
 
         stage.setScene(new Scene(loader, 731, 439));
-
-
-
     }
 }
