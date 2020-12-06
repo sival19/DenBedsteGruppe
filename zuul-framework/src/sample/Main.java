@@ -5,50 +5,116 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
-import worldofzuul.Game;
-
-import java.util.HashMap;
+import worldofzuul.*;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Main extends Application {
     private static ZuulGame test;
+    private static Stage stage;
+
+    /*
+    * Each instance of main (when a controller extends main)
+    * get their own fields/attributes. So the game knows which fxml-file's
+    * ImageView id's the methods refer to.
+    * This is why we only need the fields in main.
+     */
+    @FXML
+    public ImageView money, medicine, apple, book, medicineInv, bookInv, appleInv, moneyInv;
+
+    /*
+    * Initialize items in inventory
+    * make items visible in GUI inventory if they exist in Game inventory
+     */
+    public void init(){
+        if (checkInventory("medicin")) {
+            medicineInv.setOpacity(1.0);
+        }
+        if (checkInventory("bog")) {
+            bookInv.setOpacity(1.0);
+        }
+        if (checkInventory("æble")) {
+            appleInv.setOpacity(1.0);
+        }
+        if (checkInventory("penge")) {
+            moneyInv.setOpacity(1.0);
+        }
+    }
 
     public ZuulGame getTest() {
         return test;
     }
 
-//hashmap for rooms
-    private static HashMap<String, Parent> scenes = new HashMap<>();
-
-
-    public static Parent getScene(String roomName) {
-        return scenes.get(roomName);
+    public static Stage getStage() {
+        return stage;
     }
 
-    private static final String UI_FILE = "startPage.fxml";
+    /*
+    * First line is for ICL. It makes sure we know which room
+    * we are in so we can update inventory correctly.
+    *
+    * We load the scene from file and create a new scene,
+    * to make sure the initialize method is run, which is needed
+    * to keep track of game state (room items and inventory).
+     */
+    public void changeRooms(String roomName, String filepath) throws IOException {
+        getTest().goRoom(new Command(CommandWord.GO, roomName));
+        Parent loader = FXMLLoader.load(getClass().getResource(filepath));
+        stage.setScene(new Scene(loader));
+    }
+    /*
+    * Checks if item is in Game inventory
+     */
+    public boolean checkInventory(String itemName) {
+        ArrayList<Item> items = Inventory.getItems();
+        for (Item item : items) {
+            if (item.getName().equals(itemName)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    // OBJECT INTERACTION
+    /*
+    * We can use the same method to pick up items in all controllers.
+    * They are inherited from main.
+     */
+    public void pickMoney(){
+        getTest().pickUp(new Command(CommandWord.PICKUP, "penge"));
+        money.setVisible(false);
+        moneyInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+    public void pickMedicine() {
+        getTest().pickUp(new Command(CommandWord.PICKUP, "medicin"));
+        medicine.setVisible(false);
+        medicineInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+    public void pickApple() {
+        getTest().pickUp(new Command(CommandWord.PICKUP, "æble"));
+        apple.setVisible(false);
+        appleInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+    public void pickBook() {
+        getTest().pickUp(new Command(CommandWord.PICKUP, "bog"));
+        book.setVisible(false);
+        bookInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+
+    // START GAME
     @Override
-    public void start (Stage stage_dummy) throws Exception {
-
-        Parent richroom = FXMLLoader.load(getClass().getResource("richroom.fxml"));
-        Parent poorroom = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
-        Parent station = FXMLLoader.load(getClass().getResource("station.fxml"));
-
-        //når man bruger getScene() andre steder istedet for FXMLLoader..... burde det virke meeeen, det er javaFX, så nej :(
-        scenes.put("richroom", richroom);
-        scenes.put("poorroom", poorroom);
-        scenes.put("station", station);
-
-        Stage stage = FXMLLoader.load(getClass().getResource(UI_FILE));
-
+    public void start(Stage stage_dummy) throws Exception {
+        stage = FXMLLoader.load(getClass().getResource("startPage.fxml"));
         stage.show();
     }
 
-
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         test = new Game();
         launch(args);
     }

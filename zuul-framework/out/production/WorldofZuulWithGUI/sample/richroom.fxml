@@ -1,48 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.control.Label?>
 
+<AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
 
-<?import javafx.scene.layout.VBox?>
-<AnchorPane prefHeight="436.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
-                  <children>
-                     <ImageView fitHeight="442.0" fitWidth="740.0" layoutY="-1.0">
-                        <image>
-                           <Image url="@../images/richroom.PNG" />
-                        </image>
-                     </ImageView>
-                     <ImageView fitHeight="225.0" fitWidth="159.0" layoutX="385.0" layoutY="196.0" onMouseClicked="#talkRichman">
-                        <image>
-                           <Image url="@../images/richman.png" />
-                        </image>
-                     </ImageView>
-                      <Button fx:id="richman" layoutX="420.0" layoutY="278.0" mnemonicParsing="false" onAction="#talkRichman" opacity="0.0" prefHeight="62.0" prefWidth="95.0" text="rigmand" />
-                     <Button fx:id="library_rich" layoutX="468.0" layoutY="396.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
-                      <VBox layoutX="14.0" layoutY="378.0" prefHeight="101.0" prefWidth="104.0">
-                          <children>
-                              <ImageView fx:id="moneyInv" fitHeight="87.0" fitWidth="104.0" onMouseClicked="#removeMoney" visible="false">
-                                  <image>
-                                      <Image url="@../images/money.png" />
-                                  </image>
-                              </ImageView>
-                          </children></VBox>
-                      <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="56.0" layoutY="179.0" onMouseClicked="#pickMoney">
-                          <image>
-                              <Image url="@../images/money.png" />
-                          </image>
-                      </ImageView>
-                     
-      <Button fx:id="school_rich" layoutX="96.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
-      <Button fx:id="pharmacy_rich" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" />
-      <ImageView fx:id="backpack" fitHeight="104.0" fitWidth="93.0" layoutX="171.0" layoutY="65.0" onMouseClicked="#seeInventory">
-         <image>
-            <Image url="@../images/backpack.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="text" layoutY="441.0" prefHeight="25.0" prefWidth="740.0" />
-                  </children>
-                    </AnchorPane>
+    <!-- Inventory -->
+    <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0"/>
+    <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1">
+        <Image url="@../images/apple.png"/>
+    </ImageView>
+    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1">
+        <Image url="@../images/book.png"/>
+    </ImageView>
+    <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" opacity="0.1">
+        <Image url="@../images/medicine.png"/>
+    </ImageView>
+    <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1">
+        <Image url="@../images/drawing.png"/>
+    </ImageView>
+    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" opacity="0.1" onMouseClicked="#removeMoney">
+        <Image url="@../images/money.png"/>
+    </ImageView>
+    <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" opacity="0.1">
+        <Image url="@../images/scarf.png"/>
+    </ImageView>
+
+    <!-- Layout inventory -->
+    <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="200.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="300.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="400.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="500.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="600.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="700.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="800.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="900.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1000.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1100.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1200.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+
+    <!-- Background -->
+    <ImageView fitHeight="640.0" fitWidth="1150.0" layoutY="-1.0">
+        <Image url="@../images/richroom.PNG"/>
+    </ImageView>
+
+    <!-- People -->
+    <ImageView fitHeight="225.0" fitWidth="159.0" layoutX="385.0" layoutY="196.0" onMouseClicked="#talkRichman">
+        <Image url="@../images/richman.png"/>
+    </ImageView>
+
+    <!-- Items -->
+    <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="56.0" layoutY="179.0"
+               onMouseClicked="#pickMoney">
+        <Image url="@../images/money.png"/>
+    </ImageView>
+
+    <!-- Navigations -->
+    <Button layoutX="468.0" layoutY="396.0" mnemonicParsing="false" onAction="#goLibrary"
+            text="Bibliotek"/>
+    <Button layoutX="96.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool"
+            text="Skole"/>
+    <Button layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#goPharmacy"
+            text="Apotek"/>
+
+    <!-- Not necessary or? -->
+    <ImageView fx:id="backpack" fitHeight="104.0" fitWidth="93.0" layoutX="171.0" layoutY="65.0"
+               onMouseClicked="#seeInventory">
+        <Image url="@../images/backpack.png"/>
+    </ImageView>
+
+</AnchorPane>

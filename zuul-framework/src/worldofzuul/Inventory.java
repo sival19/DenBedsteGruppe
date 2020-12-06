@@ -4,18 +4,13 @@ import java.util.ArrayList;
 //HEJ DETTE ER EN TEST!!!!!
 
 public class Inventory {
-    private ArrayList<Item> items;
+    private static ArrayList<Item> items;
 
     Inventory(ArrayList<Item> items) {
         this.items = items;
     }
 
-
-
-    //add items to inventory
-
-
-    public ArrayList<Item> getItems() {
+    public static ArrayList<Item> getItems() {
         return items;
     }
 

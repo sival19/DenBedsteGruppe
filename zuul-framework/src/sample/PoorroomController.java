@@ -3,9 +3,11 @@ package sample;
 import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ClipboardContent;
@@ -20,63 +22,50 @@ import worldofzuul.CommandWord;
 
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class PoorroomController extends Main {
-
-    @FXML private Button poorChild, school_poor, station_poor, dreng, poorWoman;
-    @FXML private ImageView apple, appleInv;
-
-
+public class PoorroomController extends Main implements Initializable {
 
     @FXML
-    public void goStation() throws IOException {
-        getTest().goRoom(new Command(CommandWord.GO, "stationen"));
-        //Parent loader = FXMLLoader.load(getClass().getResource("station.fxml"));
-        Scene scene = school_poor.getScene();
-        Parent root = getScene("station");
-        scene.setRoot(root);
+    private Label text;
 
+    // INVENTORY MANAGEMENT
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // "apple" cannot be part of the generic init()
+        // because it isn't in all rooms/fxml-files atm.
+        apple.setVisible(!checkInventory("æble"));
+        init();
     }
 
-    @FXML
-    public void goSchool() throws IOException {
-
-        //use command go and go to skolen
-        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
-        Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
-        Stage stage = (Stage) school_poor.getScene().getWindow();
-
-
-        stage.setScene(new Scene(loader, 731, 439));
-
-    }
-
-    @FXML
-    private TextField text;
+    // CHARACTER INTERACTION
     public void talkPoorChild() {
-        dreng.getId();
-        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
-        text.setText("Jeg er sulten"); // set text to getCharMessage return value
+        text.setText("Jeg er sulten");
     }
 
-    @FXML
-    public void talkPoorWoman(){
-        poorWoman.getId();
-        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
-        text.setText("Åh hvor jeg fryser"); // set text to getCharMessage return value
+    public void talkPoorWoman() {
+        text.setText("Åh hvor jeg fryser");
     }
 
-
-    public void pickApple() {
-        getTest().pickUp(new Command(CommandWord.PICKUP , "æble"));
-        apple.setVisible(false);
-        appleInv.setVisible(true);
-        getTest().seeInventory();
-    }
-
+    // OBJECT INTERACTION
+    /*
+    * A simple remove method may not be enough. We need options when we
+    * click on items. Maybe a little pop-up menu or drag-and-drop.
+    * We need to figure interactions out.
+     */
     public void removeApple() {
         getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
-        appleInv.setVisible(false);
+        appleInv.setOpacity(0.1);
         apple.setVisible(true);
+    }
+
+    // NAVIGATION
+    public void goStation() throws IOException {
+        changeRooms("stationen", "station.fxml");
+    }
+
+    public void goSchool() throws IOException {
+        changeRooms("skolen", "school.fxml");
     }
 }

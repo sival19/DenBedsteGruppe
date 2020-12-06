@@ -71,8 +71,6 @@ public class Game implements ZuulGame {
         } else {
             System.out.println("Det indtastede item blev ikke fundet.");
         }
-
-
     }
 
     //make a method to picup
@@ -101,20 +99,18 @@ public class Game implements ZuulGame {
         } else {
             System.out.println("Det indtastede item blev ikke fundet.");
         }
-
-
     }
 
     public void createRooms() {
         // Create rooms
-        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsgården, apotek;
+        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsrum, apotek;
 
         station = new Room("på stationen");
         skole = new Room("på skolen");
         bibliotek = new Room("på biblioteket");
         restaurant = new Room("på restauranten");
         fattiggård = new Room("på fattiggården");
-        rigmandsgården = new Room("på rigmandsgården");
+        rigmandsrum = new Room("på rigmandsrum");
         apotek = new Room("på apoteket");
 
         // Create room relationships
@@ -125,12 +121,12 @@ public class Game implements ZuulGame {
 
 
         skole.setExit("stationen", station);
-        skole.setExit("rigmandsgården" , rigmandsgården);
+        skole.setExit("rigmandsrum", rigmandsrum);
         skole.setExit("biblioteket", bibliotek);
         skole.setExit("apoteket", apotek);
         skole.setExit("fattiggården", fattiggård);
 
-        bibliotek.setExit("rigmandsgården", rigmandsgården);
+        bibliotek.setExit("rigmandsrum", rigmandsrum);
         bibliotek.setExit("skolen", skole);
 
         restaurant.setExit("stationen", station);
@@ -138,12 +134,12 @@ public class Game implements ZuulGame {
         fattiggård.setExit("skolen", skole);
         fattiggård.setExit("stationen", station);
 
-        rigmandsgården.setExit("skolen", skole);
-        rigmandsgården.setExit("biblioteket", bibliotek);
-        rigmandsgården.setExit("apoteket" , apotek);
+        rigmandsrum.setExit("skolen", skole);
+        rigmandsrum.setExit("biblioteket", bibliotek);
+        rigmandsrum.setExit("apoteket", apotek);
 
 
-        apotek.setExit("rigmandsgården" , rigmandsgården);
+        apotek.setExit("rigmandsrum", rigmandsrum);
         apotek.setExit("stationen", station);
         apotek.setExit("skolen", skole);
 
@@ -160,16 +156,10 @@ public class Game implements ZuulGame {
         // Add items to rooms
         apotek.addItem(medicin);
         fattiggård.addItem(æble);
-        rigmandsgården.addItem(penge);
+        rigmandsrum.addItem(penge);
         bibliotek.addItem(bog);
 
-        /*station.addItem(æble);
-        bibliotek.addItem(penge);
-        skole.addItem(medicin);
-        restaurant.addItem(bog);
-        rigmandsgården.addItem(bog);*/
-
-        //create characters
+        // Create characters
         Character waiter, boy, richSnob, poorFuck;
 
         waiter = new Character("tjener", "bestikslav");
@@ -181,15 +171,12 @@ public class Game implements ZuulGame {
 
         skole.addCharacter(boy);
         restaurant.addCharacter(waiter);
-        rigmandsgården.addCharacter(richSnob);
+        rigmandsrum.addCharacter(richSnob);
         fattiggård.addCharacter(poorFuck);
     }
 
-
     public void play() {
         printWelcome();
-
-
         boolean finished = false;
         while (!finished) {
             Command command = parser.getCommand();
@@ -197,7 +184,6 @@ public class Game implements ZuulGame {
         }
         System.out.println("Thank you for playing.  Good bye.");
     }
-
 
     private void printWelcome() {
         System.out.println();
@@ -212,7 +198,6 @@ public class Game implements ZuulGame {
     public boolean processCommand(CommandWord commandWord, String secondWord) {
         return processCommand(new Command(commandWord, secondWord));
     }
-
 
     public boolean processCommand(Command command) {
         boolean wantToQuit = false;
@@ -234,17 +219,15 @@ public class Game implements ZuulGame {
             pickUp(command);
         } else if (commandWord == CommandWord.SEEINVENTORY) {
             seeInventory();
-        } else if (commandWord == CommandWord.REMOVEITEMS)
+        } else if (commandWord == CommandWord.REMOVEITEMS) {
             remove(command);
-
-        else if (commandWord == CommandWord.SEECHARACTERS) {
+        } else if (commandWord == CommandWord.SEECHARACTERS) {
             seeCharacters();
         } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
         }
         return wantToQuit;
     }
-
 
     private void printHelp() {
         System.out.println("You are lost. You are alone. You wander");

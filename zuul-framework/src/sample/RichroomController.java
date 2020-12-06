@@ -2,9 +2,11 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -12,70 +14,54 @@ import worldofzuul.Command;
 import worldofzuul.CommandWord;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class RichroomController extends StationController {
-
-    @FXML
-
-    Button library_rich, school_rich, pharmacy_rich, richman;
+public class RichroomController extends Main implements Initializable {
 
     @FXML
-    ImageView money, moneyInv;
-
+    private Button richman;
 
     @FXML
-    private TextField text;
-    public void talkRichman(){
-        richman.getId();
-        // Somehow call getCharMessage from Game class with button id as argument. Make sure char name == buttonid
-        text.setText("Det er fedt at være rig, men også et ensomt liv. Det ville være rart med en ven."); // set text to getCharMessage return value
+    private Label text;
+
+    // INVENTORY MANAGEMENT
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        money.setVisible(!checkInventory("penge"));
+        init();
     }
 
-
-    @FXML
-    public void seeInventory(){
-        getTest().seeInventory();
-    }
-
-    @FXML
+    // NAVIGATION
     public void goPharmacy() throws IOException {
-        getTest().goRoom(new Command(CommandWord.GO, "apoteket"));
-        Parent loader = FXMLLoader.load(getClass().getResource("pharmacy.fxml"));
-        Stage stage = (Stage) pharmacy_rich.getScene().getWindow();
-
-        stage.setScene(new Scene(loader, 731, 439));
+        changeRooms("apoteket", "pharmacy.fxml");
     }
 
-    @FXML
     public void goSchool() throws IOException {
-        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
-        Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
-        Stage stage = (Stage) school_rich.getScene().getWindow();
-
-        stage.setScene(new Scene(loader, 731, 439));
+        changeRooms("skolen", "school.fxml");
     }
 
-    @FXML
     public void goLibrary() throws IOException {
-        getTest().goRoom(new Command(CommandWord.GO, "biblioteket"));
-        Parent loader = FXMLLoader.load(getClass().getResource("library.fxml"));
-        Stage stage = (Stage) library_rich.getScene().getWindow();
-
-        stage.setScene(new Scene(loader, 731, 439));
+        changeRooms("biblioteket", "library.fxml");
     }
 
-    public void pickMoney() {
-        getTest().pickUp(new Command(CommandWord.PICKUP , "penge"));
-        money.setVisible(false);
-        moneyInv.setVisible(true);
-        getTest().seeInventory();
-    }
+    // OBJECT INTERACTION
 
     public void removeMoney() {
         getTest().processCommand(CommandWord.REMOVEITEMS, "penge");
-        moneyInv.setVisible(false);
+        moneyInv.setOpacity(0.1);
         money.setVisible(true);
     }
 
+    // CHARACTER INTERACTION
+    public void talkRichman() {
+        richman.getId();
+        text.setText("Det er fedt at være rig, men også et ensomt liv. Det ville være rart med en ven.");
+    }
+
+    @FXML
+    public void seeInventory() {
+        getTest().seeInventory();
+    }
 
 }
