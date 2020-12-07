@@ -193,7 +193,7 @@ public class Game implements ZuulGame {
         // Create items
         Item æble, penge, medicin, bog;
 
-        æble = new Item("æble", "det er rødt", 32);
+        æble = new Item("æble", "det er rødt", 0);
         penge = new Item("penge", "der er mange", 1);
         medicin = new Item("medicin", "det er piller",2 );
         bog = new Item("bog", "den er tung",3 );
