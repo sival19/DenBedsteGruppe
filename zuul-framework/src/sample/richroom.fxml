@@ -76,7 +76,7 @@
     <Button layoutX="468.0" layoutY="396.0" mnemonicParsing="false" onAction="#goLibrary"
             text="Bibliotek"/>
     <Button layoutX="96.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool"
-            text="Skole"/>
+            text="Skolen"/>
     <Button layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#goPharmacy"
             text="Apotek"/>
 
