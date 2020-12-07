@@ -19,7 +19,12 @@
 
     <!-- Inventory -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0" />
-   <ImageView fx:id="oldLady" fitHeight="289.0" fitWidth="296.0" layoutX="138.0" layoutY="333.0" onMouseClicked="#talkOldLady">
+   <ImageView fx:id="scarf" fitHeight="135.0" fitWidth="122.0" layoutX="378.0" layoutY="505.0" onMouseClicked="#pickScarf" rotate="-76.4">
+      <image>
+         <Image url="@../images/scarf.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="oldLady" fitHeight="289.0" fitWidth="296.0" layoutX="131.0" layoutY="331.0" onMouseClicked="#talkOldLady">
       <image>
          <Image url="@../images/ladyknitting.png" />
       </image>

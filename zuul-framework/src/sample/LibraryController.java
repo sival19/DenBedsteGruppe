@@ -23,7 +23,10 @@ public class LibraryController extends Main implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         book.setVisible(!checkInventory("bog"));
         init();
+        scarf.setVisible(!checkInventory("halstørklæde"));
+        init();
     }
+
 
     // NAVIGATION
     public void goSchool() throws IOException {
