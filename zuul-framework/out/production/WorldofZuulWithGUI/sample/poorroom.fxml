@@ -1,87 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
+<AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
 
     <!-- Background -->
     <ImageView fitHeight="640.0" fitWidth="1150">
-        <Image url="@../images/poorroom.PNG"/>
+        <Image url="@../images/poorroom.PNG" />
     </ImageView>
 
     <!-- People -->
     <ImageView fitHeight="376.0" fitWidth="122.0" layoutX="143.0" layoutY="273.0">
-        <Image url="@../images/poorman.png"/>
+        <Image url="@../images/poorman.png" />
     </ImageView>
     <ImageView fitHeight="294.0" fitWidth="179.0" layoutX="631.0" layoutY="327.0">
-        <Image url="@../images/poorwoman.png"/>
+        <Image url="@../images/poorwoman.png" />
     </ImageView>
 
     <!-- Persons -->
-    <Button fx:id="poorChild" layoutX="171.0" layoutY="333.0" mnemonicParsing="false" onAction="#talkPoorChild"
-            opacity="0.0" prefHeight="282.0" prefWidth="66.0" text="poorChild"/>
-    <Button fx:id="poorWoman" layoutX="675.0" layoutY="355.0" mnemonicParsing="false" onAction="#talkPoorWoman"
-            opacity="0.0" prefHeight="250.0" prefWidth="78.0" text="poorWoman"/>
+    <Button fx:id="poorChild" layoutX="171.0" layoutY="333.0" mnemonicParsing="false" onAction="#talkPoorChild" opacity="0.0" prefHeight="282.0" prefWidth="66.0" text="poorChild" />
+    <Button fx:id="poorWoman" layoutX="675.0" layoutY="355.0" mnemonicParsing="false" onAction="#talkPoorWoman" opacity="0.0" prefHeight="250.0" prefWidth="78.0" text="poorWoman" />
 
     <!-- Navigations -->
-    <Button layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station"/>
-    <Button layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skole"/>
+    <Button layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
+    <Button layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
 
     <!-- RoomItems -->
-    <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="957.0" layoutY="461.0"
-               onMouseClicked="#pickApple">
-        <Image url="@../images/apple.png"/>
+    <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="957.0" layoutY="461.0" onMouseClicked="#pickApple">
+        <Image url="@../images/apple.png" />
     </ImageView>
 
     <!-- InventoryItems-->
-    <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0"/>
-    <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#removeApple"
-               opacity="0.1">
-        <Image url="@../images/apple.png"/>
+    <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0" />
+    <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#interractApple" opacity="0.1">
+        <Image url="@../images/apple.png" />
     </ImageView>
     <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1">
-        <Image url="@../images/book.png"/>
+        <Image url="@../images/book.png" />
     </ImageView>
     <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" opacity="0.1">
-        <Image url="@../images/medicine.png"/>
+        <Image url="@../images/medicine.png" />
     </ImageView>
     <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1">
-        <Image url="@../images/drawing.png"/>
+        <Image url="@../images/drawing.png" />
     </ImageView>
     <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" opacity="0.1">
-        <Image url="@../images/money.png"/>
+        <Image url="@../images/money.png" />
     </ImageView>
     <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" opacity="0.1">
-        <Image url="@../images/scarf.png"/>
+        <Image url="@../images/scarf.png" />
     </ImageView>
 
     <!-- Layout inventory -->
-    <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="200.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="300.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="400.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="500.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="600.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="700.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="800.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="900.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1000.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1100.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1200.0" layoutY="779.0"
-          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="200.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="300.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="400.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="500.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="600.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="700.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="800.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="900.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1000.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1100.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1200.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
+   <HBox fx:id="appleChoice" disable="true" layoutX="1.0" layoutY="639.0" opacity="0" prefHeight="38.0" prefWidth="968.0">
+      <children>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder et æble, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
+         <Button fx:id="throwApple" mnemonicParsing="false" onAction="#removeApple" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+         <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til dreng" />
+         <Button mnemonicParsing="false" prefHeight="35.0" text="Giv til den gamle dame" />
+      </children>
+   </HBox>
 </AnchorPane>

@@ -5,7 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import worldofzuul.*;
 import java.io.IOException;
@@ -23,6 +26,10 @@ public class Main extends Application {
      */
     @FXML
     public ImageView money, medicine, apple, book, medicineInv, bookInv, appleInv, moneyInv;
+
+
+    @FXML
+    HBox appleChoice;
 
     /*
     * Initialize items in inventory
@@ -82,6 +89,8 @@ public class Main extends Application {
     * We can use the same method to pick up items in all controllers.
     * They are inherited from main.
      */
+
+    //PICKUP
     public void pickMoney(){
         getTest().pickUp(new Command(CommandWord.PICKUP, "penge"));
         money.setVisible(false);
@@ -105,6 +114,23 @@ public class Main extends Application {
         book.setVisible(false);
         bookInv.setOpacity(1.0);
         getTest().seeInventory();
+    }
+
+    //Remove items
+    public void removeApple() {
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
+        appleInv.setOpacity(0.1);
+        apple.setVisible(true);
+        appleChoice.setDisable(false);
+        appleChoice.setOpacity(0.0);
+    }
+
+
+    //INTERACT
+
+    public void interractApple(){
+        appleChoice.setDisable(false);
+        appleChoice.setOpacity(1.0);
     }
 
     // START GAME

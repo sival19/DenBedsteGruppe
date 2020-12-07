@@ -14,6 +14,7 @@ import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import worldofzuul.Character;
@@ -29,6 +30,7 @@ public class PoorroomController extends Main implements Initializable {
 
     @FXML
     private Label text;
+
 
     // INVENTORY MANAGEMENT
     @Override
@@ -48,17 +50,18 @@ public class PoorroomController extends Main implements Initializable {
         text.setText("Åh hvor jeg fryser");
     }
 
+
+
     // OBJECT INTERACTION
     /*
     * A simple remove method may not be enough. We need options when we
     * click on items. Maybe a little pop-up menu or drag-and-drop.
     * We need to figure interactions out.
      */
-    public void removeApple() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
-        appleInv.setOpacity(0.1);
-        apple.setVisible(true);
-    }
+
+
+
+
 
     // NAVIGATION
     public void goStation() throws IOException {
