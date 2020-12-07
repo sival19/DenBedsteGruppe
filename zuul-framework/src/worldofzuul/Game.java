@@ -74,7 +74,7 @@ public class Game implements ZuulGame {
 
         rewards.gainPoints();
 
-        double points = rewards.gainPoints;
+        int points = (int) rewards.gainPoints;
 
         System.out.println(points);
 
@@ -143,8 +143,8 @@ public class Game implements ZuulGame {
         } else {
             System.out.println("Det indtastede item blev ikke fundet.");
         }
-
     }
+
 
     public void createRooms() {
         // Create rooms
