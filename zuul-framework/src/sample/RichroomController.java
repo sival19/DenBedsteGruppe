@@ -20,9 +20,6 @@ import java.util.ResourceBundle;
 public class RichroomController extends Main implements Initializable {
 
     @FXML
-    private Button richman;
-
-    @FXML
     private Label text;
 
     // INVENTORY MANAGEMENT
@@ -55,8 +52,7 @@ public class RichroomController extends Main implements Initializable {
 
     // CHARACTER INTERACTION
     public void talkRichman() {
-        richman.getId();
-        text.setText("Det er fedt at være rig, men også et ensomt liv. Det ville være rart med en ven.");
+        text.setText("Jeg er sulten");
     }
 
     @FXML

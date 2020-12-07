@@ -30,7 +30,7 @@
 
     <!-- Navigations -->
     <Button layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
-    <Button layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skole" />
+    <Button layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" />
 
     <!-- RoomItems -->
     <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="957.0" layoutY="461.0" onMouseClicked="#pickApple">

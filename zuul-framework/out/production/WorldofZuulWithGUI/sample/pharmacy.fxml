@@ -46,10 +46,10 @@
     <ImageView fitHeight="641.0" fitWidth="1158.0" layoutX="-2.0" layoutY="-1.0">
         <Image url="@../images/pharmacy.PNG" />
     </ImageView>
-    <Button layoutX="584.0" layoutY="68.0" mnemonicParsing="false" onAction="#goRichroom" text="Slottet" />
+    <Button layoutX="553.0" layoutY="67.0" mnemonicParsing="false" onAction="#goRichroom" text="Slottet" />
     <Button layoutX="22.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
     <Button layoutX="1085.0" layoutY="289.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" />
-    <ImageView fx:id="medicine" fitHeight="87.0" fitWidth="104.0" layoutX="56.0" layoutY="179.0" onMouseClicked="#pickMedicine">
+    <ImageView fx:id="medicine" fitHeight="87.0" fitWidth="104.0" layoutX="96.0" layoutY="340.0" onMouseClicked="#pickMedicine">
         <Image url="@../images/medicine.png" />
     </ImageView>
 </AnchorPane>
