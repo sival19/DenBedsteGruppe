@@ -23,6 +23,13 @@ public class SchoolController extends Main implements Initializable {
     @FXML
     private Label text;
 
+    // CHARACTER INTERACTION
+    public void talkGirl() {
+        text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
+                " Vi må ikke gå ind på slottet...");
+
+    }
+
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
