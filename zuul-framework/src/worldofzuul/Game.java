@@ -71,18 +71,19 @@ public class Game implements ZuulGame {
             break;
         }
 
+
         rewards.gainPoints();
 
         double points = rewards.gainPoints;
 
         System.out.println(points);
 
-        Item itemGIven = null;
+        Item itemGiven = null;
         for (Item j : this.player.getInventory().getItems()) {
             String itemName = j.getName();
 
             if (secondWord.equals(itemName)) {
-                itemGIven = j;
+                itemGiven = j;
                 break;
             }
         }
@@ -114,8 +115,6 @@ public class Game implements ZuulGame {
         } else {
             System.out.println("Det indtastede item blev ikke fundet.");
         }
-
-
     }
 
     //make a method to pickup

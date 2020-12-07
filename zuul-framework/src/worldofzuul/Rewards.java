@@ -28,6 +28,7 @@ public class Rewards extends InteractiveObjects {
     //Method for gaining points
     public int gainPoints() {
 
+
         int pointsModifier;
 
         if (itemNeed == itemType)
@@ -41,7 +42,6 @@ public class Rewards extends InteractiveObjects {
 
         gainPoints = initialPoints * pointsModifier;
 
-
-    return gainPoints();
+    return (int) gainPoints;
     }
 }
