@@ -25,6 +25,12 @@ public class StationController extends Main implements Initializable {
     @FXML
     private Label text;
 
+    // CHARACTER INTERACTION
+    public void talkWizard() {
+        text.setText("Ha! Jeg vidste du ville klikke på mig! Og godt du gjorde det."
+        + " Husk nu at tænke dig om når du spiller spillet, hvem skal have hvad...? Uh nu kommer toget til Hogwarts! Farvel du!");
+    }
+
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
