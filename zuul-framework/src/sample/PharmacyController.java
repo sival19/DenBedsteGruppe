@@ -13,6 +13,11 @@ public class PharmacyController extends Main implements Initializable {
     @FXML
     private Label text;
 
+    // CHARACTER INTERACTION
+    public void talkDoctor() {
+        text.setText("Jeg er læge");
+    }
+
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
