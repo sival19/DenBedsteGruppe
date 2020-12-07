@@ -13,10 +13,10 @@
         <Image url="@../images/school.PNG" />
     </ImageView>
     <Button layoutX="1070.0" layoutY="255.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
-    <Button layoutX="571.0" layoutY="14.0" mnemonicParsing="false" onAction="#goRichRoom" text="Rigmandsrum" />
+    <Button layoutX="571.0" layoutY="14.0" mnemonicParsing="false" onAction="#goRichRoom" text="Slottet" />
     <Button layoutX="149.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" />
     <Button layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
-    <Button layoutX="966.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPoorroom" text="Fattigrum" />
+    <Button layoutX="966.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPoorroom" text="Gaden" />
 
 
     <!-- Inventory -->
