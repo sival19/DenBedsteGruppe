@@ -33,6 +33,7 @@ public class SchoolController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+       drawing.setVisible(!checkInventory("tegning"));
        init();
     }
 

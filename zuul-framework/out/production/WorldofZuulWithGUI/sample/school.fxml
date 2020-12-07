@@ -21,9 +21,14 @@
 
     <!-- Inventory -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0" />
-   <ImageView fx:id="girl" fitHeight="187.0" fitWidth="146.0" layoutX="455.0" layoutY="424.0" onMouseClicked="#talkGirl">
+   <ImageView fx:id="girl" fitHeight="185.0" fitWidth="139.0" layoutX="436.0" layoutY="447.0" onMouseClicked="#talkGirl">
       <image>
          <Image url="@../images/girl.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="drawing" fitHeight="159.0" fitWidth="266.0" layoutX="146.0" layoutY="481.0" onMouseClicked="#pickDrawing">
+      <image>
+         <Image url="@../images/drawing.png" />
       </image>
    </ImageView>
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1">

@@ -25,7 +25,7 @@ public class Main extends Application {
     * This is why we only need the fields in main.
      */
     @FXML
-    public ImageView money, medicine, apple, book, scarf, medicineInv, bookInv, appleInv, moneyInv, scarfInv;
+    public ImageView money, medicine, apple, book, scarf, drawing,  medicineInv, bookInv, appleInv, moneyInv, scarfInv, drawingInv;
 
 
     @FXML
@@ -50,6 +50,9 @@ public class Main extends Application {
         }
         if (checkInventory("halstørklæde")) {
             scarfInv.setOpacity(1.0);
+        }
+        if (checkInventory("tegning")) {
+            drawingInv.setOpacity(1.0);
         }
     }
 
@@ -122,6 +125,12 @@ public class Main extends Application {
         getTest().pickUp(new Command(CommandWord.PICKUP, "halstørklæde"));
         scarf.setVisible(false);
         scarfInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+    public void pickDrawing() {
+        getTest().pickUp(new Command(CommandWord.PICKUP, "tegning"));
+        drawing.setVisible(false);
+        drawingInv.setOpacity(1.0);
         getTest().seeInventory();
     }
 
