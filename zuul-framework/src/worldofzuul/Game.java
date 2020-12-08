@@ -246,8 +246,8 @@ public class Game implements ZuulGame {
     }
 
     //makes it possible to simply write what command and what to do in it in GUI
-    public boolean processCommand(CommandWord commandWord, String secondWord) {
-        return processCommand(new Command(commandWord, secondWord));
+    public boolean processCommand(CommandWord commandWord, String secondWord, String thirdWord) {
+        return processCommand(new Command(commandWord, secondWord, thirdWord));
     }
 
 

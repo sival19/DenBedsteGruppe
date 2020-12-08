@@ -19,7 +19,7 @@ public class LibraryController extends StationController {
 
     @FXML
     public void goSchool() throws IOException{
-        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
+        getTest().goRoom(new Command(CommandWord.GO, "skolen",""));
         Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
         Stage stage = (Stage) school_lib.getScene().getWindow();
 
@@ -29,7 +29,7 @@ public class LibraryController extends StationController {
     @FXML
     public void goRichroom() throws IOException {
 
-        getTest().goRoom(new Command(CommandWord.GO, "rigmandsgården"));
+        getTest().goRoom(new Command(CommandWord.GO, "rigmandsgården",""));
         Parent loader = FXMLLoader.load(getClass().getResource("richroom.fxml"));
         Stage stage = (Stage) richroom_lib.getScene().getWindow();
 

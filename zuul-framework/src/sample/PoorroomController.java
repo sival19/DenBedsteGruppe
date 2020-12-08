@@ -30,7 +30,7 @@ public class PoorroomController extends StationController {
 
     @FXML
     public void goStation() throws IOException {
-        getTest().goRoom(new Command(CommandWord.GO, "stationen"));
+        getTest().goRoom(new Command(CommandWord.GO, "stationen",""));
         Parent loader = FXMLLoader.load(getClass().getResource("stationSecond.fxml"));
         Stage stage = (Stage) station_poor.getScene().getWindow();
 
@@ -42,7 +42,7 @@ public class PoorroomController extends StationController {
     public void goSchool() throws IOException {
 
         //use command go and go to skolen
-        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
+        getTest().goRoom(new Command(CommandWord.GO, "skolen",""));
         Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
         Stage stage = (Stage) school_poor.getScene().getWindow();
 
@@ -77,7 +77,7 @@ public class PoorroomController extends StationController {
     }
 
     public void pickApple() {
-        getTest().pickUp(new Command(CommandWord.PICKUP , "æble"));
+        getTest().pickUp(new Command(CommandWord.PICKUP , "æble",""));
         apple.setVisible(false);
         appleInv.setVisible(true);
         getTest().seeInventory();
@@ -86,7 +86,7 @@ public class PoorroomController extends StationController {
 
     public void removeApple() {
 
-        getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble","");
         appleInv.setVisible(false);
         apple.setVisible(true);
 

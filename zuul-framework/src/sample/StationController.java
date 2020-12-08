@@ -31,7 +31,7 @@ public class StationController extends Main {
     public void goSkolen() throws IOException {
 
         //use command go and go to skolen
-        getTest().goRoom(new Command(CommandWord.GO, "skolen"));
+        getTest().goRoom(new Command(CommandWord.GO, "skolen",""));
         Parent loader = FXMLLoader.load(getClass().getResource("school.fxml"));
         Stage stage = (Stage) skole_tr.getScene().getWindow();
 
@@ -41,7 +41,7 @@ public class StationController extends Main {
 
     @FXML
     public void goPharmacy() throws IOException{
-        getTest().goRoom(new Command(CommandWord.GO, "apoteket"));
+        getTest().goRoom(new Command(CommandWord.GO, "apoteket",""));
         Parent loader = FXMLLoader.load(getClass().getResource("pharmacy.fxml"));
         Stage stage = (Stage) pharmacy_station.getScene().getWindow();
 
@@ -51,7 +51,7 @@ public class StationController extends Main {
 
     @FXML
     public void goPoorRoom() throws IOException{
-        getTest().goRoom(new Command(CommandWord.GO, "fattiggården"));
+        getTest().goRoom(new Command(CommandWord.GO, "fattiggården",""));
         Parent loader = FXMLLoader.load(getClass().getResource("poorroom.fxml"));
         Stage stage = (Stage) pooroom_station.getScene().getWindow();
 
