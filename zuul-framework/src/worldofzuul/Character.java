@@ -1,12 +1,10 @@
 package worldofzuul;
 
-import java.util.ArrayList;
-
 public class Character extends InteractiveObjects {
 
     //Constructor
-    public Character(String name, String info) {
-        super (name, info);
+    public Character(String name, String info, int itemNeed) {
+        super (name, info, itemNeed);
     }
 
     @Override
@@ -15,10 +13,14 @@ public class Character extends InteractiveObjects {
     }
 
 
-
-
-
-
     int Tasks[];
     String InteractWith;
+
+    public int getItemNeed()
+    {
+        return itemType;
+    }
 }
+
+
+

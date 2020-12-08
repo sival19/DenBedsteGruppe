@@ -8,8 +8,8 @@ public class Player {
     private static int points;
     private static int health;
     private Inventory inventory;
-    private Tasks tasks;
     private String name;
+    int totalPoints;
 
     //constructors
     public Player(int points, int health, String name) {
@@ -39,6 +39,15 @@ public class Player {
 
     public int totalPoints(int points) {
         return getPoints();
+    }
+
+    public int getTotalPoints()
+    {
+        return totalPoints;
+    }
+
+    public void setTotalPoints(int totalPoints) {
+        this.totalPoints = totalPoints;
     }
 
 

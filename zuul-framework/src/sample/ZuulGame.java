@@ -7,7 +7,7 @@ public interface ZuulGame {
 
     //process a command from game with CommandWord.SOMETHING , "what"
     //Husk hvis man laver om i sting skal man også lave om i kommandolag
-    boolean processCommand(CommandWord commandWord, String secondWord);
+    boolean processCommand(CommandWord commandWord, String secondWord, String thirdWord);
 
 
     public boolean processCommand(Command command);

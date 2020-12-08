@@ -73,7 +73,7 @@ public class Main extends Application {
     * to keep track of game state (room items and inventory).
      */
     public void changeRooms(String roomName, String filepath) throws IOException {
-        getTest().goRoom(new Command(CommandWord.GO, roomName));
+        getTest().goRoom(new Command(CommandWord.GO, roomName, ""));
         Parent loader = FXMLLoader.load(getClass().getResource(filepath));
         stage.setScene(new Scene(loader));
     }
@@ -98,37 +98,37 @@ public class Main extends Application {
 
     //PICKUP
     public void pickMoney(){
-        getTest().pickUp(new Command(CommandWord.PICKUP, "penge"));
+        getTest().pickUp(new Command(CommandWord.PICKUP, "penge", ""));
         money.setVisible(false);
         moneyInv.setOpacity(1.0);
         getTest().seeInventory();
     }
     public void pickMedicine() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "medicin"));
+        getTest().pickUp(new Command(CommandWord.PICKUP, "medicin", ""));
         medicine.setVisible(false);
         medicineInv.setOpacity(1.0);
         getTest().seeInventory();
     }
     public void pickApple() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "æble"));
+        getTest().pickUp(new Command(CommandWord.PICKUP, "æble", ""));
         apple.setVisible(false);
         appleInv.setOpacity(1.0);
         getTest().seeInventory();
     }
     public void pickBook() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "bog"));
+        getTest().pickUp(new Command(CommandWord.PICKUP, "bog", ""));
         book.setVisible(false);
         bookInv.setOpacity(1.0);
         getTest().seeInventory();
     }
     public void pickScarf() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "halstørklæde"));
+        getTest().pickUp(new Command(CommandWord.PICKUP, "halstørklæde", ""));
         scarf.setVisible(false);
         scarfInv.setOpacity(1.0);
         getTest().seeInventory();
     }
     public void pickDrawing() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "tegning"));
+        getTest().pickUp(new Command(CommandWord.PICKUP, "tegning", ""));
         drawing.setVisible(false);
         drawingInv.setOpacity(1.0);
         getTest().seeInventory();
@@ -140,7 +140,7 @@ public class Main extends Application {
     *
      */
     public void removeApple() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");
         appleInv.setOpacity(0.1);
         apple.setVisible(true);
         appleChoice.setDisable(false);
@@ -148,7 +148,7 @@ public class Main extends Application {
     }
 
     public void removeDrawing() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "tegning");
+        getTest().processCommand(CommandWord.REMOVEITEMS, "tegning", "");
         drawingInv.setOpacity(0.1);
         drawing.setVisible(true);
         drawingChoice.setDisable(false);
@@ -156,7 +156,7 @@ public class Main extends Application {
     }
 
     public void removeMedicine() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "medicin");
+        getTest().processCommand(CommandWord.REMOVEITEMS, "medicin", "");
         medicineInv.setOpacity(0.1);
         medicine.setVisible(true);
         medicineChoice.setDisable(false);
@@ -164,7 +164,7 @@ public class Main extends Application {
     }
 
     public void removeScarf(){
-        getTest().processCommand(CommandWord.REMOVEITEMS, "halstørklæde");
+        getTest().processCommand(CommandWord.REMOVEITEMS, "halstørklæde", "");
         scarfInv.setOpacity(0.1);
         scarf.setVisible(true);
         scarfChoice.setDisable(false);
@@ -172,7 +172,7 @@ public class Main extends Application {
     }
 
     public void removeBook(){
-        getTest().processCommand(CommandWord.REMOVEITEMS,"bog");
+        getTest().processCommand(CommandWord.REMOVEITEMS,"bog", "");
         bookInv.setOpacity(0.1);
         book.setVisible(true);
         bookChoice.setDisable(false);
@@ -180,7 +180,7 @@ public class Main extends Application {
     }
 
     public void removeMoney() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "penge");
+        getTest().processCommand(CommandWord.REMOVEITEMS, "penge", "");
         moneyInv.setOpacity(0.1);
         money.setVisible(true);
         moneyChoice.setDisable(false);

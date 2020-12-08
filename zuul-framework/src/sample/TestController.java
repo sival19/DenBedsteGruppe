@@ -97,14 +97,14 @@ public class TestController extends Main {
 
     @FXML private ImageView apple, appleInv;
     public void pickApple() {
-        getTest().pickUp(new Command(CommandWord.PICKUP , "æble"));
+        getTest().pickUp(new Command(CommandWord.PICKUP , "æble", ""));
         apple.setVisible(false);
         appleInv.setVisible(true);
         getTest().seeInventory();
     }
 
     public void removeApple() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");
         appleInv.setVisible(false);
         apple.setVisible(true);
     }

@@ -45,6 +45,58 @@ public class Game implements ZuulGame {
 
     }
 
+    // Point system method
+    public void giveItem(Command c) {
+
+        if (c.hasSecondWord()) {
+            if (c.hasThirdWord()) {
+
+                String secondWord = c.getSecondWord();
+                String thirdWord = c.getThirdWord();
+
+                // Checks for the specific item (typed by the player) in the players inventory
+                for (Item i : this.player.getInventory().getItems()) {
+                    int itemType = i.getItemType();
+                    String itemName = i.getName();
+
+                    // Checks if the specific item typed is in the player inventory
+                    if (secondWord.equals(itemName)) {
+
+
+                        for (Character j : this.currentRoom.getCharacters()) {
+                            int itemNeed = j.getItemNeed();
+
+
+                            int pointsModifier;
+                            int points;
+                            int initialPoints = 10;
+
+                            if (itemType == itemNeed) {
+                                pointsModifier = 2;
+                            } else {
+                                pointsModifier = 1;
+                            }
+
+                            // If types is equivalent, get 2x points
+                            // If types is not equivalent, get 1x points
+                            points = initialPoints * pointsModifier;
+
+                            // adder points til players total points
+                            player.totalPoints += points;
+
+                            System.out.println("Du fik: " + points + " point");
+                            System.out.println("Du har nu: " + player.totalPoints + " points i alt");
+                        }
+                    }
+                }
+            } else {
+                System.out.println("Prøv igen");
+
+
+            }
+        }
+    }
+
     //remove items from inventory
     private void remove(Command c) {
         if (!c.hasSecondWord()) {
@@ -148,12 +200,12 @@ public class Game implements ZuulGame {
         // Create items
         Item æble, penge, medicin, bog, tegning, halstørklæde;
 
-        æble = new Item("æble", "det er rødt");
-        halstørklæde = new Item("halstørklæde", "den er varm");
-        tegning = new Item("tegning", "n0get");
-        penge = new Item("penge", "der er mange");
-        medicin = new Item("medicin", "det er piller");
-        bog = new Item("bog", "den er tung");
+        æble = new Item("æble", "det er rødt", 1);
+        halstørklæde = new Item("halstørklæde", "den er varm", 2);
+        tegning = new Item("tegning", "n0get", 3);
+        penge = new Item("penge", "der er mange", 1);
+        medicin = new Item("medicin", "det er piller", 2);
+        bog = new Item("bog", "den er tung", 3);
 
         // Add items to rooms
         apotek.addItem(medicin);
@@ -166,10 +218,10 @@ public class Game implements ZuulGame {
         // Create characters
         Character waiter, boy, richSnob, poorFuck;
 
-        waiter = new Character("tjener", "bestikslav");
-        boy = new Character("dreng", "lille stakkel");
-        richSnob = new Character("onkel Joachim", "lidt for rig");
-        poorFuck = new Character("Total hjemløs", "så syg...");
+        waiter = new Character("tjener", "bestikslav", 1);
+        boy = new Character("dreng", "lille stakkel",2);
+        richSnob = new Character("onkel Joachim", "lidt for rig",3);
+        poorFuck = new Character("Total hjemløs", "så syg...",1);
 
         //add characters to rooms
 
@@ -199,8 +251,8 @@ public class Game implements ZuulGame {
     }
 
     //makes it possible to simply write what command and what to do in it in GUI
-    public boolean processCommand(CommandWord commandWord, String secondWord) {
-        return processCommand(new Command(commandWord, secondWord));
+    public boolean processCommand(CommandWord commandWord, String secondWord, String thirdWord) {
+        return processCommand(new Command(commandWord, secondWord, thirdWord));
     }
 
     public boolean processCommand(Command command) {
@@ -227,7 +279,11 @@ public class Game implements ZuulGame {
             remove(command);
         } else if (commandWord == CommandWord.SEECHARACTERS) {
             seeCharacters();
-        } else if (commandWord == CommandWord.QUIT) {
+        }
+        else if (commandWord == CommandWord.GIEFITEM) {
+            giveItem(command);
+        }
+        else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
         }
         return wantToQuit;
