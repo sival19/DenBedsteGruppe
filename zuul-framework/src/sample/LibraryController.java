@@ -38,9 +38,5 @@ public class LibraryController extends Main implements Initializable {
     }
 
     // OBJECT INTERACTION
-    public void removeBook() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "bog");
-        bookInv.setOpacity(0.1);
-        book.setVisible(true);
-    }
+
 }
