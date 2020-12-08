@@ -26,11 +26,7 @@ public class PharmacyController extends Main implements Initializable {
     }
 
     // OBJECT INTERACTION
-    public void removeMedicine() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "medicin");
-        medicineInv.setOpacity(0.1);
-        medicine.setVisible(true);
-    }
+
 
     // NAVIGATION
     public void goRichroom() throws IOException {

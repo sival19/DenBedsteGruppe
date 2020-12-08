@@ -7,6 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
 
     <!-- Inventory -->
@@ -17,7 +19,7 @@
     <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1">
         <Image url="@../images/book.png" />
     </ImageView>
-    <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" onMouseClicked="#removeMedicine" opacity="0.1">
+    <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" onMouseClicked="#interractMedicine" opacity="0.1">
         <Image url="@../images/medicine.png" />
     </ImageView>
     <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1">
@@ -57,4 +59,11 @@
     <ImageView fx:id="medicine" fitHeight="68.0" fitWidth="77.0" layoutX="123.0" layoutY="359.0" onMouseClicked="#pickMedicine">
         <Image url="@../images/medicine.png" />
     </ImageView>
+    <HBox fx:id="medicineChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
+        <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder noget medicin, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
+            <Button fx:id="throwMedicine" mnemonicParsing="false" onAction="#removeMedicine" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        </children>
+    </HBox>
 </AnchorPane>

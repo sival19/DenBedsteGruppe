@@ -29,7 +29,7 @@ public class Main extends Application {
 
 
     @FXML
-    HBox appleChoice, drawingChoice;
+    HBox appleChoice, drawingChoice, medicineChoice;
 
     /*
     * Initialize items in inventory
@@ -151,6 +151,14 @@ public class Main extends Application {
         drawingChoice.setOpacity(0.0);
     }
 
+    public void removeMedicine() {
+        getTest().processCommand(CommandWord.REMOVEITEMS, "medicin");
+        medicineInv.setOpacity(0.1);
+        medicine.setVisible(true);
+        medicineChoice.setDisable(false);
+        medicineChoice.setOpacity(0.0);
+    }
+
 
     //INTERACT
 
@@ -163,6 +171,11 @@ public class Main extends Application {
         drawingChoice.setDisable(false);
         drawingChoice.setOpacity(1.0);
 
+    }
+
+    public void interractMedicine(){
+        medicineChoice.setDisable(false);
+        medicineChoice.setOpacity(1.0);
     }
 
     // START GAME
