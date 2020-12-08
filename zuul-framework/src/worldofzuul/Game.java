@@ -158,7 +158,7 @@ public class Game implements ZuulGame {
         // Add items to rooms
         apotek.addItem(medicin);
         bibliotek.addItem(halstørklæde);
-        fattiggård.addItem(æble);
+        rigmandsrum.addItem(æble);
         rigmandsrum.addItem(penge);
         bibliotek.addItem(bog);
         skole.addItem(tegning);

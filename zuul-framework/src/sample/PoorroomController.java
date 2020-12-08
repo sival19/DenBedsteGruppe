@@ -35,10 +35,6 @@ public class PoorroomController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // "apple" cannot be part of the generic init()
-        // because it isn't in all rooms/fxml-files atm.
-        apple.setVisible(!checkInventory("æble"));
-        init();
     }
 
     // CHARACTER INTERACTION
