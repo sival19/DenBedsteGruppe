@@ -3,7 +3,6 @@ package worldofzuul;
 import sample.ZuulGame;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Game implements ZuulGame {
     private Parser parser;
@@ -251,8 +250,8 @@ public class Game implements ZuulGame {
     }
 
     //makes it possible to simply write what command and what to do in it in GUI
-    public boolean processCommand(CommandWord commandWord, String secondWord, String thirdWord) {
-        return processCommand(new Command(commandWord, secondWord, thirdWord));
+    public void processCommand(CommandWord commandWord, String secondWord, String thirdWord) {
+        processCommand(new Command(commandWord, secondWord, thirdWord));
     }
 
     public boolean processCommand(Command command) {

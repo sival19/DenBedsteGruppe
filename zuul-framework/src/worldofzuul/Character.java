@@ -13,8 +13,6 @@ public class Character extends InteractiveObjects {
     }
 
 
-    int Tasks[];
-    String InteractWith;
 
     public int getItemNeed()
     {
