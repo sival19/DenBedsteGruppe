@@ -11,12 +11,16 @@
 <?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
 
+    <!-- invisible items so we can drop them -->
+    <ImageView fx:id="book">
+    </ImageView>
+
     <!-- Inventory -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0" />
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1">
         <Image url="@../images/apple.png" />
     </ImageView>
-    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1">
+    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1" onMouseClicked="#interractBook">
         <Image url="@../images/book.png" />
     </ImageView>
     <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" onMouseClicked="#interractMedicine" opacity="0.1">
@@ -63,6 +67,13 @@
         <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder noget medicin, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
             <Button fx:id="throwMedicine" mnemonicParsing="false" onAction="#removeMedicine" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        </children>
+    </HBox>
+    <HBox fx:id="bookChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
+        <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder en Bog, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
+            <Button fx:id="throwBook" mnemonicParsing="false" onAction="#removeBook" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
         </children>
     </HBox>
