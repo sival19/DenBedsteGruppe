@@ -71,7 +71,7 @@
       <children>
          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder et æble, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
          <Button fx:id="throwApple" mnemonicParsing="false" onAction="#removeApple" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
-         <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til dreng" />
+         <Button fx:id="appleToBoy" mnemonicParsing="false" onAction="#giveAppleBoy" prefHeight="35.0" prefWidth="97.0" text="Giv til dreng" />
          <Button mnemonicParsing="false" prefHeight="35.0" text="Giv til den gamle dame" />
       </children>
    </HBox>

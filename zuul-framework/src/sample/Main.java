@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -24,6 +25,9 @@ public class Main extends Application {
      */
     @FXML
     public ImageView money, medicine, apple, book, scarf, drawing,  medicineInv, bookInv, appleInv, moneyInv, scarfInv, drawingInv;
+
+    @FXML
+    public Button appleToBoy;
 
 
     @FXML
@@ -130,6 +134,21 @@ public class Main extends Application {
         drawing.setVisible(false);
         drawingInv.setOpacity(1.0);
         getTest().seeInventory();
+    }
+
+    /* Give items
+    *
+    *
+    *
+     */
+
+    public void giveAppleBoy(){
+        getTest().processCommand(CommandWord.GIEFITEM, "æble", "dreng");
+        appleInv.setOpacity(0.1);
+        appleChoice.setDisable(false);
+        appleChoice.setOpacity(0.0);
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");
+
     }
 
     /*Remove items
