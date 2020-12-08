@@ -146,9 +146,10 @@ public class Game implements ZuulGame {
         currentRoom = station;
 
         // Create items
-        Item æble, penge, medicin, bog, tegning;
+        Item æble, penge, medicin, bog, tegning, halstørklæde;
 
         æble = new Item("æble", "det er rødt");
+        halstørklæde = new Item("halstørklæde", "den er varm");
         tegning = new Item("tegning", "n0get");
         penge = new Item("penge", "der er mange");
         medicin = new Item("medicin", "det er piller");
@@ -156,6 +157,7 @@ public class Game implements ZuulGame {
 
         // Add items to rooms
         apotek.addItem(medicin);
+        bibliotek.addItem(halstørklæde);
         fattiggård.addItem(æble);
         rigmandsrum.addItem(penge);
         bibliotek.addItem(bog);
