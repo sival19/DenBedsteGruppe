@@ -7,8 +7,8 @@ public class Room
 {
     private String description;
     private HashMap<String, Room> exits;
-    private List<Item> itemsRoom = new ArrayList<Item>();
-    private ArrayList<Character> characters = new ArrayList<Character>();
+    private List<Item> itemsRoom = new ArrayList<>();
+    private ArrayList<Character> characters = new ArrayList<>();
 
     public void addCharacter(Character character){
         this.characters.add(character);
@@ -37,7 +37,7 @@ public class Room
     public Room(String description)
     {
         this.description = description;
-        exits = new HashMap<String, Room>();
+        exits = new HashMap<>();
 
     }
 

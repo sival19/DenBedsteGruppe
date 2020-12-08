@@ -6,15 +6,13 @@ public class Player {
 
     //attributes
     private static int points;
-    private static int health;
     private Inventory inventory;
     private String name;
     int totalPoints;
 
     //constructors
-    public Player(int points, int health, String name) {
+    public Player(int points, String name) {
         this.points = points;
-        this.health = health;
         this.name = name;
         inventory = new Inventory(new ArrayList<>());
     }
@@ -24,31 +22,7 @@ public class Player {
         return points;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
-    }
 
-    public static int getHealth() {
-        return health;
-    }
-
-   /* public void setHealth(int health) {
-        this.health = health;
-   }
-   */
-
-    public int totalPoints(int points) {
-        return getPoints();
-    }
-
-    public int getTotalPoints()
-    {
-        return totalPoints;
-    }
-
-    public void setTotalPoints(int totalPoints) {
-        this.totalPoints = totalPoints;
-    }
 
 
     public static int addPoints(int points) {

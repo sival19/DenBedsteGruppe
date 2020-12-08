@@ -7,7 +7,7 @@ public class Inventory {
     private static ArrayList<Item> items;
 
     Inventory(ArrayList<Item> items) {
-        this.items = items;
+        Inventory.items = items;
     }
 
     public static ArrayList<Item> getItems() {

@@ -12,7 +12,7 @@ public class Game implements ZuulGame {
     public Game() {
         createRooms();
         parser = new Parser();
-        player = new Player(0, 0, "Palle");
+        player = new Player(0, "Palle");
 
     }
 
@@ -51,10 +51,11 @@ public class Game implements ZuulGame {
             if (c.hasThirdWord()) {
 
                 String secondWord = c.getSecondWord();
-                String thirdWord = c.getThirdWord();
+                //what is third word for?
+                //String thirdWord = c.getThirdWord();
 
                 // Checks for the specific item (typed by the player) in the players inventory
-                for (Item i : this.player.getInventory().getItems()) {
+                for (Item i : Inventory.getItems()) {
                     int itemType = i.getItemType();
                     String itemName = i.getName();
 
@@ -106,7 +107,7 @@ public class Game implements ZuulGame {
         //Herfr ved vi at der er et Second Word
         String secondWord = c.getSecondWord();
         Item itemToRemove = null;
-        for (Item i : this.player.getInventory().getItems()) {
+        for (Item i : Inventory.getItems()) {
             String itemName = i.getName();
 
             if (secondWord.equals(itemName)) {
