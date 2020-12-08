@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Player {
 
     //attributes
-    private static int points;
+    public static int points;
     private static int health;
     private Inventory inventory;
-    private Tasks tasks;
     private String name;
+    int totalPoints;
 
     //constructors
     public Player(int points, int health, String name) {
@@ -42,14 +42,16 @@ public class Player {
     }
 
 
-    public static int addPoints(int points) {
-        points = getPoints();
-        points += 1; //missing from where to add points and howmany
-        return points;
-
+    public int getTotalPoints()
+    {
+        return totalPoints;
     }
 
-//medtode tilføje/fjerne health
+    public void setTotalPoints(int totalPoints) {
+        this.totalPoints = totalPoints;
+    }
+
+    //medtode tilføje/fjerne health
     public static int addHealth(int health) {
         health = 100;
         health += 1; //missing from where to add health and howmuch

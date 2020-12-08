@@ -9,9 +9,6 @@ public class Game implements ZuulGame {
     private Room currentRoom;
     private Player player;
 
-    Item item = new Item("", "", 0);
-    Characters characters = new Characters("", "", 0);
-    Rewards rewards = new Rewards("", "", 0);
 
     public Game() {
         createRooms();
@@ -83,7 +80,11 @@ public class Game implements ZuulGame {
                             // If types is not equivalent, get 1x points
                             points = initialPoints * pointsModifier;
 
-                            System.out.println(points);
+                            // adder points til players total points
+                            player.totalPoints += points;
+
+                            System.out.println("Du fik: " + points + " point");
+                            System.out.println("Du har nu: " + player.totalPoints + " points i alt");
                         }
                     }
                 }
