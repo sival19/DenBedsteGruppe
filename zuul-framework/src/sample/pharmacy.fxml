@@ -5,10 +5,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
-
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
+
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
 
     <!-- invisible items so we can drop them -->
@@ -20,9 +20,14 @@
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1">
         <Image url="@../images/apple.png" />
     </ImageView>
-    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1" onMouseClicked="#interractBook">
+    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" onMouseClicked="#interractBook" opacity="0.1">
         <Image url="@../images/book.png" />
     </ImageView>
+   <ImageView fitHeight="200.0" fitWidth="112.0">
+      <image>
+         <Image url="@../images/sickboy.png" />
+      </image>
+   </ImageView>
     <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" onMouseClicked="#interractMedicine" opacity="0.1">
         <Image url="@../images/medicine.png" />
     </ImageView>
@@ -55,6 +60,11 @@
    <ImageView fx:id="doctor" fitHeight="318.0" fitWidth="311.0" layoutX="190.0" layoutY="323.0" onMouseClicked="#talkDoctor">
       <image>
          <Image url="@../images/doctor.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="sickboy" fitHeight="283.0" fitWidth="151.0" layoutX="889.0" layoutY="319.0" onMouseClicked="#talkSickboy">
+      <image>
+         <Image url="@../images/sickboy.png" />
       </image>
    </ImageView>
     <Button layoutX="553.0" layoutY="67.0" mnemonicParsing="false" onAction="#goRichroom" text="Slottet" />

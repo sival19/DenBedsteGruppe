@@ -17,6 +17,10 @@ public class PharmacyController extends Main implements Initializable {
     public void talkDoctor() {
         text.setText("Jeg er læge");
     }
+    // CHARACTER INTERACTION
+    public void talkSickboy() {
+        text.setText("Jeg er syg, men jeg har ikke råd til medicin. ");
+    }
 
     // INVENTORY MANAGEMENT
     @Override
