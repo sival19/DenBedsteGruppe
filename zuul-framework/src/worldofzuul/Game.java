@@ -56,28 +56,25 @@ public class Game implements ZuulGame {
                 String thirdWord = c.getThirdWord();
 
                 for (Item i : this.player.getInventory().getItems()) {
-                    String itemName = i.getName();
-                    int itemType = i.getItemType();
+                    int itemName = i.getItemType();
 
-                    if(secondWord.equals(itemName))
-                    {
-                        for (Character j : this.currentRoom.getCharacters()) {
-                            int itemNeed = j.getItemNeed();
+                    for (Character j : this.currentRoom.getCharacters()) {
+                        int CharName = j.getItemNeed();
 
 
-                            int pointsModifier;
-                            int points;
-                            int initialPoints = 10;
+                        int pointsModifier;
+                        int points;
+                        int initialPoints = 10;
 
-                            if (itemType == itemNeed) {
-                                pointsModifier = 2;
-                            } else {
-                                pointsModifier = 1;
-                            }
-
-                            points = initialPoints * pointsModifier;
-                            System.out.println(points);
+                        if (itemName == CharName) {
+                            pointsModifier = 2;
+                        } else {
+                            pointsModifier = 1;
                         }
+
+                        points = initialPoints * pointsModifier;
+
+                        System.out.println(points);
                     }
                 }
                 }else{
