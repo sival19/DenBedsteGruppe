@@ -29,7 +29,7 @@ public class Main extends Application {
 
 
     @FXML
-    HBox appleChoice, drawingChoice, medicineChoice, scarfChoice, bookChoice;
+    HBox appleChoice, drawingChoice, medicineChoice, scarfChoice, bookChoice, moneyChoice;
 
     /*
     * Initialize items in inventory
@@ -134,7 +134,11 @@ public class Main extends Application {
         getTest().seeInventory();
     }
 
-    //Remove items
+    /*Remove items
+    *
+    *
+    *
+     */
     public void removeApple() {
         getTest().processCommand(CommandWord.REMOVEITEMS, "æble");
         appleInv.setOpacity(0.1);
@@ -175,6 +179,14 @@ public class Main extends Application {
         bookChoice.setOpacity(0.0);
     }
 
+    public void removeMoney() {
+        getTest().processCommand(CommandWord.REMOVEITEMS, "penge");
+        moneyInv.setOpacity(0.1);
+        money.setVisible(true);
+        moneyChoice.setDisable(false);
+        moneyChoice.setOpacity(0.0);
+    }
+
 
     //INTERACT
 
@@ -202,6 +214,11 @@ public class Main extends Application {
     public void interractBook(){
         bookChoice.setDisable(false);
         bookChoice.setOpacity(1.0);
+    }
+
+    public void interractMoney(){
+        moneyChoice.setDisable(false);
+        moneyChoice.setOpacity(1.0);
     }
 
     // START GAME

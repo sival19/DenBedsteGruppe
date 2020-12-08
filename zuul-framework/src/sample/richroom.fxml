@@ -7,6 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
 
     <!-- Inventory -->
@@ -23,7 +25,7 @@
     <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1">
         <Image url="@../images/drawing.png" />
     </ImageView>
-    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" onMouseClicked="#removeMoney" opacity="0.1">
+    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" onMouseClicked="#interractMoney" opacity="0.1">
         <Image url="@../images/money.png" />
     </ImageView>
     <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" opacity="0.1">
@@ -73,5 +75,13 @@
     <ImageView fx:id="backpack" fitHeight="104.0" fitWidth="93.0" layoutX="171.0" layoutY="65.0" onMouseClicked="#seeInventory">
         <Image url="@../images/backpack.png" />
     </ImageView>
+
+    <HBox fx:id="moneyChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
+        <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder en Bog, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
+            <Button fx:id="throwMoney" mnemonicParsing="false" onAction="#removeMoney" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        </children>
+    </HBox>
 
 </AnchorPane>

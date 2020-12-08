@@ -47,11 +47,7 @@ public class RichroomController extends Main implements Initializable {
 
     // OBJECT INTERACTION
 
-    public void removeMoney() {
-        getTest().processCommand(CommandWord.REMOVEITEMS, "penge");
-        moneyInv.setOpacity(0.1);
-        money.setVisible(true);
-    }
+
 
     // CHARACTER INTERACTION
     public void talkRichman() {
