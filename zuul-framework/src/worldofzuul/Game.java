@@ -2,15 +2,16 @@ package worldofzuul;
 
 import sample.ZuulGame;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Game implements ZuulGame {
     private Parser parser;
     private Room currentRoom;
     private Player player;
-    int itemType;
-    int itemNeed;
+
+    Item item = new Item("", "", 0);
+    Characters characters = new Characters("", "",0);
+    Rewards rewards = new Rewards("","",0);
 
     public Game() {
         createRooms();
@@ -49,37 +50,42 @@ public class Game implements ZuulGame {
     public void giveItem(Command c) {
 
         if (c.hasSecondWord()) {
-            if (c.hasThirdWord())
-            {
-                Item item = new Item("", "", 0);
-                Characters characters = new Characters("", "",0);
-                Rewards rewards = new Rewards("","",0);
+            if (c.hasThirdWord()) {
 
-                item.itemType = 1;
-                characters.itemNeed = 1;
+                String secondWord = c.getSecondWord();
+                String thirdWord = c.getThirdWord();
 
-                rewards.gainPoints();
-                int points = (int) rewards.gainPoints;
+                for (Item i : this.player.getInventory().getItems()) {
+                    int itemName = i.getItemType();
 
-                System.out.println(points);
+                    for (Character j : this.currentRoom.getCharacters()) {
+                        int CharName = j.getItemNeed();
+
+
+                        int pointsModifier;
+                        int points;
+                        int initialPoints = 10;
+
+                        if (itemName == CharName) {
+                            pointsModifier = 2;
+                        } else {
+                            pointsModifier = 1;
+                        }
+
+                        points = initialPoints * pointsModifier;
+
+                        System.out.println(points);
+                    }
+                }
+                }else{
+                System.out.println("Prøv igen");
+
+
+
+                }
             }
-        } else
-        {
-            System.out.println("Prøv igen");
         }
-        String secondWord = c.getSecondWord();
 
-
-        Item itemGiven = null;
-        for (Item j : this.player.getInventory().getItems()) {
-            String itemName = j.getName();
-
-            if (secondWord.equals(itemName)) {
-                itemGiven = j;
-                break;
-            }
-        }
-    }
 
     //remove items from inventory
     private void remove(Command c) {

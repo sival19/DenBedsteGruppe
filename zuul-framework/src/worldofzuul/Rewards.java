@@ -30,7 +30,7 @@ public class Rewards extends InteractiveObjects {
 
         int pointsModifier;
 
-        if (item.itemType == characters.itemNeed)
+        if (item.itemType == characters.itemType)
         {
             pointsModifier = 2;
         } else

@@ -20,13 +20,7 @@ public class Item extends InteractiveObjects {
 
     public int getItemType()
     {
-        itemType = itemType;
         return itemType;
-    }
-
-    public void setType()
-    {
-        itemType = itemType;
     }
 
 }
