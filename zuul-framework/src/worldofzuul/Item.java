@@ -24,4 +24,9 @@ public class Item extends InteractiveObjects {
         return itemType;
     }
 
+    public void setType()
+    {
+        itemType = itemType;
+    }
+
 }

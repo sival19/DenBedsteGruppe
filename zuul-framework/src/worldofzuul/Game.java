@@ -9,6 +9,8 @@ public class Game implements ZuulGame {
     private Parser parser;
     private Room currentRoom;
     private Player player;
+    int itemType;
+    int itemNeed;
 
     public Game() {
         createRooms();
@@ -46,37 +48,27 @@ public class Game implements ZuulGame {
 
     public void giveItem(Command c) {
 
-        if (!c.hasSecondWord()) {
-            System.out.println("Hvad vil du give væk?");
-            return;
+        if (c.hasSecondWord()) {
+            if (c.hasThirdWord())
+            {
+                Item item = new Item("", "", 0);
+                Characters characters = new Characters("", "",0);
+                Rewards rewards = new Rewards("","",0);
+
+                item.itemType = 1;
+                characters.itemNeed = 1;
+
+                rewards.gainPoints();
+                int points = (int) rewards.gainPoints;
+
+                System.out.println(points);
+            }
+        } else
+        {
+            System.out.println("Prøv igen");
         }
         String secondWord = c.getSecondWord();
 
-        Item item = new Item("", "", 0);
-        Rewards rewards = new Rewards("", "", 0);
-
-        int itemType;
-        int itemNeed;
-
-        //    int itemNeed = rewards.itemNeed;
-
-        for (Item i: this.player.getInventory().getItems()) {
-            itemType = i.itemType;
-            break;
-        }
-
-        for (Character i: this.currentRoom.getCharacters())
-        {
-            itemNeed = i.itemNeed;
-            break;
-        }
-
-
-        rewards.gainPoints();
-
-        int points = (int) rewards.gainPoints;
-
-        System.out.println(points);
 
         Item itemGiven = null;
         for (Item j : this.player.getInventory().getItems()) {

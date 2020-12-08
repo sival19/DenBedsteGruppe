@@ -4,8 +4,8 @@ import java.lang.reflect.Array;
 
 public class Rewards extends InteractiveObjects {
 
-    Item item = new Item(name, info, itemType);
-    Character character = new Character(name, info, 1);
+    Item item = new Item(name, info, 1);
+    Characters characters = new Characters(name, info, 1);
 
     //Points you begin with
     final int initialPoints = 10;
@@ -28,17 +28,15 @@ public class Rewards extends InteractiveObjects {
     //Method for gaining points
     public int gainPoints() {
 
-
         int pointsModifier;
 
-        if (itemNeed == itemType)
+        if (item.itemType == characters.itemNeed)
         {
             pointsModifier = 2;
         } else
         {
             pointsModifier = 1;
         }
-
 
         gainPoints = initialPoints * pointsModifier;
 
