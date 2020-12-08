@@ -27,7 +27,10 @@ public class RichroomController extends Main implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         money.setVisible(!checkInventory("penge"));
         init();
+        apple.setVisible(!checkInventory("æble"));
+        init();
     }
+
 
     // NAVIGATION
     public void goPharmacy() throws IOException {
