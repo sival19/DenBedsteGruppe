@@ -47,6 +47,7 @@ public class Game implements ZuulGame {
 
     }
 
+    // Point system method
     public void giveItem(Command c) {
 
         if (c.hasSecondWord()) {
@@ -55,11 +56,15 @@ public class Game implements ZuulGame {
                 String secondWord = c.getSecondWord();
                 String thirdWord = c.getThirdWord();
 
+                // Checks for the specific item (typed by the player) in the players inventory
                 for (Item i : this.player.getInventory().getItems()) {
                     int itemType = i.getItemType();
                     String itemName = i.getName();
 
+                    // Checks if the specific item typed is in the player inventory
                     if (secondWord.equals(itemName)) {
+
+
                         for (Character j : this.currentRoom.getCharacters()) {
                             int itemNeed = j.getItemNeed();
 
@@ -74,6 +79,8 @@ public class Game implements ZuulGame {
                                 pointsModifier = 1;
                             }
 
+                            // If types is equivalent, get 2x points
+                            // If types is not equivalent, get 1x points
                             points = initialPoints * pointsModifier;
 
                             System.out.println(points);
