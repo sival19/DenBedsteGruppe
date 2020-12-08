@@ -6,6 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StationController">
     <ImageView fitHeight="640.0" fitWidth="1151.0" layoutX="-1.0">
@@ -16,7 +17,10 @@
     <Button layoutX="23.0" layoutY="370.0" mnemonicParsing="false" onAction="#goPoorRoom" text="Gaden" />
 
     <!-- Inventory -->
-    <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0" />
+    <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
+      <font>
+         <Font size="15.0" />
+      </font></Label>
    <ImageView fx:id="wizard" fitHeight="224.0" fitWidth="181.0" layoutX="449.0" layoutY="399.0" onMouseClicked="#talkWizard">
       <image>
          <Image url="@../images/wizard.png" />
