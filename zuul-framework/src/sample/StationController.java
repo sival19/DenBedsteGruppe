@@ -27,8 +27,8 @@ public class StationController extends Main implements Initializable {
 
     // CHARACTER INTERACTION
     public void talkWizard() {
-        text.setText("Ha! Jeg vidste du ville klikke på mig! Husk nu at tænke dig om når du spiller spillet,"
-        + " hvem skal have hvad...? Uh nu kommer toget til Hogwarts! Farvel du!");
+        text.setText("God du klikkede! Husk nu at tænke dig om når du spiller spillet,"
+        + " hvem har brug for hvad? Prøv at klikke på manden ude til højre, han ligner en der har brug for hjælp.");
     }
     // CHARACTER INTERACTION
     public void talkMan() {
