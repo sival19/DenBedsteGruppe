@@ -37,6 +37,11 @@
          <Image url="@../images/drawing.png" />
       </image>
    </ImageView>
+   <ImageView fx:id="boy" fitHeight="176.0" fitWidth="115.0" layoutX="49.0" layoutY="452.0" onMouseClicked="#talkBoy">
+      <image>
+         <Image url="@../images/child.png" />
+      </image>
+   </ImageView>
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1">
         <Image url="@../images/apple.png" />
     </ImageView>

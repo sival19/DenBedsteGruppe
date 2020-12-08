@@ -29,6 +29,11 @@ public class SchoolController extends Main implements Initializable {
                 " Vi må ikke gå ind på slottet...");
 
     }
+    // CHARACTER INTERACTION
+    public void talkBoy() {
+        text.setText("Jeg vil så gerne klare mig godt i skolen så jeg kan få en god fremtid, men mine forældre har ikke råd til bøger...");
+    }
+
 
     // INVENTORY MANAGEMENT
     @Override
