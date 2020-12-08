@@ -10,8 +10,8 @@ public class Game implements ZuulGame {
     private Player player;
 
     Item item = new Item("", "", 0);
-    Characters characters = new Characters("", "",0);
-    Rewards rewards = new Rewards("","",0);
+    Characters characters = new Characters("", "", 0);
+    Rewards rewards = new Rewards("", "", 0);
 
     public Game() {
         createRooms();
@@ -56,35 +56,37 @@ public class Game implements ZuulGame {
                 String thirdWord = c.getThirdWord();
 
                 for (Item i : this.player.getInventory().getItems()) {
-                    int itemName = i.getItemType();
+                    int itemType = i.getItemType();
+                    String itemName = i.getName();
 
-                    for (Character j : this.currentRoom.getCharacters()) {
-                        int CharName = j.getItemNeed();
+                    if (secondWord.equals(itemName)) {
+                        for (Character j : this.currentRoom.getCharacters()) {
+                            int itemNeed = j.getItemNeed();
 
 
-                        int pointsModifier;
-                        int points;
-                        int initialPoints = 10;
+                            int pointsModifier;
+                            int points;
+                            int initialPoints = 10;
 
-                        if (itemName == CharName) {
-                            pointsModifier = 2;
-                        } else {
-                            pointsModifier = 1;
+                            if (itemType == itemNeed) {
+                                pointsModifier = 2;
+                            } else {
+                                pointsModifier = 1;
+                            }
+
+                            points = initialPoints * pointsModifier;
+
+                            System.out.println(points);
                         }
-
-                        points = initialPoints * pointsModifier;
-
-                        System.out.println(points);
                     }
                 }
-                }else{
+            } else {
                 System.out.println("Prøv igen");
 
 
-
-                }
             }
         }
+    }
 
 
     //remove items from inventory
@@ -164,7 +166,7 @@ public class Game implements ZuulGame {
 
 
         skole.setExit("stationen", station);
-        skole.setExit("rigmandsgården" , rigmandsgården);
+        skole.setExit("rigmandsgården", rigmandsgården);
         skole.setExit("biblioteket", bibliotek);
         skole.setExit("apoteket", apotek);
         skole.setExit("fattiggården", fattiggård);
@@ -179,10 +181,10 @@ public class Game implements ZuulGame {
 
         rigmandsgården.setExit("skolen", skole);
         rigmandsgården.setExit("biblioteket", bibliotek);
-        rigmandsgården.setExit("apoteket" , apotek);
+        rigmandsgården.setExit("apoteket", apotek);
 
 
-        apotek.setExit("rigmandsgården" , rigmandsgården);
+        apotek.setExit("rigmandsgården", rigmandsgården);
         apotek.setExit("stationen", station);
         apotek.setExit("skolen", skole);
 
@@ -193,8 +195,8 @@ public class Game implements ZuulGame {
 
         æble = new Item("æble", "det er rødt", 0);
         penge = new Item("penge", "der er mange", 1);
-        medicin = new Item("medicin", "det er piller",2 );
-        bog = new Item("bog", "den er tung",3 );
+        medicin = new Item("medicin", "det er piller", 2);
+        bog = new Item("bog", "den er tung", 3);
 
         // Add items to rooms
         station.addItem(æble);
@@ -275,15 +277,12 @@ public class Game implements ZuulGame {
             seeCharacters();
         } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
-        }
-        else if (commandWord == CommandWord.GIEFITEM) {
+        } else if (commandWord == CommandWord.GIEFITEM) {
             giveItem(command);
         }
 
         return wantToQuit;
     }
-
-
 
 
     private void printHelp() {
