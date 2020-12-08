@@ -62,7 +62,7 @@
     </ImageView>
 
     <!-- RoomItems -->
-    <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="957.0" layoutY="461.0" onMouseClicked="#pickApple">
+    <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="497.0" layoutY="378.0" onMouseClicked="#pickApple">
         <Image url="@../images/apple.png" />
     </ImageView>
 
