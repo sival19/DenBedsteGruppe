@@ -30,6 +30,10 @@ public class StationController extends Main implements Initializable {
         text.setText("Ha! Jeg vidste du ville klikke på mig! Husk nu at tænke dig om når du spiller spillet,"
         + " hvem skal have hvad...? Uh nu kommer toget til Hogwarts! Farvel du!");
     }
+    // CHARACTER INTERACTION
+    public void talkMan() {
+        text.setText("Jeg har mistet alt og nu bor jeg her på gaden... Har du måske lidt penge du kan undvære?");
+    }
 
     // INVENTORY MANAGEMENT
     @Override

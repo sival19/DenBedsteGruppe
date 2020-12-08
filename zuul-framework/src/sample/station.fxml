@@ -26,6 +26,11 @@
          <Image url="@../images/wizard.png" />
       </image>
    </ImageView>
+   <ImageView fx:id="man" fitHeight="200.0" fitWidth="98.0" layoutX="1039.0" layoutY="423.0" onMouseClicked="#talkMan">
+      <image>
+         <Image url="@../images/man.png" />
+      </image>
+   </ImageView>
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1">
         <Image url="@../images/apple.png" />
     </ImageView>
