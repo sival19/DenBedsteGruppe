@@ -16,22 +16,21 @@ public class SchoolController extends Main implements Initializable {
     @FXML
     private Label text;
 
-    //Object INTERRACTIION
-
-
+    //Object INTERACTIION
     public void pickDrawing(){
         pickItem(drawing, drawingInv, "tegning");
-
     }
 
     // CHARACTER INTERACTION
     public void talkGirl() {
+        clearMenu();
         text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
                 " Vi må ikke gå ind på slottet...");
-
     }
+
     // CHARACTER INTERACTION
     public void talkBoy() {
+        clearMenu();
         text.setText("Jeg vil så gerne klare mig godt i skolen så jeg kan få en god fremtid, men mine forældre har ikke råd til bøger...");
     }
 

@@ -22,9 +22,6 @@ public class Player {
         return points;
     }
 
-
-
-
     public static int addPoints(int points) {
         points = getPoints();
         points += 1; //missing from where to add points and howmany
@@ -37,16 +34,10 @@ public class Player {
         health = 100;
         health += 1; //missing from where to add health and howmuch
         return health;
-
     }
 
-
-
     //tilgå inventory
-
-
     public Inventory getInventory() {
-
         return inventory;
     }
 

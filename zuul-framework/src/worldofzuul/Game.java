@@ -46,7 +46,6 @@ public class Game implements ZuulGame {
 
     // Point system method
     public void giveItem(Command c) {
-
         if (c.hasSecondWord()) {
             if (c.hasThirdWord()) {
 
@@ -90,8 +89,6 @@ public class Game implements ZuulGame {
                 }
             } else {
                 System.out.println("Prøv igen");
-
-
             }
         }
     }

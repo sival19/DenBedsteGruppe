@@ -12,8 +12,6 @@ public class Character extends InteractiveObjects {
         return getName() + ", " + getInfo();
     }
 
-
-
     public int getItemNeed()
     {
         return itemType;

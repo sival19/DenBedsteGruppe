@@ -45,25 +45,14 @@ public class PoorroomController extends Main implements Initializable {
      */
 
     public void giveAppleBoy(){
-        getTest().processCommand(CommandWord.GIVEITEM, "æble", "dreng");
-        appleInv.setOpacity(0.1);
-        appleInv.setDisable(true);
-        appleChoice.setDisable(true);
-        appleChoice.setOpacity(0.0);
-        getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");
+        giveItem(appleInv, appleChoice,"æble", "dreng");
         text.setText("Tak, nu er jeg endelig mæt!");
-
     }
 
     public void giveAppleLady(){
         giveItem(appleInv, appleChoice,"æble", "Dame");
         text.setText("Tak, nu er jeg mæt, men jeg fryser stadig.");
-
     }
-
-
-
-
 
     // NAVIGATION
     public void goStation() throws IOException {

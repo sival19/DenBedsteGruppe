@@ -6,9 +6,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RichroomController">
 
     <!-- Inventory -->
@@ -25,7 +25,7 @@
     <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1" onMouseClicked="#interactDrawing" disable="true">
         <Image url="@../images/drawing.png" />
     </ImageView>
-    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" onMouseClicked="#interractMoney" opacity="0.1">
+    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" onMouseClicked="#interactMoney" opacity="0.1">
         <Image url="@../images/money.png" />
     </ImageView>
     <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" opacity="0.1">
@@ -78,20 +78,78 @@
 
 
     <!-- Buttons for inventory interraction -->
-
-    <HBox fx:id="moneyChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
-        <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder Penge, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
-            <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Give to" />
-        </children>
+    <HBox fx:id="appleChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder et æble, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button fx:id="throwApple" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
     </HBox>
 
-    <HBox fx:id="drawingChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
-        <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du en tegning, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
-            <Button fx:id="appleToLady" mnemonicParsing="false" onAction="#giveDrawingRich" prefHeight="35.0" prefWidth="105.0" text="Giv til rigmanden" />
-        </children>
+    <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder en bog, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+    </HBox>
+
+    <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder et halstørklæde, hvad vil du gøre?  " textAlignment="RIGHT"
+              wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+    </HBox>
+
+    <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder nogle penge, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+    </HBox>
+
+    <!-- Den her er ændret onsdag aften AC-->
+    <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder en tegning, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til rigmanden" onMouseClicked="#giveDrawingRich"/>
+    </HBox>
+
+    <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder noget medicin, hvad vil du gøre?  " textAlignment="RIGHT"
+              wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
     </HBox>
 
 </AnchorPane>

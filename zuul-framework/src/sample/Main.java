@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -24,13 +25,16 @@ public class Main extends Application {
     * This is why we only need the fields in main.
      */
     @FXML
-    public ImageView money, medicine, apple, book, scarf, drawing,  medicineInv, bookInv, appleInv, moneyInv, scarfInv, drawingInv;
+    public ImageView money, medicine, apple, book, scarf, drawing, medicineInv, bookInv, appleInv, moneyInv, scarfInv, drawingInv;
 
     @FXML
     public Button appleToBoy, appleToLady;
 
     @FXML
     HBox appleChoice, drawingChoice, medicineChoice, scarfChoice, bookChoice, moneyChoice;
+
+    @FXML
+    Label text;
 
     private static ArrayList<String> usedItems = new ArrayList<String>();
 
@@ -94,6 +98,7 @@ public class Main extends Application {
         Parent loader = FXMLLoader.load(getClass().getResource(filepath));
         stage.setScene(new Scene(loader));
     }
+
     /*
     * Checks if item is in Game inventory
      */
@@ -123,17 +128,11 @@ public class Main extends Application {
         getTest().seeInventory();
     }
 
-
-
-
-
     /* Give items
     *
     *
     *
      */
-
-
 
     /*Remove items
     *
@@ -151,46 +150,56 @@ public class Main extends Application {
         getTest().processCommand(CommandWord.REMOVEITEMS, itemName,"");
     }
 
-
-
-
-
-
-
-
-
-
-
     //INTERACT FROM INVENTORY
-    public void interractApple(){
+    public void interactApple(){
+        text.setText("");
         appleChoice.setDisable(false);
-        appleChoice.setOpacity(1.0);
+        appleChoice.setVisible(true);
     }
 
     public void interactDrawing(){
+        text.setText("");
         drawingChoice.setDisable(false);
-        drawingChoice.setOpacity(1.0);
-
+        drawingChoice.setVisible(true);
     }
 
-    public void interractMedicine(){
+    public void interactMedicine(){
+        text.setText("");
         medicineChoice.setDisable(false);
-        medicineChoice.setOpacity(1.0);
+        medicineChoice.setVisible(true);
     }
 
-    public void interractScarf(){
+    public void interactScarf(){
+        text.setText("");
         scarfChoice.setDisable(false);
-        scarfChoice.setOpacity(1.0);
+        scarfChoice.setVisible(true);
     }
 
-    public void interractBook(){
+    public void interactBook(){
+        text.setText("");
         bookChoice.setDisable(false);
-        bookChoice.setOpacity(1.0);
+        bookChoice.setVisible(true);
     }
 
-    public void interractMoney(){
+    public void interactMoney(){
+        text.setText("");
         moneyChoice.setDisable(false);
-        moneyChoice.setOpacity(1.0);
+        moneyChoice.setVisible(true);
+    }
+
+    public void clearMenu(){
+        moneyChoice.setDisable(true);
+        moneyChoice.setVisible(false);
+        bookChoice.setDisable(true);
+        bookChoice.setVisible(false);
+        scarfChoice.setDisable(true);
+        scarfChoice.setVisible(false);
+        medicineChoice.setDisable(true);
+        medicineChoice.setVisible(false);
+        drawingChoice.setDisable(true);
+        drawingChoice.setVisible(false);
+        appleChoice.setDisable(true);
+        appleChoice.setVisible(false);
     }
 
     // START GAME
