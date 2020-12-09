@@ -35,7 +35,7 @@
 
     <!-- InventoryItems-->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0" />
-    <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#interractApple" opacity="0.1">
+    <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#interractApple" opacity="0.1" disable="true">
         <Image url="@../images/apple.png" />
     </ImageView>
     <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1">

@@ -43,6 +43,7 @@ public class PoorroomController extends Main implements Initializable {
     public void giveAppleBoy(){
         getTest().processCommand(CommandWord.GIEFITEM, "æble", "dreng");
         appleInv.setOpacity(0.1);
+        appleInv.setDisable(true);
         appleChoice.setDisable(true);
         appleChoice.setOpacity(0.0);
         getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");

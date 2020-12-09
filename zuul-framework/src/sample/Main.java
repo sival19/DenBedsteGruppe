@@ -46,7 +46,9 @@ public class Main extends Application {
         }
         if (checkInventory("æble")) {
             appleInv.setOpacity(1.0);
+            appleInv.setDisable(false);
         }
+        
         if (checkInventory("penge")) {
             moneyInv.setOpacity(1.0);
         }
