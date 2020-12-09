@@ -42,6 +42,13 @@ public class RichroomController extends Main implements Initializable {
 
     // OBJECT INTERACTION
 
+    public void pickMoney(){
+        getTest().pickUp(new Command(CommandWord.PICKUP, "penge", ""));
+        money.setVisible(false);
+        moneyInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+
     public void pickApple() {
         getTest().pickUp(new Command(CommandWord.PICKUP, "æble", ""));
         apple.setVisible(false);

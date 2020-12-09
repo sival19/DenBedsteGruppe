@@ -24,6 +24,8 @@ public class StationController extends Main implements Initializable {
         text.setText("Jeg har mistet alt og nu bor jeg her på gaden... Har du måske lidt penge du kan undvære?");
     }
 
+
+
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

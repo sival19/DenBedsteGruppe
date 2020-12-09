@@ -20,6 +20,14 @@
     <Button layoutX="77.0" layoutY="34.0" mnemonicParsing="false" onAction="#goRichroom" text="Slottet" />
     <Button layoutX="14.0" layoutY="208.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" />
 
+
+    <!-- People -->
+    <ImageView fx:id="oldLady" fitHeight="289.0" fitWidth="296.0" layoutX="131.0" layoutY="331.0" onMouseClicked="#talkOldLady">
+        <image>
+            <Image url="@../images/ladyknitting.png" />
+        </image>
+    </ImageView>
+
     <!-- Inventory -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
       <font>
@@ -28,11 +36,6 @@
    <ImageView fx:id="scarf" fitHeight="135.0" fitWidth="122.0" layoutX="378.0" layoutY="505.0" onMouseClicked="#pickScarf" rotate="-76.4">
       <image>
          <Image url="@../images/scarf.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="oldLady" fitHeight="289.0" fitWidth="296.0" layoutX="131.0" layoutY="331.0" onMouseClicked="#talkOldLady">
-      <image>
-         <Image url="@../images/ladyknitting.png" />
       </image>
    </ImageView>
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1">
@@ -66,10 +69,12 @@
     <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1100.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
     <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1200.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
 
+    <!-- Buttons for inventory interraction -->
+
     <HBox fx:id="scarfChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
         <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder et halstørklæde, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
-            <Button fx:id="throwScarf" mnemonicParsing="false" onAction="#removeScarf" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+            <Button fx:id="throwScarf" mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
         </children>
     </HBox>
@@ -77,7 +82,7 @@
     <HBox fx:id="bookChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
         <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder en Bog, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
-            <Button fx:id="throwBook" mnemonicParsing="false" onAction="#removeBook" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+            <Button fx:id="throwBook" mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
         </children>
     </HBox>

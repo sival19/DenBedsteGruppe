@@ -3,6 +3,9 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import worldofzuul.Command;
+import worldofzuul.CommandWord;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,6 +15,15 @@ public class SchoolController extends Main implements Initializable {
 
     @FXML
     private Label text;
+
+    //Object INTERRACTIION
+
+    public void pickDrawing() {
+        getTest().pickUp(new Command(CommandWord.PICKUP, "tegning", ""));
+        drawing.setVisible(false);
+        drawingInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
 
     // CHARACTER INTERACTION
     public void talkGirl() {

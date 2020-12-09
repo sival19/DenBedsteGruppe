@@ -3,6 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import worldofzuul.CommandWord;
 
 
@@ -14,6 +15,9 @@ public class PoorroomController extends Main implements Initializable {
 
     @FXML
     private Label text;
+
+    @FXML
+    public ImageView poorChild;
 
 
     // INVENTORY MANAGEMENT
@@ -42,6 +46,16 @@ public class PoorroomController extends Main implements Initializable {
 
     public void giveAppleBoy(){
         getTest().processCommand(CommandWord.GIEFITEM, "æble", "dreng");
+        appleInv.setOpacity(0.1);
+        appleInv.setDisable(true);
+        appleChoice.setDisable(true);
+        appleChoice.setOpacity(0.0);
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");
+
+    }
+
+    public void giveAppleLady(){
+        getTest().processCommand(CommandWord.GIEFITEM, "æble", "Dame");
         appleInv.setOpacity(0.1);
         appleInv.setDisable(true);
         appleChoice.setDisable(true);

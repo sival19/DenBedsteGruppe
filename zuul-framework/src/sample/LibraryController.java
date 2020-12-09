@@ -3,6 +3,9 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import worldofzuul.Command;
+import worldofzuul.CommandWord;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,5 +40,19 @@ public class LibraryController extends Main implements Initializable {
     }
 
     // OBJECT INTERACTION
+
+    public void pickBook() {
+        getTest().pickUp(new Command(CommandWord.PICKUP, "bog", ""));
+        book.setVisible(false);
+        bookInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+
+    public void pickScarf() {
+        getTest().pickUp(new Command(CommandWord.PICKUP, "halstørklæde", ""));
+        scarf.setVisible(false);
+        scarfInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
 
 }

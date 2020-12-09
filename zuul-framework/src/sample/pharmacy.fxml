@@ -11,9 +11,11 @@
 
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
 
-    <!-- invisible items so we can drop them -->
-    <ImageView fx:id="book">
-    </ImageView>
+
+
+
+
+
 
     <!-- Inventory -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0" />
@@ -23,11 +25,6 @@
     <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" onMouseClicked="#interractBook" opacity="0.1">
         <Image url="@../images/book.png" />
     </ImageView>
-   <ImageView fitHeight="200.0" fitWidth="112.0">
-      <image>
-         <Image url="@../images/sickboy.png" />
-      </image>
-   </ImageView>
     <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" onMouseClicked="#interractMedicine" opacity="0.1">
         <Image url="@../images/medicine.png" />
     </ImageView>
@@ -40,6 +37,9 @@
     <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" opacity="0.1">
         <Image url="@../images/scarf.png" />
     </ImageView>
+
+
+
 
     <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5" />
     <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="200.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
@@ -54,36 +54,50 @@
     <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1100.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
     <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1200.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
 
-    <ImageView fitHeight="641.0" fitWidth="1158.0" layoutX="-2.0" layoutY="-1.0">
+
+
+    <!-- Background -->
+    <ImageView fitHeight="640.0" fitWidth="1150.0" layoutY="-1.0">
         <Image url="@../images/pharmacy.PNG" />
     </ImageView>
-   <ImageView fx:id="doctor" fitHeight="318.0" fitWidth="311.0" layoutX="190.0" layoutY="323.0" onMouseClicked="#talkDoctor">
-      <image>
-         <Image url="@../images/doctor.png" />
-      </image>
-   </ImageView>
-   <ImageView fx:id="sickboy" fitHeight="283.0" fitWidth="151.0" layoutX="889.0" layoutY="319.0" onMouseClicked="#talkSickboy">
-      <image>
-         <Image url="@../images/sickboy.png" />
-      </image>
-   </ImageView>
+
+
     <Button layoutX="553.0" layoutY="67.0" mnemonicParsing="false" onAction="#goRichroom" text="Slottet" />
     <Button layoutX="22.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
     <Button layoutX="1085.0" layoutY="289.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" />
     <ImageView fx:id="medicine" fitHeight="68.0" fitWidth="77.0" layoutX="123.0" layoutY="359.0" onMouseClicked="#pickMedicine">
         <Image url="@../images/medicine.png" />
     </ImageView>
+
+
+    <!-- People -->
+
+    <ImageView fx:id="sickboy" fitHeight="261.0" fitWidth="161.0" layoutX="900.0" layoutY="376.0" onMouseClicked="#talkSickboy">
+        <image>
+            <Image url="@../images/sickboy.png" />
+        </image>
+    </ImageView>
+
+   <ImageView fx:id="doctor" fitHeight="278.0" fitWidth="295.0" layoutX="219.0" layoutY="341.0" onMouseClicked="#talkDoctor">
+      <image>
+         <Image url="@../images/doctor.png" />
+      </image>
+   </ImageView>
+
+
+    <!-- Buttons for inventory interraction -->
+
     <HBox fx:id="medicineChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
         <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder noget medicin, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
-            <Button fx:id="throwMedicine" mnemonicParsing="false" onAction="#removeMedicine" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+            <Button fx:id="throwMedicine" mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
         </children>
     </HBox>
     <HBox fx:id="bookChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
         <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder en Bog, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
-            <Button fx:id="throwBook" mnemonicParsing="false" onAction="#removeBook" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
+            <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
         </children>
     </HBox>
