@@ -20,6 +20,7 @@ public class SchoolController extends Main implements Initializable {
 
     public void pickDrawing() {
         getTest().pickUp(new Command(CommandWord.PICKUP, "tegning", ""));
+        addUsedItem("tegning");
         drawing.setVisible(false);
         drawingInv.setOpacity(1.0);
         getTest().seeInventory();
@@ -40,7 +41,7 @@ public class SchoolController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        drawing.setVisible(!checkInventory("penge") && !getUsedItems().contains("penge"));
+        drawing.setVisible(!checkInventory("tegning") && !getUsedItems().contains("tegning"));
        init();
     }
 

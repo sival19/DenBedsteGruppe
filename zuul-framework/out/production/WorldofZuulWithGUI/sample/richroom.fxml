@@ -22,7 +22,7 @@
     <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" opacity="0.1">
         <Image url="@../images/medicine.png" />
     </ImageView>
-    <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1">
+    <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1" onMouseClicked="#interactDrawing" disable="true">
         <Image url="@../images/drawing.png" />
     </ImageView>
     <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" onMouseClicked="#interractMoney" opacity="0.1">
@@ -84,6 +84,13 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder Penge, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
             <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to" />
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Give to" />
+        </children>
+    </HBox>
+
+    <HBox fx:id="drawingChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
+        <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du en tegning, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
+            <Button fx:id="appleToLady" mnemonicParsing="false" onAction="#giveDrawingRich" prefHeight="35.0" prefWidth="105.0" text="Giv til rigmanden" />
         </children>
     </HBox>
 

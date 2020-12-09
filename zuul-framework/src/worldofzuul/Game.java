@@ -215,12 +215,12 @@ public class Game implements ZuulGame {
         skole.addItem(tegning);
 
         // Create characters
-        Character waiter, boy, richSnob, poorFuck, oldLady;
+        Character waiter, boy, richGuy, poorFuck, oldLady;
 
         waiter = new Character("tjener", "bestikslav", 1);
         boy = new Character("dreng", "lille stakkel",1);
         oldLady = new Character("Dame", "fryser", 0);
-        richSnob = new Character("onkel Joachim", "lidt for rig",3);
+        richGuy = new Character("rich", "lidt for rig",3);
         poorFuck = new Character("Total hjemløs", "så syg...",1);
 
         //add characters to rooms
@@ -228,7 +228,7 @@ public class Game implements ZuulGame {
         skole.addCharacter(boy);
         fattiggård.addCharacter(oldLady);
         restaurant.addCharacter(waiter);
-        rigmandsrum.addCharacter(richSnob);
+        rigmandsrum.addCharacter(richGuy);
         fattiggård.addCharacter(boy);
     }
 

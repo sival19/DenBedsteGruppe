@@ -52,6 +52,13 @@ public class RichroomController extends Main implements Initializable {
         getTest().seeInventory();
     }
 
+
+    public void giveDrawingRich(){
+        giveItem(drawingInv, drawingChoice,"tegning", "rich");
+        text.setText("Tak");
+
+    }
+
     // CHARACTER INTERACTION
     public void talkRichman() {
         text.setText("Jeg er sulten");
