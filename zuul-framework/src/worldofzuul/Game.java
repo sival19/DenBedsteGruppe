@@ -218,8 +218,8 @@ public class Game implements ZuulGame {
         Character waiter, boy, richSnob, poorFuck, oldLady;
 
         waiter = new Character("tjener", "bestikslav", 1);
-        boy = new Character("dreng", "lille stakkel",0);
-        oldLady = new Character("Dame", "fryser", 1);
+        boy = new Character("dreng", "lille stakkel",1);
+        oldLady = new Character("Dame", "fryser", 0);
         richSnob = new Character("onkel Joachim", "lidt for rig",3);
         poorFuck = new Character("Total hjemløs", "så syg...",1);
 
@@ -229,7 +229,7 @@ public class Game implements ZuulGame {
         fattiggård.addCharacter(oldLady);
         restaurant.addCharacter(waiter);
         rigmandsrum.addCharacter(richSnob);
-        fattiggård.addCharacter(poorFuck);
+        fattiggård.addCharacter(boy);
     }
 
     public void play() {
