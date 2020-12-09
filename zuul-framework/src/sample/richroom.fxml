@@ -81,9 +81,9 @@
 
     <HBox fx:id="moneyChoice" disable="true" layoutX="398.0" layoutY="640.0" opacity="0" prefHeight="38.0" prefWidth="748.0">
         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder en Bog, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
-            <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Smid på jorden" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du holder Penge, hvad vil du gøre?" wrappingWidth="224.98306846618652" />
+            <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Give to" />
         </children>
     </HBox>
 

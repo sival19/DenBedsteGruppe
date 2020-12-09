@@ -52,7 +52,7 @@ public class Game implements ZuulGame {
 
                 String secondWord = c.getSecondWord();
                 //what is third word for?
-                //String thirdWord = c.getThirdWord();
+                String thirdWord = c.getThirdWord();
 
                 // Checks for the specific item (typed by the player) in the players inventory
                 for (Item i : Inventory.getItems()) {
