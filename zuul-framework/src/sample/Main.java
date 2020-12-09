@@ -105,18 +105,8 @@ public class Main extends Application {
         moneyInv.setOpacity(1.0);
         getTest().seeInventory();
     }
-    public void pickMedicine() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "medicin", ""));
-        medicine.setVisible(false);
-        medicineInv.setOpacity(1.0);
-        getTest().seeInventory();
-    }
-    public void pickApple() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "æble", ""));
-        apple.setVisible(false);
-        appleInv.setOpacity(1.0);
-        getTest().seeInventory();
-    }
+
+
     public void pickBook() {
         getTest().pickUp(new Command(CommandWord.PICKUP, "bog", ""));
         book.setVisible(false);
@@ -142,14 +132,7 @@ public class Main extends Application {
     *
      */
 
-    public void giveAppleBoy(){
-        getTest().processCommand(CommandWord.GIEFITEM, "æble", "dreng");
-        appleInv.setOpacity(0.1);
-        appleChoice.setDisable(false);
-        appleChoice.setOpacity(0.0);
-        getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");
 
-    }
 
     /*Remove items
     *

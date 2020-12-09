@@ -3,7 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-
+import worldofzuul.CommandWord;
 
 
 import java.io.IOException;
@@ -39,6 +39,15 @@ public class PoorroomController extends Main implements Initializable {
     * click on items. Maybe a little pop-up menu or drag-and-drop.
     * We need to figure interactions out.
      */
+
+    public void giveAppleBoy(){
+        getTest().processCommand(CommandWord.GIEFITEM, "æble", "dreng");
+        appleInv.setOpacity(0.1);
+        appleChoice.setDisable(true);
+        appleChoice.setOpacity(0.0);
+        getTest().processCommand(CommandWord.REMOVEITEMS, "æble", "");
+
+    }
 
 
 
