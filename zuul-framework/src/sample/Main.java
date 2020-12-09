@@ -49,9 +49,11 @@ public class Main extends Application {
     public void init(){
         if (checkInventory("medicin")) {
             medicineInv.setOpacity(1.0);
+            medicineInv.setDisable(false);
         }
         if (checkInventory("bog")) {
             bookInv.setOpacity(1.0);
+            bookInv.setDisable(false);
         }
         if (checkInventory("æble")) {
             appleInv.setOpacity(1.0);
@@ -59,12 +61,15 @@ public class Main extends Application {
         }
         if (checkInventory("penge")) {
             moneyInv.setOpacity(1.0);
+            moneyInv.setDisable(false);
         }
         if (checkInventory("halstørklæde")) {
             scarfInv.setOpacity(1.0);
+            scarfInv.setDisable(false);
         }
         if (checkInventory("tegning")) {
             drawingInv.setOpacity(1.0);
+            drawingInv.setDisable(false);
         }
     }
 

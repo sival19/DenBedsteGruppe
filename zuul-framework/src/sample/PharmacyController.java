@@ -28,7 +28,7 @@ public class PharmacyController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        medicine.setVisible(!checkInventory("medicin"));
+        medicine.setVisible(!checkInventory("penge") && !getUsedItems().contains("penge"));
         init();
     }
 

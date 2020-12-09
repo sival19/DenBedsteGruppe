@@ -23,9 +23,8 @@ public class LibraryController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        book.setVisible(!checkInventory("bog"));
-        init();
-        scarf.setVisible(!checkInventory("halstørklæde"));
+        book.setVisible(!checkInventory("bog") && !getUsedItems().contains("bog"));
+        scarf.setVisible(!checkInventory("halstørklæde") && !getUsedItems().contains("halstørklæde"));
         init();
     }
 

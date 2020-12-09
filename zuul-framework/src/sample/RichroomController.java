@@ -18,7 +18,7 @@ public class RichroomController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        money.setVisible(!checkInventory("penge"));
+        money.setVisible(!checkInventory("penge") && !getUsedItems().contains("penge"));
         apple.setVisible(!checkInventory("æble") && !getUsedItems().contains("æble"));
         init();
     }
