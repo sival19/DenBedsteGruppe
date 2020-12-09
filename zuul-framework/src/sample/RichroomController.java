@@ -19,13 +19,9 @@ public class RichroomController extends Main implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         money.setVisible(!checkInventory("penge"));
-        init();
-        apple.setVisible(!checkInventory("æble"));
+        apple.setVisible(!checkInventory("æble") && !getUsedItems().contains("æble"));
         init();
     }
-
-
-
 
     // NAVIGATION
     public void goPharmacy() throws IOException {
@@ -41,7 +37,6 @@ public class RichroomController extends Main implements Initializable {
     }
 
     // OBJECT INTERACTION
-
     public void pickMoney(){
         getTest().pickUp(new Command(CommandWord.PICKUP, "penge", ""));
         money.setVisible(false);
@@ -51,12 +46,11 @@ public class RichroomController extends Main implements Initializable {
 
     public void pickApple() {
         getTest().pickUp(new Command(CommandWord.PICKUP, "æble", ""));
+        addUsedItem("æble");
         apple.setVisible(false);
         appleInv.setOpacity(1.0);
         getTest().seeInventory();
     }
-
-
 
     // CHARACTER INTERACTION
     public void talkRichman() {

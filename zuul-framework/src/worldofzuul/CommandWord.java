@@ -4,7 +4,7 @@ public enum CommandWord
 {
     GO("go"), QUIT("quit"), HELP("help"), UNKNOWN("?"),
     PICKUP("tag"), SEEITEMS("hvad"), SEECHARACTERS("hvem"),
-    SEEINVENTORY("taske"), REMOVEITEMS("smid"), GIEFITEM ("giv");
+    SEEINVENTORY("taske"), REMOVEITEMS("smid"), GIVEITEM("giv");
     
     private String commandString;
     

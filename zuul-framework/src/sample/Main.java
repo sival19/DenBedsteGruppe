@@ -29,9 +29,18 @@ public class Main extends Application {
     @FXML
     public Button appleToBoy, appleToLady;
 
-
     @FXML
     HBox appleChoice, drawingChoice, medicineChoice, scarfChoice, bookChoice, moneyChoice;
+
+    private static ArrayList<String> usedItems = new ArrayList<String>();
+
+    public static ArrayList<String> getUsedItems(){
+        return usedItems;
+    }
+
+    public static void addUsedItem(String itemName){
+        usedItems.add(itemName);
+    }
 
     /*
     * Initialize items in inventory
@@ -48,7 +57,6 @@ public class Main extends Application {
             appleInv.setOpacity(1.0);
             appleInv.setDisable(false);
         }
-        
         if (checkInventory("penge")) {
             moneyInv.setOpacity(1.0);
         }
@@ -118,10 +126,22 @@ public class Main extends Application {
     *
      */
 
+    // INTERACT WITH ITEM TO PEOPLE
+    public void giveItem(ImageView item, HBox menu, String itemName, String character){
+        getTest().processCommand(CommandWord.GIVEITEM, itemName, character);
+        item.setOpacity(0.1);
+        item.setDisable(true);
+        menu.setDisable(true);
+        menu.setOpacity(0.0);
+        getTest().processCommand(CommandWord.REMOVEITEMS, itemName,"");
+    }
 
 
-    //INTERACT
 
+
+
+
+    //INTERACT FROM INVENTORY
     public void interractApple(){
         appleChoice.setDisable(false);
         appleChoice.setOpacity(1.0);

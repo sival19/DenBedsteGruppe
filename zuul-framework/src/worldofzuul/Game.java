@@ -281,7 +281,7 @@ public class Game implements ZuulGame {
         } else if (commandWord == CommandWord.SEECHARACTERS) {
             seeCharacters();
         }
-        else if (commandWord == CommandWord.GIEFITEM) {
+        else if (commandWord == CommandWord.GIVEITEM) {
             giveItem(command);
         }
         else if (commandWord == CommandWord.QUIT) {
