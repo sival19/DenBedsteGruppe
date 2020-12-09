@@ -59,13 +59,12 @@ public class Game implements ZuulGame {
                     int itemType = i.getItemType();
                     String itemName = i.getName();
 
+                    for (Character j : this.currentRoom.getCharacters()) {
+                        int itemNeed = j.getItemNeed();
+                        String CharName = j.getName();
+
                     // Checks if the specific item typed is in the player inventory
-                    if (secondWord.equals(itemName)) {
-
-
-                        for (Character j : this.currentRoom.getCharacters()) {
-                            int itemNeed = j.getItemNeed();
-
+                    if (secondWord.equals(itemName) && thirdWord.equals(CharName)) {
 
                             int pointsModifier;
                             int points;
