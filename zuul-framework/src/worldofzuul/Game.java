@@ -200,7 +200,7 @@ public class Game implements ZuulGame {
         // Create items
         Item æble, penge, medicin, bog, tegning, halstørklæde;
 
-        æble = new Item("æble", "det er rødt", 1);
+        æble = new Item("æble", "det er rødt", 0);
         halstørklæde = new Item("halstørklæde", "den er varm", 2);
         tegning = new Item("tegning", "n0get", 3);
         penge = new Item("penge", "der er mange", 1);
@@ -219,7 +219,7 @@ public class Game implements ZuulGame {
         Character waiter, boy, richSnob, poorFuck;
 
         waiter = new Character("tjener", "bestikslav", 1);
-        boy = new Character("dreng", "lille stakkel",2);
+        boy = new Character("dreng", "lille stakkel",0);
         richSnob = new Character("onkel Joachim", "lidt for rig",3);
         poorFuck = new Character("Total hjemløs", "så syg...",1);
 
