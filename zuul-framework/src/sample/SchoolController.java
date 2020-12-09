@@ -18,12 +18,10 @@ public class SchoolController extends Main implements Initializable {
 
     //Object INTERRACTIION
 
-    public void pickDrawing() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "tegning", ""));
-        addUsedItem("tegning");
-        drawing.setVisible(false);
-        drawingInv.setOpacity(1.0);
-        getTest().seeInventory();
+
+    public void pickDrawing(){
+        pickItem(drawing, drawingInv, "tegning");
+
     }
 
     // CHARACTER INTERACTION

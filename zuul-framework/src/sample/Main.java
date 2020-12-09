@@ -115,6 +115,16 @@ public class Main extends Application {
 
     //PICKUP
 
+    public void pickItem(ImageView item, ImageView itemInv, String itemName) {
+        getTest().pickUp(new Command(CommandWord.PICKUP, itemName, ""));
+        addUsedItem(itemName);
+        item.setVisible(false);
+        itemInv.setOpacity(1.0);
+        getTest().seeInventory();
+    }
+
+
+
 
 
     /* Give items
@@ -140,6 +150,11 @@ public class Main extends Application {
         menu.setOpacity(0.0);
         getTest().processCommand(CommandWord.REMOVEITEMS, itemName,"");
     }
+
+
+
+
+
 
 
 
