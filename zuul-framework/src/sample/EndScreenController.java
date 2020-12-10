@@ -3,7 +3,6 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-
 import java.awt.*;
 import java.net.URL;
 import java.util.*;
@@ -11,10 +10,12 @@ import java.util.*;
 public class EndScreenController extends Main implements Initializable {
 
     @FXML
-    Label endScore, highscores, title, highscore1, highscore2, highscore3, highscore4, highscore5;
+    Label endScore, title, highscore1, highscore2, highscore3, highscore4, highscore5;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        Label[] highscoreIds = {highscore1, highscore2, highscore3, highscore4, highscore5};
+
         int userScore = getGame().getPlayer().totalPoints;
         endScore.setText(String.valueOf(userScore));
 
@@ -31,18 +32,18 @@ public class EndScreenController extends Main implements Initializable {
             scoreMap.add(new java.util.AbstractMap.SimpleEntry<>(scoreTuple[0], scoreTuple[1].strip()));
         }
 
-        // sort the list of pairs by score-value
+        // Sort the list of pairs by score-value
         scoreMap.sort(Map.Entry.comparingByValue());
 
         // Make the list be in descending order.
         Collections.reverse(scoreMap);
 
         // Add the high scores to the scene
-        highscore1.setText(scoreMap.get(0).getKey() + ": " + scoreMap.get(0).getValue());
-        highscore2.setText(scoreMap.get(1).getKey() + ": " + scoreMap.get(1).getValue());
-        highscore3.setText(scoreMap.get(2).getKey() + ": " + scoreMap.get(2).getValue());
-        highscore4.setText(scoreMap.get(3).getKey() + ": " + scoreMap.get(3).getValue());
-        highscore5.setText(scoreMap.get(4).getKey() + ": " + scoreMap.get(4).getValue());
+        int i = 0;
+        while (highscoreIds.length > i && i < scoreMap.size()) {
+            highscoreIds[i].setText(scoreMap.get(i).getKey() + ": " + scoreMap.get(i).getValue());
+            i++;
+        }
 
 
         if (userScore < 20) {

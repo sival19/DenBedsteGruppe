@@ -27,10 +27,10 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <Label fx:id="highscore1" alignment="CENTER" prefHeight="33.0" prefWidth="972.0" text="Highscores1" />
-      <Label fx:id="highscore2" alignment="CENTER" prefHeight="33.0" prefWidth="972.0" text="Highscores1" />
-      <Label fx:id="highscore3" alignment="CENTER" prefHeight="33.0" prefWidth="972.0" text="Highscores1" />
-      <Label fx:id="highscore4" alignment="CENTER" prefHeight="33.0" prefWidth="972.0" text="Highscores1" />
-      <Label fx:id="highscore5" alignment="CENTER" prefHeight="33.0" prefWidth="972.0" text="Highscores1" />
+        <Label fx:id="highscore1" alignment="CENTER" prefHeight="33.0" prefWidth="972.0"/>
+      <Label fx:id="highscore2" alignment="CENTER" prefHeight="33.0" prefWidth="972.0"/>
+      <Label fx:id="highscore3" alignment="CENTER" prefHeight="33.0" prefWidth="972.0"/>
+      <Label fx:id="highscore4" alignment="CENTER" prefHeight="33.0" prefWidth="972.0"/>
+      <Label fx:id="highscore5" alignment="CENTER" prefHeight="33.0" prefWidth="972.0"/>
     </VBox>
 </AnchorPane>
