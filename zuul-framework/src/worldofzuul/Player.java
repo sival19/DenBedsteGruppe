@@ -29,12 +29,6 @@ public class Player {
 
     }
 
-//medtode tilføje/fjerne health
-    public static int addHealth(int health) {
-        health = 100;
-        health += 1; //missing from where to add health and howmuch
-        return health;
-    }
 
     //tilgå inventory
     public Inventory getInventory() {
