@@ -52,7 +52,7 @@ public class LibraryController extends Main implements Initializable {
     }
 
     public void giveMedicineNiceLady(){
-        giveItem(moneyInv, moneyChoice, "medicin", "strikkeDame");
+        giveItem(medicineInv, medicineChoice, "medicin", "strikkeDame");
     }
 
     public void giveDrawingNiceLady(){
