@@ -23,6 +23,7 @@ public class PoorroomController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         init();
     }
 

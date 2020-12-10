@@ -3,8 +3,6 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import worldofzuul.Command;
-import worldofzuul.CommandWord;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,6 +22,7 @@ public class LibraryController extends Main implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         book.setVisible(!checkInventory("bog") && !getUsedItems().contains("bog"));
         scarf.setVisible(!checkInventory("halstørklæde") && !getUsedItems().contains("halstørklæde"));
+
         init();
     }
 

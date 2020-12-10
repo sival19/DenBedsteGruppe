@@ -3,8 +3,6 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import worldofzuul.Command;
-import worldofzuul.CommandWord;
 
 import java.io.IOException;
 import java.net.URL;
@@ -82,6 +80,6 @@ public class RichroomController extends Main implements Initializable {
 
     @FXML
     public void seeInventory() {
-        getTest().seeInventory();
+        getGame().seeInventory();
     }
 }

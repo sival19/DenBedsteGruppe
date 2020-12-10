@@ -27,9 +27,16 @@
         <Image url="@../images/child.png"/>
     </ImageView>
 
+    <!-- showing score -->
+    <Text fx:id="score" fill="WHITE" layoutX="13.0" layoutY="44.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="Score: " wrappingWidth="445.06657104492206">
+        <font>
+            <Font size="28.0" />
+        </font>
+    </Text>
+
     <!-- Items in room -->
     <ImageView fx:id="drawing" fitHeight="79.0" fitWidth="75.0" layoutX="401.0" layoutY="546.0"
-               onMouseClicked="#pickDrawing">
+               onMouseClicked="#pickDrawing" visible="false">
         <image>
             <Image url="@../images/drawing.png"/>
         </image>
@@ -42,12 +49,15 @@
     <Button layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#goStation" text="Station"/>
     <Button layoutX="966.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPoorroom" text="Gaden"/>
 
-    <!-- IDK???? -->
+    <!-- Speech and interaction area -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
         <font>
             <Font size="15.0"/>
         </font>
     </Label>
+
+    <!-- Button to end game -->
+    <Button fx:id="endgame" layoutX="1001.0" layoutY="642.0" mnemonicParsing="false" onAction="#goEndScreen" prefHeight="35.0" prefWidth="150.0" text="Afslut og se resultat" disable="true" visible="false" />
 
     <!-- Inventory -->
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" opacity="0.1"
@@ -165,6 +175,7 @@
                 onAction="#giveMedicineGirl"/>
         <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" text="Annuller" onAction="#clearMenu"/>
     </HBox>
+
     <!-- Layout inventory  -->
     <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5"/>
     <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="200.0" layoutY="779.0"

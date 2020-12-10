@@ -8,7 +8,7 @@ public class Player {
     private static int points;
     private Inventory inventory;
     private String name;
-    int totalPoints;
+    public int totalPoints;
 
     //constructors
     public Player(int points, String name) {
@@ -16,8 +16,6 @@ public class Player {
         this.name = name;
         inventory = new Inventory(new ArrayList<>());
     }
-    
-
 
     //tilgå inventory
     public Inventory getInventory() {

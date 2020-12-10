@@ -15,16 +15,27 @@ public class SchoolController extends Main implements Initializable {
     @FXML
     private Label text;
 
+    // INVENTORY MANAGEMENT
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        init();
+    }
+
     // OBJECT INTERACTION
-    public void pickDrawing(){
+    public void pickDrawing() {
         pickItem(drawing, drawingInv, "tegning");
     }
 
     // CHARACTER TALK INTERACTION
     public void talkGirl() {
         clearMenu();
-        text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
-                " Vi må ikke gå ind på slottet...");
+        if (!getUsedItems().contains("tegning") && !checkInventory("tegning")) {
+            text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
+                    " Vi må ikke gå ind på slottet...");
+            pickDrawing();
+        } else if (getUsedItems().contains("tegning")) {
+            text.setText("Jeg håber den rige mand blev glad!");
+        }
     }
 
     public void talkBoy() {
@@ -33,66 +44,59 @@ public class SchoolController extends Main implements Initializable {
     }
 
     // CHARACTER ITEM INTERACTION
-    public void giveAppleBoy(){
-        giveItem(appleInv, appleChoice,"æble", "skoleDreng");
+    public void giveAppleBoy() {
+        giveItem(appleInv, appleChoice, "æble", "skoleDreng");
         text.setText("Tak,men jeg er ikke så sulten lige nu.");
     }
 
-    public void giveAppleGirl(){
-        giveItem(appleInv, appleChoice,"æble", "skolePige");
+    public void giveAppleGirl() {
+        giveItem(appleInv, appleChoice, "æble", "skolePige");
         text.setText("Tak, men jeg er ikke så sulten lige nu.");
     }
 
-    public void giveBookBoy(){
-        giveItem(bookInv, bookChoice,"bog", "skoleDreng");
+    public void giveBookBoy() {
+        giveItem(bookInv, bookChoice, "bog", "skoleDreng");
         text.setText("Tak, nu kan jeg endelig følge med i skolen!");
     }
 
-    public void giveBookGirl(){
-        giveItem(bookInv, bookChoice,"bog", "skolePige");
+    public void giveBookGirl() {
+        giveItem(bookInv, bookChoice, "bog", "skolePige");
         text.setText("Tak, men jeg har masser af bøger jeg kan læse i.");
     }
 
-    public void giveScarfBoy(){
-        giveItem(scarfInv, scarfChoice,"halstørklæde", "skoleDreng");
+    public void giveScarfBoy() {
+        giveItem(scarfInv, scarfChoice, "halstørklæde", "skoleDreng");
         text.setText("Tak, det er fint.");
     }
 
-    public void giveScarfGirl(){
-        giveItem(scarfInv, scarfChoice,"halstørklæde", "skolePige");
+    public void giveScarfGirl() {
+        giveItem(scarfInv, scarfChoice, "halstørklæde", "skolePige");
         text.setText("Tak, det er fint.");
     }
 
-    public void giveMoneyBoy(){
-        giveItem(moneyInv, moneyChoice,"penge", "skoleDreng");
+    public void giveMoneyBoy() {
+        giveItem(moneyInv, moneyChoice, "penge", "skoleDreng");
         text.setText("Tak, dem vil jeg bruge på at købe bøger!");
     }
 
-    public void giveMoneyGirl(){
-        giveItem(moneyInv, moneyChoice,"penge", "skolePige");
+    public void giveMoneyGirl() {
+        giveItem(moneyInv, moneyChoice, "penge", "skolePige");
         text.setText("Tak, men jeg mangler ikke noget lige nu.");
     }
 
-    public void giveDrawingBoy(){
-        giveItem(drawingInv, drawingChoice,"tegning", "skoleDreng");
+    public void giveDrawingBoy() {
+        giveItem(drawingInv, drawingChoice, "tegning", "skoleDreng");
         text.setText("Tak, den er fin!");
     }
 
-    public void giveMedicineBoy(){
-        giveItem(medicineInv, medicineChoice,"medicin", "skoleDreng");
+    public void giveMedicineBoy() {
+        giveItem(medicineInv, medicineChoice, "medicin", "skoleDreng");
         text.setText("Tak, men jeg føler mig ikke syg nu.");
     }
 
-    public void giveMedicineGirl(){
-        giveItem(medicineInv, medicineChoice,"medicin", "skolePige");
+    public void giveMedicineGirl() {
+        giveItem(medicineInv, medicineChoice, "medicin", "skolePige");
         text.setText("Tak, men jeg føler mig ikke syg nu.");
-    }
-
-    // INVENTORY MANAGEMENT
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        drawing.setVisible(!checkInventory("tegning") && !getUsedItems().contains("tegning"));
-       init();
     }
 
     // NAVIGATION

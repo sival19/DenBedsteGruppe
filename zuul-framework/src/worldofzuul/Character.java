@@ -9,7 +9,7 @@ public class Character extends InteractiveObjects {
 
     @Override
     public String toString() {
-        return getName() + ", " + getInfo();
+        return getName() + ": " + getInfo();
     }
 
     public int getItemNeed()

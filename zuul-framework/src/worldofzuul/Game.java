@@ -9,42 +9,33 @@ public class Game implements ZuulGame {
     private Room currentRoom;
     private Player player;
 
+
     public Game() {
         createRooms();
         parser = new Parser();
         player = new Player(0, "Palle");
-
     }
-
-    // Get message from character info. Search by name
-    public String getCharMessage(String charName) {
-        ArrayList<Character> characters = currentRoom.getCharacters();
-        for (int i = 0; i < characters.size(); i++) {
-            if (characters.get(i).name.equals(charName)) {
-                return characters.get(i).info;
-            }
-        }
-        return "";
-    }
-
 
     //see characters
     private void seeCharacters() {
         System.out.println(currentRoom.getCharacters());
     }
 
-
+    // See items
     private void seeItems() {
         System.out.println(currentRoom.getItems());
     }
 
-    public void seeInventory() {
-
-        player.seeInventory();
-
+    // See player
+    public Player getPlayer(){
+        return this.player;
     }
 
-    // Point system method
+    public void seeInventory() {
+        player.seeInventory();
+    }
+
+    // Method to give item and receive points
     public void giveItem(Command c) {
         if (c.hasSecondWord()) {
             if (c.hasThirdWord()) {
@@ -151,63 +142,63 @@ public class Game implements ZuulGame {
 
     public void createRooms() {
         // Create rooms
-        Room station, skole, bibliotek, restaurant, fattiggård, rigmandsrum, apotek;
+        Room station, school, library, restaurant, poorroom, richroom, pharmacy;
 
         station = new Room("på stationen");
-        skole = new Room("på skolen");
-        bibliotek = new Room("på biblioteket");
+        school = new Room("på skolen");
+        library = new Room("på biblioteket");
         restaurant = new Room("på restauranten");
-        fattiggård = new Room("på fattiggården");
-        rigmandsrum = new Room("på rigmandsrum");
-        apotek = new Room("på apoteket");
+        poorroom = new Room("på fattiggården");
+        richroom = new Room("på rigmandsrum");
+        pharmacy = new Room("på apoteket");
 
         // Create room relationships
         //added all exits to station, to make it work in GUI
-        station.setExit("apoteket", apotek);
-        station.setExit("skolen", skole);
-        station.setExit("fattiggården", fattiggård);
+        station.setExit("apoteket", pharmacy);
+        station.setExit("skolen", school);
+        station.setExit("fattiggården", poorroom);
 
-        skole.setExit("stationen", station);
-        skole.setExit("rigmandsrum", rigmandsrum);
-        skole.setExit("biblioteket", bibliotek);
-        skole.setExit("apoteket", apotek);
-        skole.setExit("fattiggården", fattiggård);
+        school.setExit("stationen", station);
+        school.setExit("rigmandsrum", richroom);
+        school.setExit("biblioteket", library);
+        school.setExit("apoteket", pharmacy);
+        school.setExit("fattiggården", poorroom);
 
-        bibliotek.setExit("rigmandsrum", rigmandsrum);
-        bibliotek.setExit("skolen", skole);
+        library.setExit("rigmandsrum", richroom);
+        library.setExit("skolen", school);
 
         restaurant.setExit("stationen", station);
 
-        fattiggård.setExit("skolen", skole);
-        fattiggård.setExit("stationen", station);
+        poorroom.setExit("skolen", school);
+        poorroom.setExit("stationen", station);
 
-        rigmandsrum.setExit("skolen", skole);
-        rigmandsrum.setExit("biblioteket", bibliotek);
-        rigmandsrum.setExit("apoteket", apotek);
+        richroom.setExit("skolen", school);
+        richroom.setExit("biblioteket", library);
+        richroom.setExit("apoteket", pharmacy);
 
-        apotek.setExit("rigmandsrum", rigmandsrum);
-        apotek.setExit("stationen", station);
-        apotek.setExit("skolen", skole);
+        pharmacy.setExit("rigmandsrum", richroom);
+        pharmacy.setExit("stationen", station);
+        pharmacy.setExit("skolen", school);
 
         currentRoom = station;
 
         // Create items
-        Item æble, penge, medicin, bog, tegning, halstørklæde;
+        Item apple, money, medicine, book, drawing, scarf;
 
-        æble = new Item("æble", "det er rødt", 0);
-        halstørklæde = new Item("halstørklæde", "den er varm", 2);
-        tegning = new Item("tegning", "n0get", 1);
-        penge = new Item("penge", "der er mange", 1);
-        medicin = new Item("medicin", "det er piller", 2);
-        bog = new Item("bog", "den er tung", 2);
+        apple = new Item("æble", "det er rødt", 0);
+        scarf = new Item("halstørklæde", "den er varm", 2);
+        drawing = new Item("tegning", "n0get", 1);
+        money = new Item("penge", "der er mange", 1);
+        medicine = new Item("medicin", "det er piller", 2);
+        book = new Item("bog", "den er tung", 2);
 
         // Add items to rooms
-        apotek.addItem(medicin);
-        bibliotek.addItem(halstørklæde);
-        rigmandsrum.addItem(æble);
-        rigmandsrum.addItem(penge);
-        bibliotek.addItem(bog);
-        skole.addItem(tegning);
+        pharmacy.addItem(medicine);
+        library.addItem(scarf);
+        richroom.addItem(apple);
+        richroom.addItem(money);
+        library.addItem(book);
+        school.addItem(drawing);
 
         // Create characters
         Character poorBoy, poorLady, schoolGirl, schoolBoy, richMan, wizard, knittingLady, homelessMan, sickMan;
@@ -223,20 +214,20 @@ public class Game implements ZuulGame {
         sickMan = new Character("sygMand", "Han ser syg ud",1);
 
         //add characters to rooms
-        skole.addCharacter(schoolBoy);
-        skole.addCharacter(schoolGirl);
+        school.addCharacter(schoolBoy);
+        school.addCharacter(schoolGirl);
 
-        fattiggård.addCharacter(poorLady);
-        fattiggård.addCharacter(poorBoy);
+        poorroom.addCharacter(poorLady);
+        poorroom.addCharacter(poorBoy);
 
-        rigmandsrum.addCharacter(richMan);
+        richroom.addCharacter(richMan);
 
-        bibliotek.addCharacter(knittingLady);
+        library.addCharacter(knittingLady);
 
         station.addCharacter(wizard);
         station.addCharacter(homelessMan);
 
-        apotek.addCharacter(sickMan);
+        pharmacy.addCharacter(sickMan);
     }
 
     public void play() {

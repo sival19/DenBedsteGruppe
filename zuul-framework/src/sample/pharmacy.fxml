@@ -32,6 +32,13 @@
         </image>
     </ImageView>
 
+    <!-- showing score -->
+    <Text fx:id="score" fill="WHITE" layoutX="13.0" layoutY="44.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.5" text="Score: " wrappingWidth="445.06657104492206">
+        <font>
+            <Font size="28.0" />
+        </font>
+    </Text>
+
     <!-- Items in room -->
     <ImageView fx:id="medicine" fitHeight="68.0" fitWidth="77.0" layoutX="123.0" layoutY="359.0"
                onMouseClicked="#pickMedicine">
@@ -43,8 +50,17 @@
     <Button layoutX="22.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation" text="Station"/>
     <Button layoutX="1085.0" layoutY="289.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen"/>
 
+    <!-- Speech and interaction area -->
+    <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+
+    <!-- Button to end game -->
+    <Button fx:id="endgame" layoutX="1001.0" layoutY="642.0" mnemonicParsing="false" onAction="#goEndScreen" prefHeight="35.0" prefWidth="150.0" text="Afslut og se resultat" disable="true" visible="false" />
+
     <!-- Inventory -->
-    <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0"/>
     <ImageView fx:id="appleInv" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#interactApple"
                opacity="0.1" disable="true">
         <Image url="@../images/apple.png"/>

@@ -16,14 +16,13 @@ public class StationController extends Main implements Initializable {
 
     // CHARACTER INTERACTION
     public void talkWizard() {
-        text.setText("God du klikkede! Husk nu at tænke dig om når du spiller spillet,"
-        + " hvem har brug for hvad? Prøv at klikke på manden ude til højre, han ligner en der har brug for hjælp.");
+        text.setText("Godt du klikkede, " + getName() + "! Tænk dig om når du spiller, hvem har brug for hvad? Klik på manden til højre. Mon han har brug for hjælp?");
     }
+
     // CHARACTER INTERACTION
     public void talkMan() {
         text.setText("Jeg har mistet alt og nu bor jeg her på gaden... Har du måske lidt penge du kan undvære?");
     }
-
 
 
     // INVENTORY MANAGEMENT
@@ -47,28 +46,33 @@ public class StationController extends Main implements Initializable {
 
     // OBJECT INTERACTION
 
-    public void giveAppleStationMan () {
-        giveItem (appleInv, appleChoice, "æble", "hjemløsMand");
+    public void giveAppleStationMan() {
+        giveItem(appleInv, appleChoice, "æble", "hjemløsMand");
         text.setText("Tak!");
     }
-    public void giveBookStationMan () {
-        giveItem (bookInv, bookChoice, "bog", "hjemløsMand");
+
+    public void giveBookStationMan() {
+        giveItem(bookInv, bookChoice, "bog", "hjemløsMand");
         text.setText("Tak!");
     }
-    public void giveScarfStationMan () {
-        giveItem (scarfInv, scarfChoice, "halstørklæde", "hjemløsMand");
+
+    public void giveScarfStationMan() {
+        giveItem(scarfInv, scarfChoice, "halstørklæde", "hjemløsMand");
         text.setText("Tak!");
     }
-    public void giveDrawingStationMan () {
-        giveItem (drawingInv, drawingChoice, "tegning", "hjemløsMand");
+
+    public void giveDrawingStationMan() {
+        giveItem(drawingInv, drawingChoice, "tegning", "hjemløsMand");
         text.setText("Tak!");
     }
-    public void giveMedicineStationMan () {
-        giveItem (medicineInv, medicineChoice, "medicin", "hjemløsMand");
+
+    public void giveMedicineStationMan() {
+        giveItem(medicineInv, medicineChoice, "medicin", "hjemløsMand");
         text.setText("Tak!");
     }
-    public void giveMoneyStationMan () {
-        giveItem (moneyInv, moneyChoice, "penge", "hjemløsMand");
+
+    public void giveMoneyStationMan() {
+        giveItem(moneyInv, moneyChoice, "penge", "hjemløsMand");
         text.setText("Tak!");
     }
 }

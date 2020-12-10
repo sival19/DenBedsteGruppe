@@ -1,8 +1,6 @@
 package worldofzuul;
 import java.util.ArrayList;
 
-//HEJ DETTE ER EN TEST!!!!!
-
 public class Inventory {
     private static ArrayList<Item> items;
 
@@ -30,7 +28,4 @@ public class Inventory {
             System.out.println(" - " + item);
         }
     }
-
-
-
 }
