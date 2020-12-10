@@ -60,17 +60,11 @@ public class LibraryController extends Main implements Initializable {
     }
 
     public void pickBook() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "bog", ""));
-        book.setVisible(false);
-        bookInv.setOpacity(1.0);
-        getTest().seeInventory();
+        pickItem(book, bookInv, "bog");
     }
 
     public void pickScarf() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "halstørklæde", ""));
-        scarf.setVisible(false);
-        scarfInv.setOpacity(1.0);
-        getTest().seeInventory();
+        pickItem(scarf, scarfInv, "halstørklæde");
     }
 
 }
