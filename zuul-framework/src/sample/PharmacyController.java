@@ -50,6 +50,26 @@ public class PharmacyController extends Main implements Initializable {
         text.setText("Tak... *host* det er en fin tegning! *host* puha jeg har det skidt...");
     }
 
+    public void giveMoneySick(){
+        giveItem(moneyInv, moneyChoice,"penge", "sickMan");
+        text.setText("Tak, nu kan det måske være jeg har råd til at købe noget medicin.");
+    }
+
+    public void giveScarfSick(){
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "sickMan");
+        text.setText("Tak... *host* det gør mig nok ikke rask, men det kan holde mig varm *host* ");
+    }
+
+    public void giveBookSick(){
+        giveItem(bookInv, bookChoice,"bog", "sickMan");
+        text.setText("Tak... *host* kan være jeg kan læse den når jeg får det bedre *host* ");
+    }
+
+    public void giveAppleSick(){
+        giveItem(appleInv, appleChoice,"æble", "sickMan");
+        text.setText("Tak... *host* jeg har det dog lidt for dårligt til at spise, men jeg gemmer det til senere *host* ");
+    }
+
 
     // NAVIGATION
     public void goRichroom() throws IOException {

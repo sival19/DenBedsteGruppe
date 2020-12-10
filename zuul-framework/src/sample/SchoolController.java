@@ -11,8 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SchoolController extends Main implements Initializable {
-
-
+    
     @FXML
     private Label text;
 
@@ -32,6 +31,61 @@ public class SchoolController extends Main implements Initializable {
     public void talkBoy() {
         clearMenu();
         text.setText("Jeg vil så gerne klare mig godt i skolen så jeg kan få en god fremtid, men mine forældre har ikke råd til bøger...");
+    }
+
+    public void giveAppleBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveAppleGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveBookBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveBookGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveScarfBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveScarfGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveMoneyBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveMoneyGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveDrawingBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveMedicineBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveMedicineGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "boy");
+        text.setText("Tak, den er fin!");
     }
 
 

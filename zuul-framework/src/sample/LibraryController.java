@@ -46,9 +46,12 @@ public class LibraryController extends Main implements Initializable {
     public void giveBookNiceLady(){
 
     }
+<<<<<<< HEAD
 
     
 
+=======
+>>>>>>> SVVVVVVVVVVVVV
     public void pickBook() {
         getTest().pickUp(new Command(CommandWord.PICKUP, "bog", ""));
         book.setVisible(false);
