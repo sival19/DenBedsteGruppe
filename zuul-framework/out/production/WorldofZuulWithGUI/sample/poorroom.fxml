@@ -118,7 +118,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to " />
+        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to " onMouseClicked="" />
         <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
     </HBox>
 
