@@ -12,28 +12,81 @@ import java.util.ResourceBundle;
 
 public class SchoolController extends Main implements Initializable {
 
-
     @FXML
     private Label text;
 
-    //Object INTERACTIION
+    // OBJECT INTERACTION
     public void pickDrawing(){
         pickItem(drawing, drawingInv, "tegning");
     }
 
-    // CHARACTER INTERACTION
+    // CHARACTER TALK INTERACTION
     public void talkGirl() {
         clearMenu();
         text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
                 " Vi må ikke gå ind på slottet...");
     }
 
-    // CHARACTER INTERACTION
     public void talkBoy() {
         clearMenu();
         text.setText("Jeg vil så gerne klare mig godt i skolen så jeg kan få en god fremtid, men mine forældre har ikke råd til bøger...");
     }
 
+    // CHARACTER ITEM INTERACTION
+    public void giveAppleBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolBoy");
+        text.setText("Tak,men jeg er ikke så sulten lige nu.");
+    }
+
+    public void giveAppleGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolGirl");
+        text.setText("Tak, men jeg er ikke så sulten lige nu.");
+    }
+
+    public void giveBookBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolBoy");
+        text.setText("Tak, nu kan jeg endelig følge med i skolen!");
+    }
+
+    public void giveBookGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolGirl");
+        text.setText("Tak, men jeg har masser af bøger jeg kan læse i.");
+    }
+
+    public void giveScarfBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolBoy");
+        text.setText("Tak, det er fint.");
+    }
+
+    public void giveScarfGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolGirl");
+        text.setText("Tak, det er fint.");
+    }
+
+    public void giveMoneyBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolBoy");
+        text.setText("Tak, dem vil jeg bruge på at købe bøger!");
+    }
+
+    public void giveMoneyGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolGirl");
+        text.setText("Tak, men jeg mangler ikke noget lige nu.");
+    }
+
+    public void giveDrawingBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolBoy");
+        text.setText("Tak, den er fin!");
+    }
+
+    public void giveMedicineBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolBoy");
+        text.setText("Tak, men jeg føler mig ikke syg nu.");
+    }
+
+    public void giveMedicineGirl(){
+        giveItem(drawingInv, drawingChoice,"tegning", "schoolGirl");
+        text.setText("Tak, men jeg føler mig ikke syg nu.");
+    }
 
     // INVENTORY MANAGEMENT
     @Override

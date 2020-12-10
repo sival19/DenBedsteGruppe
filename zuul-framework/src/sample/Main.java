@@ -152,36 +152,42 @@ public class Main extends Application {
 
     //INTERACT FROM INVENTORY
     public void interactApple(){
+        clearMenu();
         text.setText("");
         appleChoice.setDisable(false);
         appleChoice.setVisible(true);
     }
 
     public void interactDrawing(){
+        clearMenu();
         text.setText("");
         drawingChoice.setDisable(false);
         drawingChoice.setVisible(true);
     }
 
     public void interactMedicine(){
+        clearMenu();
         text.setText("");
         medicineChoice.setDisable(false);
         medicineChoice.setVisible(true);
     }
 
     public void interactScarf(){
+        clearMenu();
         text.setText("");
         scarfChoice.setDisable(false);
         scarfChoice.setVisible(true);
     }
 
     public void interactBook(){
+        clearMenu();
         text.setText("");
         bookChoice.setDisable(false);
         bookChoice.setVisible(true);
     }
 
     public void interactMoney(){
+        clearMenu();
         text.setText("");
         moneyChoice.setDisable(false);
         moneyChoice.setVisible(true);
