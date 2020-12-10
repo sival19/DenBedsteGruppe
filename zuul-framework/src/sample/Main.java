@@ -187,7 +187,6 @@ public class Main extends Application {
         text.setText("");
         appleChoice.setDisable(false);
         appleChoice.setVisible(true);
-        Writer();
     }
 
     public void interactDrawing(){
