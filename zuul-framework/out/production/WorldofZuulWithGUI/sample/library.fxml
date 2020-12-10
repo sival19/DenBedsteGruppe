@@ -81,7 +81,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwApple" mnemonicParsing="false" onAction="#giveAppleNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" />
+        <Button fx:id="throwApple" mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Giv til damen" />
     </HBox>
 
     <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -90,7 +90,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwBook" mnemonicParsing="false" onAction="#giveBookNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" />
+        <Button fx:id="throwBook" mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Giv til damen" />
     </HBox>
 
 
@@ -101,7 +101,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwMoney" mnemonicParsing="false" onAction="#giveMoneyNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
+        <Button fx:id="throwMoney" mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
     </HBox>
 
     <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -110,12 +110,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-<<<<<<< HEAD
-        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
-=======
-        <Button fx:id="throwDrawing" mnemonicParsing="false" onAction="#giveDrawingNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
->>>>>>> SVVVVVVVVVVVVV
+        <Button fx:id="throwDrawing" mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
     </HBox>
 
     <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -125,10 +120,6 @@
             </font>
         </Text>
         <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
-<<<<<<< HEAD
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
-=======
->>>>>>> SVVVVVVVVVVVVV
     </HBox>
 
     <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -137,6 +128,6 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveMedicineNiceLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen " />
+        <Button mnemonicParsing="false"  prefHeight="35.0" prefWidth="97.0" text="Giv til damen " />
     </HBox>
 </AnchorPane>
