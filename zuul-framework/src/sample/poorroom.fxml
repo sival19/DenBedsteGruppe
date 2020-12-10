@@ -38,19 +38,19 @@
     <ImageView fx:id="appleInv" disable="true" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#interactApple" opacity="0.1">
         <Image url="@../images/apple.png" />
     </ImageView>
-    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" opacity="0.1">
+    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" onMouseClicked="#interactBook" opacity="0.1">
         <Image url="@../images/book.png" />
     </ImageView>
-    <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" opacity="0.1">
+    <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" onMouseClicked="#interactMedicine" opacity="0.1">
         <Image url="@../images/medicine.png" />
     </ImageView>
-    <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" opacity="0.1">
+    <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" onMouseClicked="#interactDrawing" opacity="0.1">
         <Image url="@../images/drawing.png" />
     </ImageView>
-    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0" opacity="0.1">
+    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0"  onMouseClicked="#interactMoney" opacity="0.1">
         <Image url="@../images/money.png" />
     </ImageView>
-    <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" opacity="0.1">
+    <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" onMouseClicked="#interactScarf" opacity="0.1">
         <Image url="@../images/scarf.png" />
     </ImageView>
 
@@ -78,8 +78,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveAppleBoy" prefHeight="35.0" prefWidth="105.0" text="Giv til drengen" />
-        <Button mnemonicParsing="false" onMouseClicked="#giveAppleLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" />
+        <Button mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Giv til damen" onAction="#giveAppleLady" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveAppleLady" prefHeight="35.0" prefWidth="97.0" text="Giv til drengen" onAction="#giveAppleBoy" />
     </HBox>
 
     <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -88,8 +88,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to " />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" onAction="#giveBookBoy" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveBookLady" />
     </HBox>
 
     <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -98,8 +98,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to " />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" onAction="#giveScarfBoy" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveScarfLady" />
     </HBox>
 
     <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -108,8 +108,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to " />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen " onAction="#giveMoneyBoy" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveMoneyLady" />
     </HBox>
 
     <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -118,8 +118,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" onAction="#giveDrawingBoy" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveDrawingLady" />
     </HBox>
 
     <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
@@ -128,8 +128,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to " />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen" />
+        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen " onAction="#giveMedicineBoy" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveMedicineLady" />
     </HBox>
 
 </AnchorPane>
