@@ -167,7 +167,6 @@ public class Game implements ZuulGame {
         station.setExit("skolen", skole);
         station.setExit("fattiggården", fattiggård);
 
-
         skole.setExit("stationen", station);
         skole.setExit("rigmandsrum", rigmandsrum);
         skole.setExit("biblioteket", bibliotek);
@@ -185,7 +184,6 @@ public class Game implements ZuulGame {
         rigmandsrum.setExit("skolen", skole);
         rigmandsrum.setExit("biblioteket", bibliotek);
         rigmandsrum.setExit("apoteket", apotek);
-
 
         apotek.setExit("rigmandsrum", rigmandsrum);
         apotek.setExit("stationen", station);
@@ -212,22 +210,33 @@ public class Game implements ZuulGame {
         skole.addItem(tegning);
 
         // Create characters
-        Character waiter, boy, richGuy, niceLady, oldLady;
+        Character poorBoy, poorLady, schoolGirl, schoolBoy, richMan, wizard, knittingLady, homelessMan, sickMan;
 
-        waiter = new Character("tjener", "bestikslav", 1);
-        boy = new Character("dreng", "lille stakkel",1);
-        oldLady = new Character("Dame", "fryser", 0);
-        richGuy = new Character("rich", "lidt for rig",3);
-        niceLady = new Character("sødDame", "så sød",1);
+        poorBoy = new Character("fattigDreng", "lille stakkel",1);
+        poorLady = new Character("fattigDame", "Hun fryser", 1);
+        schoolBoy = new Character("skoleDreng", "han er ked af det", 1);
+        schoolGirl = new Character("skolePige", "hun ser glad ud", 1);
+        wizard = new Character("troldmand", "Han er mystisk",0);
+        homelessMan = new Character("hjemløsMand", "han ser hjemløs ud",1);
+        richMan = new Character("rigmand", "lidt for rig",3);
+        knittingLady = new Character("strikkeDame", "Hun strikker halstørklæder",0);
+        sickMan = new Character("sygMand", "Han ser syg ud",1);
 
         //add characters to rooms
+        skole.addCharacter(schoolBoy);
+        skole.addCharacter(schoolGirl);
 
-        skole.addCharacter(boy);
-        fattiggård.addCharacter(oldLady);
-        restaurant.addCharacter(waiter);
-        rigmandsrum.addCharacter(richGuy);
-        bibliotek.addCharacter(niceLady);
-        fattiggård.addCharacter(boy);
+        fattiggård.addCharacter(poorLady);
+        fattiggård.addCharacter(poorBoy);
+
+        rigmandsrum.addCharacter(richMan);
+
+        bibliotek.addCharacter(knittingLady);
+
+        station.addCharacter(wizard);
+        station.addCharacter(homelessMan);
+
+        apotek.addCharacter(sickMan);
     }
 
     public void play() {

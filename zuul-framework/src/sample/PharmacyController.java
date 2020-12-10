@@ -34,10 +34,7 @@ public class PharmacyController extends Main implements Initializable {
     // OBJECT INTERACTION
 
     public void pickMedicine() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "medicin", ""));
-        medicine.setVisible(false);
-        medicineInv.setOpacity(1.0);
-        getTest().seeInventory();
+        pickItem(medicine, medicineInv, "medicin");
     }
 
     public void giveMedicineSick(){
