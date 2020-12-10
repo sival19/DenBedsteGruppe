@@ -45,11 +45,8 @@ public class RichroomController extends Main implements Initializable {
     }
 
     public void pickApple() {
-        getTest().pickUp(new Command(CommandWord.PICKUP, "æble", ""));
-        addUsedItem("æble");
-        apple.setVisible(false);
-        appleInv.setOpacity(1.0);
-        getTest().seeInventory();
+        pickItem(apple, appleInv, "æble");
+
     }
 
     public void giveDrawingRich(){
