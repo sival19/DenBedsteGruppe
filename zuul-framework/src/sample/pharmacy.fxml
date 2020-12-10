@@ -89,7 +89,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwApple" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveAppleSick"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveAppleSick"/>
     </HBox>
 
     <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -100,7 +100,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveBookSick"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveBookSick"/>
     </HBox>
 
     <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -112,7 +112,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveScarfSick"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveScarfSick"/>
     </HBox>
 
     <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -123,7 +123,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveMoneySick"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveMoneySick"/>
     </HBox>
 
     <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -134,7 +134,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveDrawingSick" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveDrawingSick" />
     </HBox>
     <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
           prefWidth="1049.0" visible="false">
@@ -145,6 +145,6 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onMouseClicked="#giveMedicineSick"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onMouseClicked="#giveMedicineSick"/>
     </HBox>
 </AnchorPane>

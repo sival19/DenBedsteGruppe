@@ -112,6 +112,7 @@
         <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" onAction="#giveScarfRich"/>
     </HBox>
 
+    <!-- Doesn't work or IDK -->
     <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
           prefWidth="1049.0" visible="false">
         <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
@@ -123,7 +124,6 @@
         <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand"/>
     </HBox>
 
-    <!-- Den her er ændret onsdag aften AC-->
     <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
           prefWidth="1049.0" visible="false">
         <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
