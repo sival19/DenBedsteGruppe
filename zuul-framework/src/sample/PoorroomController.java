@@ -45,61 +45,61 @@ public class PoorroomController extends Main implements Initializable {
      */
 
     public void giveAppleBoy(){
-        giveItem(appleInv, appleChoice,"æble", "dreng");
+        giveItem(appleInv, appleChoice,"æble", "poorBoy");
         text.setText("Tak, nu er jeg endelig mæt!");
     }
 
     public void giveAppleLady(){
-        giveItem(appleInv, appleChoice,"æble", "Dame");
+        giveItem(appleInv, appleChoice,"æble", "poorLady");
         text.setText("Tak, nu er jeg mæt, men jeg fryser stadig.");
     }
 
     public void giveMedicineBoy(){
-        giveItem(medicineInv, medicineChoice, "medicin", "dreng");
+        giveItem(medicineInv, medicineChoice, "medicin", "poorBoy");
         text.setText("Tak, men jeg er stadig sulten.");
     }
 
     public void giveMedicineLady(){
-        giveItem(medicineInv, medicineChoice, "medicin", "Dame");
+        giveItem(medicineInv, medicineChoice, "medicin", "poorLady");
         text.setText("Tak, men jeg fryser stadig!");
     }
 
     public void giveMoneyBoy(){
-        giveItem(moneyInv, moneyChoice, "penge", "dreng");
+        giveItem(moneyInv, moneyChoice, "penge", "poorBoy");
         text.setText("Tak, jeg bruger penge til at købe mad!.");
     }
     public void giveMoneyLady() {
-        giveItem(moneyInv, moneyChoice, "penge", "Dame");
+        giveItem(moneyInv, moneyChoice, "penge", "poorLady");
         text.setText("Tak, jeg bruger penge til at købe varme trøj!.");
     }
 
     public void giveScarfBoy(){
-        giveItem(scarfInv, scarfChoice,"halstørklæde", "dreng");
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "poorBoy");
         text.setText("Tak, men jeg er stadig sulten!");
     }
 
     public void giveScarfLady(){
-        giveItem(scarfInv, scarfChoice,"halstørklæde", "Dame");
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "poorLady");
         text.setText("Tak, nu er jeg endelig varm!.");
     }
 
     public void giveDrawingBoy(){
-        giveItem(drawingInv, drawingChoice,"tegning", "dreng");
+        giveItem(drawingInv, drawingChoice,"tegning", "poorBoy");
         text.setText("Tak, men jeg er stadig sulten!");
     }
 
     public void giveDrawingLady(){
-        giveItem(drawingInv, drawingChoice,"tegning", "Dame");
+        giveItem(drawingInv, drawingChoice,"tegning", "poorLady");
         text.setText("Tak, men jeg fryser stadig.");
     }
 
     public void giveBookBoy(){
-        giveItem(bookInv, bookChoice,"bog", "dreng");
+        giveItem(bookInv, bookChoice,"bog", "poorBoy");
         text.setText("Tak, men jeg er stadig sulten!");
     }
 
     public void giveBookLady(){
-        giveItem(bookInv, bookChoice,"bog", "Dame");
+        giveItem(bookInv, bookChoice,"bog", "poorLady");
         text.setText("Tak, men jeg fryser stadig.");
     }
 
