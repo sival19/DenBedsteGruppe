@@ -39,6 +39,16 @@ public class LibraryController extends Main implements Initializable {
 
     // OBJECT INTERACTION
 
+    public void giveAppleNiceLady(){
+
+    }
+
+    public void giveBookNiceLady(){
+
+    }
+
+    public
+
     public void pickBook() {
         getTest().pickUp(new Command(CommandWord.PICKUP, "bog", ""));
         book.setVisible(false);

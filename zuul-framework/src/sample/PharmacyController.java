@@ -40,6 +40,16 @@ public class PharmacyController extends Main implements Initializable {
         getTest().seeInventory();
     }
 
+    public void giveMedicineSick(){
+        giveItem(medicineInv, medicineChoice,"medicin", "sickMan");
+        text.setText("Tusind tak! Nu kan det være jeg endelig får det bedre!");
+    }
+
+    public void giveDrawingSick(){
+        giveItem(drawingInv, drawingChoice,"tegning", "sickMan");
+        text.setText("Tak... *host* det er en fin tegning! *host* puha jeg har det skidt...");
+    }
+
 
     // NAVIGATION
     public void goRichroom() throws IOException {
