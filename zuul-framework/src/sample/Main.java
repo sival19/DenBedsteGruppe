@@ -141,6 +141,11 @@ public class Main extends Application {
      */
 
     // INTERACT WITH ITEM TO PEOPLE
+    public void cancel(){
+        clearMenu();
+    }
+
+
     public void giveItem(ImageView item, HBox menu, String itemName, String character){
         getTest().processCommand(CommandWord.GIVEITEM, itemName, character);
         item.setOpacity(0.1);
