@@ -34,42 +34,42 @@ public class SchoolController extends Main implements Initializable {
 
     // CHARACTER ITEM INTERACTION
     public void giveAppleBoy(){
-        giveItem(drawingInv, drawingChoice,"æble", "skoleDreng");
+        giveItem(appleInv, appleChoice,"æble", "skoleDreng");
         text.setText("Tak,men jeg er ikke så sulten lige nu.");
     }
 
     public void giveAppleGirl(){
-        giveItem(drawingInv, drawingChoice,"æble", "skolePige");
+        giveItem(appleInv, appleChoice,"æble", "skolePige");
         text.setText("Tak, men jeg er ikke så sulten lige nu.");
     }
 
     public void giveBookBoy(){
-        giveItem(drawingInv, drawingChoice,"bog", "skoleDreng");
+        giveItem(bookInv, bookChoice,"bog", "skoleDreng");
         text.setText("Tak, nu kan jeg endelig følge med i skolen!");
     }
 
     public void giveBookGirl(){
-        giveItem(drawingInv, drawingChoice,"bog", "skolePige");
+        giveItem(bookInv, bookChoice,"bog", "skolePige");
         text.setText("Tak, men jeg har masser af bøger jeg kan læse i.");
     }
 
     public void giveScarfBoy(){
-        giveItem(drawingInv, drawingChoice,"halstørklæde", "skoleDreng");
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "skoleDreng");
         text.setText("Tak, det er fint.");
     }
 
     public void giveScarfGirl(){
-        giveItem(drawingInv, drawingChoice,"halstørklæde", "skolePige");
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "skolePige");
         text.setText("Tak, det er fint.");
     }
 
     public void giveMoneyBoy(){
-        giveItem(drawingInv, drawingChoice,"penge", "skoleDreng");
+        giveItem(moneyInv, moneyChoice,"penge", "skoleDreng");
         text.setText("Tak, dem vil jeg bruge på at købe bøger!");
     }
 
     public void giveMoneyGirl(){
-        giveItem(drawingInv, drawingChoice,"penge", "skolePige");
+        giveItem(moneyInv, moneyChoice,"penge", "skolePige");
         text.setText("Tak, men jeg mangler ikke noget lige nu.");
     }
 
@@ -79,12 +79,12 @@ public class SchoolController extends Main implements Initializable {
     }
 
     public void giveMedicineBoy(){
-        giveItem(drawingInv, drawingChoice,"medicin", "skoleDreng");
+        giveItem(medicineInv, medicineChoice,"medicin", "skoleDreng");
         text.setText("Tak, men jeg føler mig ikke syg nu.");
     }
 
     public void giveMedicineGirl(){
-        giveItem(drawingInv, drawingChoice,"medicin", "skolePige");
+        giveItem(medicineInv, medicineChoice,"medicin", "skolePige");
         text.setText("Tak, men jeg føler mig ikke syg nu.");
     }
 
