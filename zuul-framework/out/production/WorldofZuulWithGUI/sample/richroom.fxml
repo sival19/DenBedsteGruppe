@@ -86,8 +86,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwApple" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" onAction="#giveAppleRich"/>
     </HBox>
 
     <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -98,8 +97,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" onAction="#giveBookRich"/>
     </HBox>
 
     <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -111,8 +109,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" onAction="#giveScarfRich"/>
     </HBox>
 
     <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -123,8 +120,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand"/>
     </HBox>
 
     <!-- Den her er ændret onsdag aften AC-->
@@ -136,7 +132,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til rigmanden" onMouseClicked="#giveDrawingRich"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til den rige mand" onMouseClicked="#giveDrawingRich"/>
     </HBox>
 
     <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -148,8 +144,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" onAction="#giveMedicineRich"/>
     </HBox>
 
 </AnchorPane>
