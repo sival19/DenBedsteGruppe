@@ -48,16 +48,19 @@ public class RichroomController extends Main implements Initializable {
     }
 
     public void giveAppleRich(){
+        giveItem(appleInv, appleChoice, "æble", "rigmand");
 
         text.setText("Tak, men jeg har penge til at købe alle æbler i verden!");
     }
 
     public void giveBookRich(){
+        giveItem(bookInv, bookChoice, "bog", "rigmand");
 
         text.setText("Tak, men jeg har penge til at købe alle bøger i verden!");
     }
 
     public void giveScarfRich(){
+        giveItem(scarfInv, scarfChoice, "halstørklæde", "rigmand");
 
         text.setText("Tak, men jeg har penge til at købe alle halstørklæder i verden!");
     }
