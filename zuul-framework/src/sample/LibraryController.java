@@ -47,8 +47,6 @@ public class LibraryController extends Main implements Initializable {
 
     }
 
-    public
-
     public void pickBook() {
         getTest().pickUp(new Command(CommandWord.PICKUP, "bog", ""));
         book.setVisible(false);
