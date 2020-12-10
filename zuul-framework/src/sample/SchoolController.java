@@ -54,12 +54,12 @@ public class SchoolController extends Main implements Initializable {
     }
 
     public void giveScarfBoy(){
-        giveItem(drawingInv, drawingChoice,"halstørklade", "skoleDreng");
+        giveItem(drawingInv, drawingChoice,"halstørklæde", "skoleDreng");
         text.setText("Tak, det er fint.");
     }
 
     public void giveScarfGirl(){
-        giveItem(drawingInv, drawingChoice,"halstøreklæde", "skolePige");
+        giveItem(drawingInv, drawingChoice,"halstørklæde", "skolePige");
         text.setText("Tak, det er fint.");
     }
 
