@@ -198,10 +198,10 @@ public class Game implements ZuulGame {
 
         æble = new Item("æble", "det er rødt", 0);
         halstørklæde = new Item("halstørklæde", "den er varm", 2);
-        tegning = new Item("tegning", "n0get", 3);
+        tegning = new Item("tegning", "n0get", 1);
         penge = new Item("penge", "der er mange", 1);
         medicin = new Item("medicin", "det er piller", 2);
-        bog = new Item("bog", "den er tung", 3);
+        bog = new Item("bog", "den er tung", 2);
 
         // Add items to rooms
         apotek.addItem(medicin);
@@ -212,13 +212,13 @@ public class Game implements ZuulGame {
         skole.addItem(tegning);
 
         // Create characters
-        Character waiter, boy, richGuy, poorFuck, oldLady;
+        Character waiter, boy, richGuy, niceLady, oldLady;
 
         waiter = new Character("tjener", "bestikslav", 1);
         boy = new Character("dreng", "lille stakkel",1);
         oldLady = new Character("Dame", "fryser", 0);
         richGuy = new Character("rich", "lidt for rig",3);
-        poorFuck = new Character("Total hjemløs", "så syg...",1);
+        niceLady = new Character("sødDame", "så sød",1);
 
         //add characters to rooms
 
@@ -226,6 +226,7 @@ public class Game implements ZuulGame {
         fattiggård.addCharacter(oldLady);
         restaurant.addCharacter(waiter);
         rigmandsrum.addCharacter(richGuy);
+        bibliotek.addCharacter(niceLady);
         fattiggård.addCharacter(boy);
     }
 
