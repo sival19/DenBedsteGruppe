@@ -125,6 +125,7 @@ public class Main extends Application {
         addUsedItem(itemName);
         item.setVisible(false);
         itemInv.setOpacity(1.0);
+        itemInv.setDisable(false);
         getTest().seeInventory();
     }
 
@@ -141,11 +142,6 @@ public class Main extends Application {
      */
 
     // INTERACT WITH ITEM TO PEOPLE
-    public void cancel(){
-        clearMenu();
-    }
-
-
     public void giveItem(ImageView item, HBox menu, String itemName, String character){
         getTest().processCommand(CommandWord.GIVEITEM, itemName, character);
         item.setOpacity(0.1);

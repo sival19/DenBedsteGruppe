@@ -10,126 +10,176 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
+<AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PoorroomController">
 
     <!-- Background -->
     <ImageView fitHeight="640.0" fitWidth="1150">
-        <Image url="@../images/poorroom.PNG" />
+        <Image url="@../images/poorroom.PNG"/>
     </ImageView>
 
     <!-- People -->
-    <ImageView fx:id="poorChild" fitHeight="376.0" fitWidth="122.0" layoutX="143.0" layoutY="273.0" onMouseClicked="#talkPoorChild">
-        <Image url="@../images/poorboy.png" />
+    <ImageView fx:id="poorChild" fitHeight="376.0" fitWidth="122.0" layoutX="143.0" layoutY="273.0"
+               onMouseClicked="#talkPoorChild">
+        <Image url="@../images/poorboy.png"/>
     </ImageView>
-    <ImageView fx:id="poorWoman" fitHeight="294.0" fitWidth="179.0" layoutX="631.0" layoutY="327.0" onMouseClicked="#talkPoorWoman">
-        <Image url="@../images/poorwoman.png" />
+    <ImageView fx:id="poorWoman" fitHeight="294.0" fitWidth="179.0" layoutX="631.0" layoutY="327.0"
+               onMouseClicked="#talkPoorWoman">
+        <Image url="@../images/poorwoman.png"/>
     </ImageView>
 
-    <!-- Navigations -->
-    <Button layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
-    <Button layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" />
+    <!-- Navigation -->
+    <Button layoutX="81.0" layoutY="36.0" mnemonicParsing="false" onAction="#goStation" text="Station"/>
+    <Button layoutX="579.0" layoutY="40.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen"/>
 
-
-    <!-- InventoryItems-->
+    <!-- Speech and interaction area -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
-      <font>
-         <Font size="15.0" />
-      </font></Label>
-    <ImageView fx:id="appleInv" disable="true" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#interactApple" opacity="0.1">
-        <Image url="@../images/apple.png" />
+        <font>
+            <Font size="15.0"/>
+        </font>
+    </Label>
+
+    <!-- Inventory -->
+    <ImageView fx:id="appleInv" disable="true" fitHeight="86.0" fitWidth="98.0" layoutY="677.0"
+               onMouseClicked="#interactApple" opacity="0.1">
+        <Image url="@../images/apple.png"/>
     </ImageView>
-    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0" onMouseClicked="#interactBook" opacity="0.1">
-        <Image url="@../images/book.png" />
+    <ImageView fx:id="bookInv" fitHeight="57.0" fitWidth="60.0" layoutX="118.0" layoutY="697.0"
+               onMouseClicked="#interactBook" opacity="0.1" disable="true">
+        <Image url="@../images/book.png"/>
     </ImageView>
-    <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0" onMouseClicked="#interactMedicine" opacity="0.1">
-        <Image url="@../images/medicine.png" />
+    <ImageView fx:id="medicineInv" fitHeight="57.0" fitWidth="60.0" layoutX="519.0" layoutY="692.0"
+               onMouseClicked="#interactMedicine" opacity="0.1" disable="true">
+        <Image url="@../images/medicine.png"/>
     </ImageView>
-    <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0" onMouseClicked="#interactDrawing" opacity="0.1">
-        <Image url="@../images/drawing.png" />
+    <ImageView fx:id="drawingInv" fitHeight="57.0" fitWidth="60.0" layoutX="419.0" layoutY="692.0"
+               onMouseClicked="#interactDrawing" opacity="0.1" disable="true">
+        <Image url="@../images/drawing.png"/>
     </ImageView>
-    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0"  onMouseClicked="#interactMoney" opacity="0.1">
-        <Image url="@../images/money.png" />
+    <ImageView fx:id="moneyInv" fitHeight="57.0" fitWidth="60.0" layoutX="320.0" layoutY="692.0"
+               onMouseClicked="#interactMoney" opacity="0.1" disable="true">
+        <Image url="@../images/money.png"/>
     </ImageView>
-    <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0" onMouseClicked="#interactScarf" opacity="0.1">
-        <Image url="@../images/scarf.png" />
+    <ImageView fx:id="scarfInv" fitHeight="57.0" fitWidth="60.0" layoutX="219.0" layoutY="692.0"
+               onMouseClicked="#interactScarf" opacity="0.1" disable="true">
+        <Image url="@../images/scarf.png"/>
     </ImageView>
+
+    <!-- Inventory interaction -->
+    <HBox fx:id="appleChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder et æble, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen"
+                onAction="#giveAppleLady"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til drengen"
+                onAction="#giveAppleBoy"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" text="Annuller" onAction="#clearMenu"/>
+    </HBox>
+
+    <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder en bog, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen"
+                onAction="#giveBookBoy"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen"
+                onAction="#giveBookLady"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" text="Annuller" onAction="#clearMenu"/>
+    </HBox>
+
+    <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder et halstørklæde, hvad vil du gøre?  " textAlignment="RIGHT"
+              wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen"
+                onAction="#giveScarfBoy"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen"
+                onAction="#giveScarfLady"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" text="Annuller" onAction="#clearMenu"/>
+    </HBox>
+
+    <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder nogle penge, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen "
+                onAction="#giveMoneyBoy"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen"
+                onAction="#giveMoneyLady"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" text="Annuller" onAction="#clearMenu"/>
+    </HBox>
+
+    <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder en tegning, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen"
+                onAction="#giveDrawingBoy"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen"
+                onAction="#giveDrawingLady"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" text="Annuller" onAction="#clearMenu"/>
+    </HBox>
+
+    <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder noget medicin, hvad vil du gøre?  " textAlignment="RIGHT"
+              wrappingWidth="502.4000000000001">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Text>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen "
+                onAction="#giveMedicineBoy"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen"
+                onAction="#giveMedicineLady"/>
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="113.0" text="Annuller" onAction="#clearMenu"/>
+    </HBox>
 
     <!-- Layout inventory -->
-    <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="200.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="300.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="400.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="500.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="600.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="700.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="800.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="900.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1000.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1100.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1200.0" layoutY="779.0" startX="-100.00000762939453" startY="-13.79998779296875" />
-
-
-    <!-- Buttons for inventory interraction -->
-
-    <!-- Den her er ændret onsdag aften AC-->
-    <HBox fx:id="appleChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder et æble, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Button mnemonicParsing="false"  prefHeight="35.0" prefWidth="105.0" text="Giv til damen" onAction="#giveAppleLady" />
-        <Button mnemonicParsing="false" onMouseClicked="#giveAppleLady" prefHeight="35.0" prefWidth="97.0" text="Giv til drengen" onAction="#giveAppleBoy" />
-    </HBox>
-
-    <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder en bog, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" onAction="#giveBookBoy" />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveBookLady" />
-    </HBox>
-
-    <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder et halstørklæde, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" onAction="#giveScarfBoy" />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveScarfLady" />
-    </HBox>
-
-    <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder nogle penge, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Button fx:id="throwMoney" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen " onAction="#giveMoneyBoy" />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveMoneyLady" />
-    </HBox>
-
-    <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder en tegning, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" onAction="#giveDrawingBoy" />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveDrawingLady" />
-    </HBox>
-
-    <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder noget medicin, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Text>
-        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to drengen " onAction="#giveMedicineBoy" />
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveMedicineLady" />
-    </HBox>
-
+    <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="200.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="300.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="400.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="500.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="600.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="700.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="800.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="900.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1000.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1100.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
+    <Line endX="-100.00000762939453" endY="-98.800048828125" layoutX="1200.0" layoutY="779.0"
+          startX="-100.00000762939453" startY="-13.79998779296875"/>
 </AnchorPane>
