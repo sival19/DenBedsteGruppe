@@ -45,4 +45,30 @@ public class StationController extends Main implements Initializable {
     }
 
 
+    // OBJECT INTERACTION
+
+    public void giveAppleStationMan () {
+        giveItem (appleInv, appleChoice, "æble", "hjemløs Mand");
+        text.setText("Tak!");
+    }
+    public void giveBookStationMan () {
+        giveItem (bookInv, bookChoice, "bog", "hjemløs Mand");
+        text.setText("Tak!");
+    }
+    public void giveScarfStationMan () {
+        giveItem (scarfInv, scarfChoice, "halsterklæde", "hjemløs Mand");
+        text.setText("Tak!");
+    }
+    public void giveDrawingStationMan () {
+        giveItem (drawingInv, drawingChoice, "tegning", "hjemløs Mand");
+        text.setText("Tak!");
+    }
+    public void giveMedicineStationMan () {
+        giveItem (medicineInv, medicineChoice, "medicin", "hjemløs Mand");
+        text.setText("Tak!");
+    }
+    public void giveMoneyStationMan () {
+        giveItem (moneyInv, moneyChoice, "penge", "hjemløs Mand");
+        text.setText("Tak!");
+    }
 }

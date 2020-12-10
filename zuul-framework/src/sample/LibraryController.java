@@ -40,28 +40,23 @@ public class LibraryController extends Main implements Initializable {
     // OBJECT INTERACTION
 
     public void giveAppleNiceLady(){
-        giveItem(appleInv, appleChoice,"æble", "sødDame");
-
+        giveItem(appleInv, appleChoice, "æble", "strikkeDame");
     }
 
     public void giveBookNiceLady(){
-        giveItem(bookInv, bookChoice, "bog", "sødDame");
-
+        giveItem(bookInv, bookChoice, "bog", "strikkeDame");
     }
 
     public void giveMoneyNiceLady(){
-        giveItem(moneyInv, moneyChoice, "penge", "sødDame");
-
+        giveItem(moneyInv, moneyChoice, "penge", "strikkeDame");
     }
 
     public void giveMedicineNiceLady(){
-        giveItem(moneyInv, moneyChoice, "medicin", "sødDame");
-
+        giveItem(medicineInv, medicineChoice, "medicin", "strikkeDame");
     }
 
     public void giveDrawingNiceLady(){
-        giveItem(drawingInv,drawingChoice, "tegning", "sødDame");
-
+        giveItem(drawingInv,drawingChoice, "tegning", "strikkeDame");
     }
 
     public void pickBook() {
