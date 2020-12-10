@@ -138,10 +138,8 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til din syge " onMouseClicked="#giveDrawingSick" />
     </HBox>
-
     <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
           prefWidth="1049.0" visible="false">
         <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
@@ -151,7 +149,6 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Give to "/>
-        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til pigen"/>
+        <Button fx:id="throwMedicine" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onMouseClicked="#giveMedicineSick"/>
     </HBox>
 </AnchorPane>
