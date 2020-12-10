@@ -100,7 +100,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til din syge " onAction="#giveBookSick"/>
+        <Button fx:id="throwBook" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveBookSick"/>
     </HBox>
 
     <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
@@ -134,7 +134,7 @@
                 <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til din syge " onAction="#giveDrawingSick" />
+        <Button fx:id="throwDrawing" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " onAction="#giveDrawingSick" />
     </HBox>
     <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
           prefWidth="1049.0" visible="false">
