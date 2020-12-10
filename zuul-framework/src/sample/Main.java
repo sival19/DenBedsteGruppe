@@ -57,11 +57,11 @@ public class Main extends Application {
 
 
     public void Writer() {
-            String text = "Some Text, hope it works...";
+            String text = "Some Text, hope it works... maybe mmore";
             BufferedWriter output = null;
             try {
                 File file = new File("name and high score.txt");
-                output = new BufferedWriter(new FileWriter(file));
+                output = new BufferedWriter(new FileWriter(file, true));
                 output.write(text);
             } catch ( IOException e ) {
                 e.printStackTrace();
@@ -187,6 +187,7 @@ public class Main extends Application {
         text.setText("");
         appleChoice.setDisable(false);
         appleChoice.setVisible(true);
+        Writer();
     }
 
     public void interactDrawing(){
