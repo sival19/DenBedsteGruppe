@@ -75,59 +75,72 @@
 
     <!-- Buttons for inventory interraction -->
 
-    <HBox fx:id="appleChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder et æble, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+    <HBox fx:id="appleChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder et æble, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
             <font>
-                <Font size="15.0" />
+                <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwApple" mnemonicParsing="false" onAction="#giveAppleNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" onAction="#giveAppleNiceLady" />
     </HBox>
 
-    <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder en bog, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+    <HBox fx:id="bookChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder en bog, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
             <font>
-                <Font size="15.0" />
+                <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwBook" mnemonicParsing="false" onAction="#giveBookNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" onAction="#giveBookNiceLady"/>
     </HBox>
 
-
-
-    <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder nogle penge, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+    <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder et halstørklæde, hvad vil du gøre?  " textAlignment="RIGHT"
+              wrappingWidth="502.4000000000001">
             <font>
-                <Font size="15.0" />
+                <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwMoney" mnemonicParsing="false" onAction="#giveMoneyNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
+
     </HBox>
 
-    <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder en tegning, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+    <!-- Doesn't work or IDK -->
+    <HBox fx:id="moneyChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder nogle penge, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
             <font>
-                <Font size="15.0" />
+                <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwDrawing" mnemonicParsing="false" onAction="#giveDrawingNiceLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" onAction="#giveMoneyNiceLady"/>
     </HBox>
 
-    <HBox fx:id="scarfChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder en tegning, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+    <HBox fx:id="drawingChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder en tegning, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
             <font>
-                <Font size="15.0" />
+                <Font size="15.0"/>
             </font>
         </Text>
-        <Button fx:id="throwScarf" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen " />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" onAction="#giveDrawingNiceLady" />
     </HBox>
 
-    <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0" prefWidth="1049.0" visible="false">
-        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0" text="Du holder noget medicin, hvad vil du gøre?  " textAlignment="RIGHT" wrappingWidth="502.4000000000001">
+    <HBox fx:id="medicineChoice" alignment="CENTER_LEFT" disable="true" layoutX="97.0" layoutY="640.0" prefHeight="40.0"
+          prefWidth="1049.0" visible="false">
+        <Text accessibleRole="TEXT_AREA" fontSmoothingType="LCD" strokeLineJoin="BEVEL" strokeWidth="0.0"
+              text="Du holder noget medicin, hvad vil du gøre?  " textAlignment="RIGHT"
+              wrappingWidth="502.4000000000001">
             <font>
-                <Font size="15.0" />
+                <Font size="15.0"/>
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveMedicineNiceLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen " />
+        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" onAction="#giveMedicineNiceLady" />
     </HBox>
 </AnchorPane>

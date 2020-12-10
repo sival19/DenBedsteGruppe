@@ -40,7 +40,7 @@ public class LibraryController extends Main implements Initializable {
     // OBJECT INTERACTION
 
     public void giveAppleNiceLady(){
-        giveItem(appleInv, appleChoice, "æble", "sødDame");
+        giveItem(appleInv, appleChoice,"æble", "sødDame");
 
     }
 
