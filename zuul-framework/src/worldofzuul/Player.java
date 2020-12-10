@@ -16,18 +16,7 @@ public class Player {
         this.name = name;
         inventory = new Inventory(new ArrayList<>());
     }
-
-    //methods
-    public static int getPoints() {
-        return points;
-    }
-
-    public static int addPoints(int points) {
-        points = getPoints();
-        points += 1; //missing from where to add points and howmany
-        return points;
-
-    }
+    
 
 
     //tilgå inventory
