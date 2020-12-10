@@ -54,6 +54,58 @@ public class PoorroomController extends Main implements Initializable {
         text.setText("Tak, nu er jeg mæt, men jeg fryser stadig.");
     }
 
+    public void giveMedicineBoy(){
+        giveItem(medicineInv, medicineChoice, "medicin", "dreng");
+        text.setText("Tak, men jeg er stadig sulten.");
+    }
+
+    public void giveMedicineLady(){
+        giveItem(medicineInv, medicineChoice, "medicin", "Dame");
+        text.setText("Tak, men jeg fryser stadig!");
+    }
+
+    public void giveMoneyBoy(){
+        giveItem(moneyInv, moneyChoice, "penge", "dreng");
+        text.setText("Tak, jeg bruger penge til at købe mad!.");
+    }
+    public void giveMoneyLady() {
+        giveItem(moneyInv, moneyChoice, "penge", "Dame");
+        text.setText("Tak, jeg bruger penge til at købe varme trøj!.");
+    }
+
+    public void giveScarfBoy(){
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "dreng");
+        text.setText("Tak, men jeg er stadig sulten!");
+    }
+
+    public void giveScarfLady(){
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "Dame");
+        text.setText("Tak, nu er jeg endelig varm!.");
+    }
+
+    public void giveDrawingBoy(){
+        giveItem(drawingInv, drawingChoice,"tegning", "dreng");
+        text.setText("Tak, men jeg er stadig sulten!");
+    }
+
+    public void giveDrawingLady(){
+        giveItem(drawingInv, drawingChoice,"tegning", "Dame");
+        text.setText("Tak, men jeg fryser stadig.");
+    }
+
+    public void giveBookBoy(){
+        giveItem(bookInv, bookChoice,"bog", "dreng");
+        text.setText("Tak, men jeg er stadig sulten!");
+    }
+
+    public void giveBookLady(){
+        giveItem(bookInv, bookChoice,"bog", "Dame");
+        text.setText("Tak, men jeg fryser stadig.");
+    }
+
+
+
+
     // NAVIGATION
     public void goStation() throws IOException {
         changeRooms("stationen", "station.fxml");
