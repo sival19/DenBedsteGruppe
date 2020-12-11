@@ -20,9 +20,10 @@ public class StationController extends Main implements Initializable {
     }
 
     // CHARACTER INTERACTION
-    public void talkMan() {
-        text.setText("Jeg har mistet alt og nu bor jeg her på gaden... Har du måske lidt penge du kan undvære?");
+    public void talkSickboy() {
+        text.setText("Jeg er syg, men jeg har ikke råd til medicin. ");
     }
+
 
 
     // INVENTORY MANAGEMENT
@@ -43,33 +44,71 @@ public class StationController extends Main implements Initializable {
 
     // OBJECT INTERACTION
 
-    public void giveAppleStationMan() {
-        giveItem(appleInv, appleChoice, "æble", "hjemløsMand");
-        text.setText("Tak!");
+    public void giveMedicineSick(){
+        giveItem(medicineInv, medicineChoice,"medicin", "sygMand");
+        text.setText("Tusind tak! Nu kan det være jeg endelig får det bedre!");
     }
 
-    public void giveBookStationMan() {
-        giveItem(bookInv, bookChoice, "bog", "hjemløsMand");
-        text.setText("Tak!");
+    public void giveDrawingSick(){
+        giveItem(drawingInv, drawingChoice,"tegning", "sygMand");
+        text.setText("Tak... *host* det er en fin tegning! *host* puha jeg har det skidt...");
     }
 
-    public void giveScarfStationMan() {
-        giveItem(scarfInv, scarfChoice, "halstørklæde", "hjemløsMand");
-        text.setText("Tak!");
+    public void giveMoneySick(){
+        giveItem(moneyInv, moneyChoice,"penge", "sygMand");
+        text.setText("Tak, nu kan det måske være jeg har råd til at købe noget medicin.");
     }
 
-    public void giveDrawingStationMan() {
-        giveItem(drawingInv, drawingChoice, "tegning", "hjemløsMand");
-        text.setText("Tak!");
+    public void giveScarfSick(){
+        giveItem(scarfInv, scarfChoice,"halstørklæde", "sygMand");
+        text.setText("Tak... *host* det gør mig nok ikke rask, men det kan holde mig varm *host* ");
     }
 
-    public void giveMedicineStationMan() {
-        giveItem(medicineInv, medicineChoice, "medicin", "hjemløsMand");
-        text.setText("Tak!");
+    public void giveBookSick(){
+        giveItem(bookInv, bookChoice,"bog", "sygMand");
+        text.setText("Tak... *host* kan være jeg kan læse den når jeg får det bedre *host* ");
     }
 
-    public void giveMoneyStationMan() {
-        giveItem(moneyInv, moneyChoice, "penge", "hjemløsMand");
-        text.setText("Tak!");
+    public void giveAppleSick(){
+        giveItem(appleInv, appleChoice,"æble", "sygMand");
+        text.setText("Tak... *host* jeg har det dog lidt for dårligt til at spise, men jeg gemmer det til senere *host* ");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PharmacyController">
 
@@ -18,10 +14,8 @@
     </ImageView>
 
     <!-- People -->
-    <ImageView fx:id="sickboy" fitHeight="261.0" fitWidth="161.0" layoutX="701.0" layoutY="383.0" onMouseClicked="#talkSickboy">
-        <image>
-            <Image url="@../images/sickboy.png" />
-        </image>
+    <ImageView fx:id="man" fitHeight="262.0" fitWidth="150.0" layoutX="716.0" layoutY="365.0" onMouseClicked="#talkMan">
+        <Image url="@../images/man.png" />
     </ImageView>
     <ImageView fx:id="doctor" fitHeight="278.0" fitWidth="295.0" layoutX="219.0" layoutY="341.0" onMouseClicked="#talkDoctor">
         <image>
@@ -84,7 +78,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveAppleSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onMouseClicked="#giveAppleStationMan" prefHeight="35.0" prefWidth="105.0" text="Giv til manden på stationen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -94,7 +88,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveBookSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onMouseClicked="#giveBookStationMan" prefHeight="35.0" prefWidth="105.0" text="Giv til manden på stationen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -104,7 +98,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveScarfSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onMouseClicked="#giveScarfStationMan" prefHeight="35.0" prefWidth="105.0" text="Giv til manden på stationen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -114,7 +108,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveMoneySick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onMouseClicked="#giveMoneyStationMan" prefHeight="35.0" prefWidth="105.0" text="Giv til manden på stationen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -124,7 +118,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveDrawingSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onMouseClicked="#giveDrawingStationMan" prefHeight="35.0" prefWidth="105.0" text="Giv til manden på stationen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -134,9 +128,19 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveMedicineSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onMouseClicked="#giveMedicineStationMan" prefHeight="35.0" prefWidth="105.0" text="Giv til manden på stationen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Layout inventory -->
     <Line endX="1150.0" endY="0.39996337890625" layoutY="678.0" startX="-1.220703143189894E-5" />
