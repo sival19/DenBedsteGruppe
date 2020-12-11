@@ -21,12 +21,8 @@ public class RichroomController extends Main implements Initializable {
     }
 
     // NAVIGATION
-    public void goPharmacy() throws IOException {
-        changeRooms("apoteket", "pharmacy.fxml");
-    }
-
-    public void goSchool() throws IOException {
-        changeRooms("skolen", "school.fxml");
+    public void goPoorroom() throws IOException {
+        changeRooms("fattiggården", "poorroom.fxml");
     }
 
     public void goLibrary() throws IOException {

@@ -145,43 +145,38 @@ public class Game implements ZuulGame {
 
     public void createRooms() {
         // Create rooms
-        Room station, school, library, restaurant, poorroom, richroom, pharmacy;
+        Room station, school, library, poorroom, richroom, pharmacy;
 
         station = new Room("på stationen");
         school = new Room("på skolen");
         library = new Room("på biblioteket");
-        restaurant = new Room("på restauranten");
         poorroom = new Room("på fattiggården");
         richroom = new Room("på rigmandsrum");
         pharmacy = new Room("på apoteket");
 
         // Create room relationships
         //added all exits to station, to make it work in GUI
-        station.setExit("apoteket", pharmacy);
         station.setExit("skolen", school);
         station.setExit("fattiggården", poorroom);
 
         school.setExit("stationen", station);
-        school.setExit("rigmandsrum", richroom);
         school.setExit("biblioteket", library);
-        school.setExit("apoteket", pharmacy);
         school.setExit("fattiggården", poorroom);
 
         library.setExit("rigmandsrum", richroom);
         library.setExit("skolen", school);
 
-        restaurant.setExit("stationen", station);
 
         poorroom.setExit("skolen", school);
         poorroom.setExit("stationen", station);
+        poorroom.setExit("apoteket", pharmacy);
+        poorroom.setExit("rigmandsrum", richroom);
 
-        richroom.setExit("skolen", school);
+        richroom.setExit("fattiggården", poorroom);
         richroom.setExit("biblioteket", library);
-        richroom.setExit("apoteket", pharmacy);
 
-        pharmacy.setExit("rigmandsrum", richroom);
-        pharmacy.setExit("stationen", station);
-        pharmacy.setExit("skolen", school);
+        pharmacy.setExit("fattiggården", poorroom);
+
 
         currentRoom = station;
 

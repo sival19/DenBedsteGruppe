@@ -18,7 +18,7 @@
     </ImageView>
 
     <!-- People -->
-    <ImageView fx:id="sickboy" fitHeight="261.0" fitWidth="161.0" layoutX="900.0" layoutY="376.0" onMouseClicked="#talkSickboy">
+    <ImageView fx:id="sickboy" fitHeight="261.0" fitWidth="161.0" layoutX="701.0" layoutY="383.0" onMouseClicked="#talkSickboy">
         <image>
             <Image url="@../images/sickboy.png" />
         </image>
@@ -42,15 +42,7 @@
     </ImageView>
 
     <!-- Navigation -->
-    <Button layoutX="553.0" layoutY="67.0" mnemonicParsing="false" onAction="#goRichroom" prefHeight="51.0" prefWidth="113.0" text="Slottet">
-      <font>
-         <Font size="15.0" />
-      </font></Button>
-    <Button layoutX="22.0" layoutY="302.0" mnemonicParsing="false" onAction="#goStation" prefHeight="51.0" prefWidth="113.0" text="Station">
-      <font>
-         <Font size="15.0" />
-      </font></Button>
-    <Button layoutX="1020.0" layoutY="294.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
+    <Button layoutX="987.0" layoutY="368.0" mnemonicParsing="false" onAction="#goPoorroom" prefHeight="51.0" prefWidth="113.0" text="Gaden">
       <font>
          <Font size="15.0" />
       </font></Button>

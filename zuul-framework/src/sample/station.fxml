@@ -34,15 +34,11 @@
     </Text>
 
     <!-- Navigation -->
-    <Button layoutX="774.0" layoutY="14.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
+    <Button layoutX="1000.0" layoutY="333.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
       <font>
          <Font size="15.0" />
       </font></Button>
-    <Button layoutX="331.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacy" prefHeight="51.0" prefWidth="113.0" text="Apotek">
-      <font>
-         <Font size="15.0" />
-      </font></Button>
-    <Button layoutX="23.0" layoutY="370.0" mnemonicParsing="false" onAction="#goPoorRoom" prefHeight="51.0" prefWidth="113.0" text="Gaden">
+    <Button layoutX="42.0" layoutY="333.0" mnemonicParsing="false" onAction="#goPoorRoom" prefHeight="51.0" prefWidth="113.0" text="Gaden">
       <font>
          <Font size="15.0" />
       </font></Button>

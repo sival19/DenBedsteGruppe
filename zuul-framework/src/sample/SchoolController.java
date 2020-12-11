@@ -104,14 +104,6 @@ public class SchoolController extends Main implements Initializable {
         changeRooms("biblioteket", "library.fxml");
     }
 
-    public void goPharmacy() throws IOException {
-        changeRooms("apoteket", "pharmacy.fxml");
-    }
-
-    public void goRichRoom() throws IOException {
-        changeRooms("rigmandsrum", "richroom.fxml");
-    }
-
     public void goPoorroom() throws IOException {
         changeRooms("fattiggården", "poorroom.fxml");
     }

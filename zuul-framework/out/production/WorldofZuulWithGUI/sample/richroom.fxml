@@ -30,7 +30,7 @@
     </Text>
 
     <!-- Items in room -->
-    <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="881.0" layoutY="536.0"  visible="false">
+    <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="881.0" layoutY="536.0" visible="false">
         <Image url="@../images/money.png" />
     </ImageView>
     <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="497.0" layoutY="378.0" onMouseClicked="#pickApple">
@@ -38,18 +38,16 @@
     </ImageView>
 
     <!-- Navigation -->
-    <Button layoutX="469.0" layoutY="33.0" mnemonicParsing="false" onAction="#goLibrary" prefHeight="51.0" prefWidth="113.0" text="Bibliotek">
+    <Button layoutX="1012.0" layoutY="264.0" mnemonicParsing="false" onAction="#goLibrary" prefHeight="51.0" prefWidth="113.0" text="Bibliotek">
       <font>
          <Font size="15.0" />
       </font></Button>
-    <Button layoutX="15.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
-      <font>
-         <Font size="15.0" />
-      </font></Button>
-    <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#goPharmacy" prefHeight="51.0" prefWidth="113.0" text="Apotek">
-      <font>
-         <Font size="15.0" />
-      </font></Button>
+
+    <Button layoutX="493.0" layoutY="579.0" mnemonicParsing="false" onAction="#goPoorroom" prefHeight="51.0" prefWidth="113.0" text="Gaden">
+        <font>
+            <Font size="15.0" />
+        </font></Button>
+
 
     <!-- Speech and interaction area -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">

@@ -113,4 +113,12 @@ public class PoorroomController extends Main implements Initializable {
     public void goSchool() throws IOException {
         changeRooms("skolen", "school.fxml");
     }
+
+    public void goRichroom() throws IOException {
+        changeRooms("rigmandsrum", "richroom.fxml");
+    }
+
+    public void goPharmacy() throws IOException{
+        changeRooms("apoteket", "pharmacy.fxml");
+    }
 }

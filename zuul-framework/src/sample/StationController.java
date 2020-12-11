@@ -31,9 +31,6 @@ public class StationController extends Main implements Initializable {
         init();
     }
 
-    public void goPharmacy() throws IOException {
-        changeRooms("apoteket", "pharmacy.fxml");
-    }
 
     public void goSchool() throws IOException {
         changeRooms("skolen", "school.fxml");
