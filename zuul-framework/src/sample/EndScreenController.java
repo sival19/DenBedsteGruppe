@@ -26,10 +26,10 @@ public class EndScreenController extends Main implements Initializable {
         String[] scoreList = scores.split(";");
 
         // Split the score strings into name:score pairs
-        ArrayList<Map.Entry<String, String>> scoreMap = new ArrayList<>();
+        ArrayList<Map.Entry<String, Integer>> scoreMap = new ArrayList<>();
         for (String score : scoreList) {
             String[] scoreTuple = score.split(":");
-            scoreMap.add(new java.util.AbstractMap.SimpleEntry<>(scoreTuple[0], scoreTuple[1].strip()));
+            scoreMap.add(new java.util.AbstractMap.SimpleEntry<>(scoreTuple[0], Integer.valueOf(scoreTuple[1].strip())));
         }
 
         // Sort the list of pairs by score-value
@@ -46,16 +46,16 @@ public class EndScreenController extends Main implements Initializable {
         }
 
 
-        if (userScore <= 60) {
+        if (userScore <= 20) {
             title.setText("Det var fandme ringe, " + getName());
 
-        } else if (userScore <= 70) {
+        } else if (userScore <= 40) {
             title.setText("Det var ikke så godt, " + getName());
 
-        } else if (userScore <= 80) {
+        } else if (userScore <= 60) {
             title.setText("meh, " + getName());
 
-        } else if (userScore <= 90) {
+        } else if (userScore <= 80) {
             title.setText("Det var godt gået!, "+ getName());
 
         } else if (userScore <= 100) {

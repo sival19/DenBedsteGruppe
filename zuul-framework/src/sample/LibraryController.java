@@ -15,7 +15,7 @@ public class LibraryController extends Main implements Initializable {
     //CHARACTER INTERACTION
     public void talkOldLady() {
         if (!getUsedItems().contains("halstørklæde") && !checkInventory("halstørklæde")) {
-            text.setText("Hej! Jeg har strukket mange halstørklæder kan du finde nogen der kunne bruge en ekstra?");
+            text.setText("Hej! Jeg har strukket mange halstørklæder kan du finde nogen der kunne bruge et ekstra?");
             pickScarf();
         } else if (getUsedItems().contains("halstørklæde")) {
             text.setText("Jeg håber at nogen fik varmen");
