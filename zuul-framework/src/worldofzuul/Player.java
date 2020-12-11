@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * In this class we create a player with an inventory
  * and totalPoints to keep score.
  * This class also contains methods to access the inventory
+ * and use methods form the Inventory class.
  */
 
 public class Player {

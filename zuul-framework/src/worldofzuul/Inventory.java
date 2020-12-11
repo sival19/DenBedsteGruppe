@@ -1,6 +1,13 @@
 package worldofzuul;
 import java.util.ArrayList;
 
+/*
+ * In this class we create an inventory to keep track of
+ * which items the player has picked up.
+ * This class has methods to access inventory which are
+ * also used in the Player class.
+ */
+
 public class Inventory {
     private static ArrayList<Item> items;
 
@@ -16,12 +23,10 @@ public class Inventory {
         items.add(item);
     }
 
-    //remove items from inventory
     public void removeFromInventory(Item item) {
         items.remove(item);
     }
 
-    //see the inventory
     public void printInventory() {
         System.out.println("Inventory:");
         for (Item item : items) {
