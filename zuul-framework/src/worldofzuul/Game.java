@@ -42,6 +42,8 @@ public class Game implements ZuulGame {
             if (c.hasThirdWord()) {
 
                 String secondWord = c.getSecondWord();
+
+                //what is third word for?
                 String thirdWord = c.getThirdWord();
 
                 // Checks for the specific item (typed by the player) in the players inventory
@@ -60,7 +62,10 @@ public class Game implements ZuulGame {
 
                             if (j.getWantedItems().contains(i.name)) {
                                 pointsModifier = 2;
-                            } else {
+                            } else if (j.getLessWantedItems().contains(i.name)) {
+                                pointsModifier = 0;
+                            }
+                            else {
                                 pointsModifier = 1;
                             }
 
@@ -85,11 +90,11 @@ public class Game implements ZuulGame {
     //remove items from inventory
     private void remove(Command c) {
         if (!c.hasSecondWord()) {
-            System.out.println("hvad vil du fjerne?");
+            System.out.println("Hvad vil du fjerne?");
             return;
         }
 
-        //Herfr ved vi at der er et Second Word
+        //Acts on a second word
         String secondWord = c.getSecondWord();
         Item itemToRemove = null;
         for (Item i : Inventory.getItems()) {
@@ -110,14 +115,14 @@ public class Game implements ZuulGame {
         }
     }
 
-    //make a method to picup
+    //A method to pickup
     public void pickUp(Command c) {
         if (!c.hasSecondWord()) {
-            System.out.println("hvad vil du samle op??");
+            System.out.println("Hvad vil du samle op??");
             return;
         }
 
-        //Herfr ved vi at der er et Second Word
+        //Acts on a second word
         String secondWord = c.getSecondWord();
         Item itemToadd = null;
         for (Item i : this.currentRoom.getItems()) {
@@ -201,15 +206,15 @@ public class Game implements ZuulGame {
         // Create characters
         Character poorBoy, poorLady, schoolGirl, schoolBoy, richMan, wizard, knittingLady, homelessMan, sickMan;
 
-        poorBoy = new Character("fattigDreng", "lille stakkel", new ArrayList<>(Arrays.asList("æble", "penge")));
-        poorLady = new Character("fattigDame", "Hun fryser", new ArrayList<>(Arrays.asList("halstørklæde", "penge")));
-        schoolBoy = new Character("skoleDreng", "han er ked af det", new ArrayList<>(Arrays.asList("bog", "penge")));
-        schoolGirl = new Character("skolePige", "hun ser glad ud", new ArrayList<>());
-        wizard = new Character("troldmand", "Han er mystisk", new ArrayList<>());
-        homelessMan = new Character("hjemløsMand", "han ser hjemløs ud", new ArrayList<>(Arrays.asList("penge")));
-        richMan = new Character("rigmand", "lidt for rig", new ArrayList<>(Arrays.asList("tegning")));
-        knittingLady = new Character("strikkeDame", "Hun strikker halstørklæder", new ArrayList<>());
-        sickMan = new Character("sygMand", "Han ser syg ud", new ArrayList<>(Arrays.asList("medicin", "penge")));
+        poorBoy = new Character("fattigDreng", "lille stakkel", new ArrayList<>(Arrays.asList("æble", "penge")), new ArrayList<>(Arrays.asList("tegning")));
+        poorLady = new Character("fattigDame", "Hun fryser", new ArrayList<>(Arrays.asList("halstørklæde", "penge")), new ArrayList<>(Arrays.asList("tegning")));
+        schoolBoy = new Character("skoleDreng", "han er ked af det", new ArrayList<>(Arrays.asList("bog", "penge")), new ArrayList<>(Arrays.asList("tegning")));
+        schoolGirl = new Character("skolePige", "hun ser glad ud", new ArrayList<>(), new ArrayList<>(Arrays.asList("tegning")));
+        wizard = new Character("troldmand", "Han er mystisk", new ArrayList<>(), new ArrayList<>());
+        homelessMan = new Character("hjemløsMand", "han ser hjemløs ud", new ArrayList<>(Arrays.asList("penge")), new ArrayList<>(Arrays.asList("tegning", "bog")));
+        richMan = new Character("rigmand", "lidt for rig", new ArrayList<>(Arrays.asList("tegning")), new ArrayList<>(Arrays.asList("halsterklæde")));
+        knittingLady = new Character("strikkeDame", "Hun strikker halstørklæder", new ArrayList<>(), new ArrayList<>());
+        sickMan = new Character("sygMand", "Han ser syg ud", new ArrayList<>(Arrays.asList("medicin", "penge")), new ArrayList<>(Arrays.asList("bog", "tegning")));
 
         //add characters to rooms
         school.addCharacter(schoolBoy);
