@@ -88,8 +88,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveAppleLady" prefHeight="35.0" prefWidth="105.0" text="Giv til damen" />
-        <Button mnemonicParsing="false" onAction="#giveAppleBoy" prefHeight="35.0" prefWidth="97.0" text="Giv til drengen" />
+        <Button mnemonicParsing="false" onAction="#giveAppleLady" prefHeight="35.0" prefWidth="113.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" onAction="#giveAppleBoy" prefHeight="35.0" prefWidth="113.0" text="Giv til drengen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -99,8 +99,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveBookBoy" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" />
-        <Button mnemonicParsing="false" onAction="#giveBookLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" onAction="#giveBookBoy" prefHeight="35.0" prefWidth="113.0" text="Give to drengen" />
+        <Button mnemonicParsing="false" onAction="#giveBookLady" prefHeight="35.0" prefWidth="113.0" text="Giv til damen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -110,8 +110,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveScarfBoy" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" />
-        <Button mnemonicParsing="false" onAction="#giveScarfLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" onAction="#giveScarfBoy" prefHeight="35.0" prefWidth="113.0" text="Give to drengen" />
+        <Button mnemonicParsing="false" onAction="#giveScarfLady" prefHeight="35.0" prefWidth="113.0" text="Giv til damen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -121,8 +121,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveMoneyBoy" prefHeight="35.0" prefWidth="105.0" text="Give to drengen " />
-        <Button mnemonicParsing="false" onAction="#giveMoneyLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" onAction="#giveMoneyBoy" prefHeight="35.0" prefWidth="113.0" text="Give to drengen " />
+        <Button mnemonicParsing="false" onAction="#giveMoneyLady" prefHeight="35.0" prefWidth="113.0" text="Giv til damen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -132,8 +132,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveDrawingBoy" prefHeight="35.0" prefWidth="105.0" text="Give to drengen" />
-        <Button mnemonicParsing="false" onAction="#giveDrawingLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" onAction="#giveDrawingBoy" prefHeight="35.0" prefWidth="113.0" text="Give to drengen" />
+        <Button mnemonicParsing="false" onAction="#giveDrawingLady" prefHeight="35.0" prefWidth="113.0" text="Giv til damen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -143,8 +143,8 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveMedicineBoy" prefHeight="35.0" prefWidth="105.0" text="Give to drengen " />
-        <Button mnemonicParsing="false" onAction="#giveMedicineLady" prefHeight="35.0" prefWidth="97.0" text="Giv til damen" />
+        <Button mnemonicParsing="false" onAction="#giveMedicineBoy" prefHeight="35.0" prefWidth="113.0" text="Give to drengen " />
+        <Button mnemonicParsing="false" onAction="#giveMedicineLady" prefHeight="35.0" prefWidth="113.0" text="Giv til damen" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 

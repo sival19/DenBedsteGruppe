@@ -79,7 +79,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveAppleSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onAction="#giveAppleSick" prefHeight="35.0" prefWidth="113.0" text="Giv til den syge " />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -89,7 +89,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveBookSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onAction="#giveBookSick" prefHeight="35.0" prefWidth="113.0" text="Giv til den syge " />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -99,7 +99,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveScarfSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onAction="#giveScarfSick" prefHeight="35.0" prefWidth="113.0" text="Giv til den syge " />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -109,7 +109,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveMoneySick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onAction="#giveMoneySick" prefHeight="35.0" prefWidth="113.0" text="Giv til den syge " />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -119,7 +119,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveDrawingSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onAction="#giveDrawingSick" prefHeight="35.0" prefWidth="113.0" text="Giv til den syge " />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -129,7 +129,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveMedicineSick" prefHeight="35.0" prefWidth="105.0" text="Giv til den syge " />
+        <Button mnemonicParsing="false" onMouseClicked="#giveMedicineSick" prefHeight="35.0" prefWidth="113.0" text="Giv til den syge " />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
