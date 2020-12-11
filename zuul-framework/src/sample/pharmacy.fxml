@@ -78,7 +78,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveAppleStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden på stationen" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveAppleStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -88,7 +88,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveBookStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden på stationen" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveBookStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -98,7 +98,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveScarfStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden på stationen" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveScarfStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -108,7 +108,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveMoneyStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden på stationen" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveMoneyStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -118,7 +118,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveDrawingStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden på stationen" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveDrawingStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -128,7 +128,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveMedicineStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden på stationen" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveMedicineStationMan" prefHeight="35.0" prefWidth="113.0" text="Giv til manden" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 

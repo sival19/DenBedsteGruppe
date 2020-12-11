@@ -39,32 +39,32 @@ public class PharmacyController extends Main implements Initializable {
     // OBJECT INTERACTION
     public void giveAppleStationMan() {
         giveItem(appleInv, appleChoice, "æble", "hjemløsMand");
-        text.setText("Tak!");
+        text.setText("Tak "+getName()+"!");
     }
 
     public void giveBookStationMan() {
         giveItem(bookInv, bookChoice, "bog", "hjemløsMand");
-        text.setText("Tak!");
+        text.setText("Tak "+getName()+"!");
     }
 
     public void giveScarfStationMan() {
         giveItem(scarfInv, scarfChoice, "halstørklæde", "hjemløsMand");
-        text.setText("Tak!");
+        text.setText("Tak "+getName()+"!");
     }
 
     public void giveDrawingStationMan() {
         giveItem(drawingInv, drawingChoice, "tegning", "hjemløsMand");
-        text.setText("Tak!");
+        text.setText("Tak "+getName()+"!");
     }
 
     public void giveMedicineStationMan() {
         giveItem(medicineInv, medicineChoice, "medicin", "hjemløsMand");
-        text.setText("Tak!");
+        text.setText("Tak "+getName()+"!");
     }
 
     public void giveMoneyStationMan() {
         giveItem(moneyInv, moneyChoice, "penge", "hjemløsMand");
-        text.setText("Tak!");
+        text.setText("Tak "+getName()+"! Nu kan jeg overleve en uge mere.");
     }
 
     public void pickMedicine() {

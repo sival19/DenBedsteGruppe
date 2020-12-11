@@ -43,29 +43,29 @@ public class RichroomController extends Main implements Initializable {
     public void giveAppleRich(){
         giveItem(appleInv, appleChoice, "æble", "rigmand");
 
-        text.setText("Tak, men jeg har penge til at købe alle æbler i verden!");
+        text.setText("Tak " +getName()+", men jeg har penge til at købe alle æbler i verden!");
     }
 
     public void giveBookRich(){
         giveItem(bookInv, bookChoice, "bog", "rigmand");
 
-        text.setText("Tak, men jeg har penge til at købe alle bøger i verden!");
+        text.setText("Tak " +getName()+", men jeg har penge til at købe alle bøger i verden!");
     }
 
     public void giveScarfRich(){
         giveItem(scarfInv, scarfChoice, "halstørklæde", "rigmand");
 
-        text.setText("Tak, men jeg har penge til at købe alle halstørklæder i verden!");
+        text.setText("Tak "+getName()+", men jeg har penge til at købe alle halstørklæder i verden!");
     }
 
     public void giveDrawingRich(){
         giveItem(drawingInv, drawingChoice,"tegning", "rigmand");
-        text.setText("Tak, det her var det eneste jeg manglede: et tegn på at der er nogen derude, som vil være min ven!");
+        text.setText("Tak " +getName()+", det her var det eneste jeg manglede: et tegn på at der er nogen derude, som vil være min ven!");
     }
 
     public void giveMedicineRich(){
        giveItem(medicineInv, medicineChoice, "medicin", "rigmand");
-        text.setText("Tak, men jeg har penge til at købe alt medicin i verden!");
+        text.setText("Tak " +getName()+", men jeg har penge til at købe alt medicin i verden!");
     }
 
     // CHARACTER INTERACTION
