@@ -27,11 +27,10 @@ public class SchoolController extends Main implements Initializable {
     public void talkGirl() {
         clearMenu();
         if (!getUsedItems().contains("tegning") && !checkInventory("tegning")) {
-            text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
-                    " Vi må ikke gå ind på slottet...");
+            text.setText("Hej! Mig og nogle andre har tegnet en tegning, kender du nogen der er ensom og vil have en ven?");
             pickDrawing();
         } else if (getUsedItems().contains("tegning")) {
-            text.setText("Jeg håber den rige mand blev glad!");
+            text.setText("Jeg håber at nogen blev glad for tegningen!");
         }
     }
 
