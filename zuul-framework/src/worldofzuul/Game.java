@@ -151,7 +151,7 @@ public class Game implements ZuulGame {
         school = new Room("på skolen");
         library = new Room("på biblioteket");
         poorroom = new Room("på gaden");
-        richroom = new Room("på rigmandsrum");
+        richroom = new Room("på slottet");
         pharmacy = new Room("på apoteket");
 
         // Create room relationships
@@ -163,14 +163,14 @@ public class Game implements ZuulGame {
         school.setExit("biblioteket", library);
         school.setExit("gaden", poorroom);
 
-        library.setExit("rigmandsrum", richroom);
+        library.setExit("slottet", richroom);
         library.setExit("skolen", school);
 
 
         poorroom.setExit("skolen", school);
         poorroom.setExit("stationen", station);
         poorroom.setExit("apoteket", pharmacy);
-        poorroom.setExit("rigmandsrum", richroom);
+        poorroom.setExit("slottet", richroom);
 
         richroom.setExit("gaden", poorroom);
         richroom.setExit("biblioteket", library);
