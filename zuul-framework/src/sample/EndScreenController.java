@@ -15,8 +15,8 @@ public class EndScreenController extends Main implements Initializable {
     Label endScore, title, highscore1, highscore2, highscore3, highscore4, highscore5;
 
     @FXML
-    ImageView angryback;
-    
+    ImageView angryback, happyback;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -66,12 +66,15 @@ public class EndScreenController extends Main implements Initializable {
 
         } else if (userScore <= 80) {
             title.setText("Det var godt gået!, "+ getName());
+            happyback.setVisible(true);
 
         } else if (userScore <= 100) {
             title.setText("Fantastisk, "+ getName() + "!");
+            happyback.setVisible(true);
 
         } else {
             title.setText("Fantastisk! Du er vist lidt af en helt " + getName() + "!");
+            happyback.setVisible(true);
         }
     }
 }
