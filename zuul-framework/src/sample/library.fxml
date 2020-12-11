@@ -35,14 +35,17 @@
     <ImageView fx:id="book" fitHeight="87.0" fitWidth="104.0" layoutX="838.0" layoutY="306.0" onMouseClicked="#pickBook">
         <Image url="@../images/book.png" />
     </ImageView>
-    <ImageView fx:id="scarf" fitHeight="135.0" fitWidth="122.0" layoutX="378.0" layoutY="505.0" visible="false" rotate="-76.4">
+    <ImageView fx:id="scarf" fitHeight="135.0" fitWidth="122.0" layoutX="378.0" layoutY="505.0" rotate="-76.4" visible="false">
         <image>
             <Image url="@../images/scarf.png" />
         </image>
     </ImageView>
 
     <!-- Navigation -->
-    <Button layoutX="552.0" layoutY="30.0" mnemonicParsing="false" onAction="#goRichroom" text="Slottet" prefHeight="51.0" prefWidth="113.0"/>
+    <Button layoutX="552.0" layoutY="30.0" mnemonicParsing="false" onAction="#goRichroom" prefHeight="51.0" prefWidth="113.0" text="Slottet">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
 
     <Button layoutX="14.0" layoutY="208.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
       <font>

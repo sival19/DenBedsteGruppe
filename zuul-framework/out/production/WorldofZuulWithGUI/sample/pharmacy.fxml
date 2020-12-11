@@ -42,7 +42,7 @@
     </ImageView>
 
     <!-- Navigation -->
-    <Button layoutX="553.0" layoutY="67.0" mnemonicParsing="false" onAction="#goRichroom" prefHeight="51.0" prefWidth="113.0" text="Slottet">
+    <Button layoutX="553.0" layoutY="67.0" mnemonicParsing="false" onAction="#goRichroom" prefHeight="51.0" prefWidth="113.0" text="Slottet" style="#ff0000">
       <font>
          <Font size="15.0" />
       </font></Button>

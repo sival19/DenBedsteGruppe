@@ -14,7 +14,7 @@
 
 
     <!-- Background -->
-    <ImageView fitHeight="640.0" fitWidth="1151.0" layoutX="-1.0">
+    <ImageView fitHeight="640.0" fitWidth="1151.0" layoutX="4.0">
         <Image url="@../images/station.PNG" />
     </ImageView>
 
@@ -34,9 +34,18 @@
     </Text>
 
     <!-- Navigation -->
-    <Button layoutX="774.0" layoutY="14.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" prefHeight="51.0" prefWidth="113.0"/>
-    <Button layoutX="331.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" prefHeight="51.0" prefWidth="113.0"/>
-    <Button layoutX="23.0" layoutY="370.0" mnemonicParsing="false" onAction="#goPoorRoom" text="Gaden" prefHeight="51.0" prefWidth="113.0"/>
+    <Button layoutX="774.0" layoutY="14.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button layoutX="331.0" layoutY="14.0" mnemonicParsing="false" onAction="#goPharmacy" prefHeight="51.0" prefWidth="113.0" text="Apotek">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button layoutX="23.0" layoutY="370.0" mnemonicParsing="false" onAction="#goPoorRoom" prefHeight="51.0" prefWidth="113.0" text="Gaden">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
 
     <!-- Speech and interaction area -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
@@ -46,7 +55,7 @@
     </Label>
 
     <!-- Button to end game -->
-    <Button fx:id="endgame" layoutX="1001.0" layoutY="642.0" mnemonicParsing="false" onAction="#goEndScreen" prefHeight="35.0" prefWidth="150.0" text="Afslut og se resultat" disable="true" visible="false" />
+    <Button fx:id="endgame" disable="true" layoutX="1001.0" layoutY="642.0" mnemonicParsing="false" onAction="#goEndScreen" prefHeight="35.0" prefWidth="150.0" text="Afslut og se resultat" visible="false" />
 
     <!-- Inventory -->
     <ImageView fx:id="appleInv" disable="true" fitHeight="86.0" fitWidth="98.0" layoutY="677.0" onMouseClicked="#interactApple" opacity="0.1">
