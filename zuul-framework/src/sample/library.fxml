@@ -35,7 +35,7 @@
     <ImageView fx:id="book" fitHeight="87.0" fitWidth="104.0" layoutX="838.0" layoutY="306.0" onMouseClicked="#pickBook">
         <Image url="@../images/book.png" />
     </ImageView>
-    <ImageView fx:id="scarf" fitHeight="135.0" fitWidth="122.0" layoutX="378.0" layoutY="505.0" onMouseClicked="#pickScarf" rotate="-76.4">
+    <ImageView fx:id="scarf" fitHeight="135.0" fitWidth="122.0" layoutX="378.0" layoutY="505.0" visible="false" rotate="-76.4">
         <image>
             <Image url="@../images/scarf.png" />
         </image>

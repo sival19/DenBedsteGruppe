@@ -14,14 +14,20 @@ public class LibraryController extends Main implements Initializable {
 
     //CHARACTER INTERACTION
     public void talkOldLady() {
-        text.setText("Jeg har strukket alt for mange halstørklæder, kender du nogen som kan bruge dem?");
+        if (!getUsedItems().contains("halstørklæde") && !checkInventory("halstørklæde")) {
+            text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
+                    " Vi må ikke gå ind på slottet...");
+            pickScarf();
+        } else if (getUsedItems().contains("halstørklæde")) {
+            text.setText("Jeg håber den rige mand blev glad!");
+        }
     }
 
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         book.setVisible(!checkInventory("bog") && !getUsedItems().contains("bog"));
-        scarf.setVisible(!checkInventory("halstørklæde") && !getUsedItems().contains("halstørklæde"));
+
 
         init();
     }
