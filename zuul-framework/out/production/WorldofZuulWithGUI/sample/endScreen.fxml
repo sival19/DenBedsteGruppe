@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="760.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EndScreenController">
+   <ImageView fx:id="happyback" fitHeight="760.0" fitWidth="1150.0" visible="false">
+      <image>
+         <Image url="@../images/happyback.jpg" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="angryback" fitHeight="760.0" fitWidth="1150.0" visible="false">
+      <image>
+         <Image url="@../images/background-bad.jpg" />
+      </image>
+   </ImageView>
     <VBox alignment="CENTER" prefHeight="760.0" prefWidth="1150.0">
         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="154.0" text="Endelig score:">
             <font>
@@ -16,7 +29,7 @@
                 <Font size="84.0" />
             </font>
         </Label>
-        <Label fx:id="title" alignment="CENTER" prefHeight="135.0" prefWidth="1129.0" text="Titel som røvhul">
+        <Label fx:id="title" alignment="CENTER" prefHeight="135.0" prefWidth="1129.0" text="Title">
             <font>
                 <Font size="33.0" />
             </font>
