@@ -17,11 +17,11 @@ public class PharmacyController extends Main implements Initializable {
     // CHARACTER INTERACTION
     public void talkDoctor() {
         if (!getUsedItems().contains("medicin") && !checkInventory("medicin")) {
-            text.setText("Hej, jeg har set en syg dreng der virkeligt kunne broge noget medicin men har ikke råd til det, " +
+            text.setText("Hej, jeg har set en syg dreng der virklig godt kunne broge noget medicin, men han har ikke råd til det, " +
                     " kan du give det til ham? ");
             pickMedicine();
         } else if (getUsedItems().contains("medicin")) {
-            text.setText("Jeg håber den rige mand blev glad!");
+            text.setText("Jeg håber den syge dreng fik medicinen, så får han det nok bedre");
         }
     }
 
