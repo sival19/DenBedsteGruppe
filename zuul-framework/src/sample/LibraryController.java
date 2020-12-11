@@ -15,10 +15,10 @@ public class LibraryController extends Main implements Initializable {
     //CHARACTER INTERACTION
     public void talkOldLady() {
         if (!getUsedItems().contains("halstørklæde") && !checkInventory("halstørklæde")) {
-            text.setText("Hej! Jeg har strukket mange halstørklæder kan du finde nogen der kunne bruge et ekstra?");
+            text.setText("Hej! Jeg har strukket alt for mange halstørklæder, kender du nogen som kunne bruge et?");
             pickScarf();
         } else if (getUsedItems().contains("halstørklæde")) {
-            text.setText("Jeg håber at nogen fik varmen");
+            text.setText("Jeg håber at nogen fik glæde af mit hasltørklæde!");
         }
     }
 
@@ -60,7 +60,7 @@ public class LibraryController extends Main implements Initializable {
 
     public void giveMedicineNiceLady(){
         giveItem(medicineInv, medicineChoice, "medicin", "strikkeDame");
-        text.setText("Tak "+getName()+"! Jeg elsker medicin.");
+        text.setText("Tak "+getName()+"! Medicin kan man altid bruge når man er oppe i alderen.");
     }
 
     public void giveDrawingNiceLady(){
