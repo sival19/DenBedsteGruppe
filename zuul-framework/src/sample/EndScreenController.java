@@ -59,8 +59,10 @@ public class EndScreenController extends Main implements Initializable {
             title.setText("Det var godt gået!");
 
         } else if (userScore < 100) {
-            title.setText("Du er vist lidt af en helt!");
+            title.setText("Fantastisk!");
 
+        } else {
+            title.setText("Fantastisk! Du er vist lidt af en helt!");
         }
     }
 }
