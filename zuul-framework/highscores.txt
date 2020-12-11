@@ -1,1 +1,1 @@
-simon: 120;simon2: 70;simon3: 90;asda: 30;Simon: 10;simon: 40;simon: 60;Simon: 30;Simon: 120;simon: 60;
+simon: 120;nadia: 70;nicolaj: 90;annekathrine: 30;faezah: 10;lars:
