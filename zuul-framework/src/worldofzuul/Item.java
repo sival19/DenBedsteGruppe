@@ -2,21 +2,13 @@ package worldofzuul;
 
 public class Item extends InteractiveObjects {
 
-
     //Constructor
-    public Item(String name, String info, int itemType){
-        super (name,info, itemType);
+    public Item(String name, String info){
+        super (name,info);
     }
-
 
     @Override
     public String toString() {
         return getName() + ": " + getInfo();
     }
-
-    public int getItemType()
-    {
-        return itemType;
-    }
-
 }

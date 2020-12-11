@@ -3,6 +3,7 @@ package worldofzuul;
 import sample.ZuulGame;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Game implements ZuulGame {
     private Parser parser;
@@ -27,7 +28,7 @@ public class Game implements ZuulGame {
     }
 
     // See player
-    public Player getPlayer(){
+    public Player getPlayer() {
         return this.player;
     }
 
@@ -46,21 +47,19 @@ public class Game implements ZuulGame {
 
                 // Checks for the specific item (typed by the player) in the players inventory
                 for (Item i : Inventory.getItems()) {
-                    int itemType = i.getItemType();
                     String itemName = i.getName();
 
                     for (Character j : this.currentRoom.getCharacters()) {
-                        int itemNeed = j.getItemNeed();
                         String CharName = j.getName();
 
-                    // Checks if the specific item typed is in the player inventory
-                    if (secondWord.equals(itemName) && thirdWord.equals(CharName)) {
+                        // Checks if the specific item typed is in the player inventory
+                        if (secondWord.equals(itemName) && thirdWord.equals(CharName)) {
 
                             int pointsModifier;
                             int points;
                             int initialPoints = 10;
 
-                            if (itemType == itemNeed) {
+                            if (j.getWantedItems().contains(i.name)) {
                                 pointsModifier = 2;
                             } else {
                                 pointsModifier = 1;
@@ -185,12 +184,12 @@ public class Game implements ZuulGame {
         // Create items
         Item apple, money, medicine, book, drawing, scarf;
 
-        apple = new Item("æble", "det er rødt", 0);
-        scarf = new Item("halstørklæde", "den er varm", 2);
-        drawing = new Item("tegning", "n0get", 1);
-        money = new Item("penge", "der er mange", 1);
-        medicine = new Item("medicin", "det er piller", 2);
-        book = new Item("bog", "den er tung", 2);
+        apple = new Item("æble", "det er rødt");
+        scarf = new Item("halstørklæde", "den er varm");
+        drawing = new Item("tegning", "den er tegnet af pigen");
+        money = new Item("penge", "der er mange");
+        medicine = new Item("medicin", "det er piller");
+        book = new Item("bog", "den er tung");
 
         // Add items to rooms
         pharmacy.addItem(medicine);
@@ -203,15 +202,15 @@ public class Game implements ZuulGame {
         // Create characters
         Character poorBoy, poorLady, schoolGirl, schoolBoy, richMan, wizard, knittingLady, homelessMan, sickMan;
 
-        poorBoy = new Character("fattigDreng", "lille stakkel",1);
-        poorLady = new Character("fattigDame", "Hun fryser", 1);
-        schoolBoy = new Character("skoleDreng", "han er ked af det", 1);
-        schoolGirl = new Character("skolePige", "hun ser glad ud", 1);
-        wizard = new Character("troldmand", "Han er mystisk",0);
-        homelessMan = new Character("hjemløsMand", "han ser hjemløs ud",1);
-        richMan = new Character("rigmand", "lidt for rig",3);
-        knittingLady = new Character("strikkeDame", "Hun strikker halstørklæder",0);
-        sickMan = new Character("sygMand", "Han ser syg ud",1);
+        poorBoy = new Character("fattigDreng", "lille stakkel", new ArrayList<>(Arrays.asList("æble", "penge")));
+        poorLady = new Character("fattigDame", "Hun fryser", new ArrayList<>(Arrays.asList("halstørklæde", "penge")));
+        schoolBoy = new Character("skoleDreng", "han er ked af det", new ArrayList<>(Arrays.asList("bog", "penge")));
+        schoolGirl = new Character("skolePige", "hun ser glad ud", new ArrayList<>());
+        wizard = new Character("troldmand", "Han er mystisk", new ArrayList<>());
+        homelessMan = new Character("hjemløsMand", "han ser hjemløs ud", new ArrayList<>(Arrays.asList("penge")));
+        richMan = new Character("rigmand", "lidt for rig", new ArrayList<>(Arrays.asList("tegning")));
+        knittingLady = new Character("strikkeDame", "Hun strikker halstørklæder", new ArrayList<>());
+        sickMan = new Character("sygMand", "Han ser syg ud", new ArrayList<>(Arrays.asList("medicin", "penge")));
 
         //add characters to rooms
         school.addCharacter(schoolBoy);
@@ -278,11 +277,9 @@ public class Game implements ZuulGame {
             remove(command);
         } else if (commandWord == CommandWord.SEECHARACTERS) {
             seeCharacters();
-        }
-        else if (commandWord == CommandWord.GIVEITEM) {
+        } else if (commandWord == CommandWord.GIVEITEM) {
             giveItem(command);
-        }
-        else if (commandWord == CommandWord.QUIT) {
+        } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
         }
         return wantToQuit;

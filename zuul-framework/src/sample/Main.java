@@ -111,8 +111,8 @@ public class Main extends Application {
 
         // For some reason endgame is null in the beginning of the game
         if (endgame != null) {
-            endgame.setVisible(getUsedItems().size() > 1);
-            endgame.setDisable(!(getUsedItems().size() > 1));
+            endgame.setVisible(getUsedItems().size() == 6);
+            endgame.setDisable(!(getUsedItems().size() == 6));
         }
 
         if (score != null) {
@@ -192,8 +192,8 @@ public class Main extends Application {
         menu.setDisable(true);
         menu.setOpacity(0.0);
         getGame().processCommand(CommandWord.REMOVEITEMS, itemName, "");
-        endgame.setVisible(getUsedItems().size() > 1);
-        endgame.setDisable(!(getUsedItems().size() > 1));
+        endgame.setVisible(getUsedItems().size() == 6);
+        endgame.setDisable(!(getUsedItems().size() == 6));
         updateScore();
     }
 

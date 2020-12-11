@@ -1,10 +1,14 @@
 package worldofzuul;
 
+import java.util.ArrayList;
+
 public class Character extends InteractiveObjects {
+    private ArrayList<String> wantedItems;
 
     //Constructor
-    public Character(String name, String info, int itemNeed) {
-        super (name, info, itemNeed);
+    public Character(String name, String info, ArrayList<String> wantedItems) {
+        super (name, info);
+        this.wantedItems = wantedItems;
     }
 
     @Override
@@ -12,9 +16,8 @@ public class Character extends InteractiveObjects {
         return getName() + ": " + getInfo();
     }
 
-    public int getItemNeed()
-    {
-        return itemType;
+    public ArrayList<String> getWantedItems() {
+        return wantedItems;
     }
 }
 

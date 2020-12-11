@@ -3,13 +3,11 @@ package worldofzuul;
 public abstract class InteractiveObjects {
     String name;
     String info;
-    int itemType;
 
     //Constructor
-    public InteractiveObjects(String name, String info, int itemType) {
+    public InteractiveObjects(String name, String info) {
         this.name = name;
         this.info = info;
-        this.itemType = itemType;
     }
 
     //Get methods
