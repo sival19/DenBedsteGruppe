@@ -52,33 +52,7 @@ public class Main extends Application {
     public static void addUsedItem(String itemName) {
         usedItems.add(itemName);
     }
-    /*
-     *Create .txt file to add name and highscore
-     *
-     *
-     */
-
-
-    public void Writer() {
-            String text = "Some Text, hope it works... maybe mmore";
-            BufferedWriter output = null;
-            try {
-                File file = new File("name and high score.txt");
-                output = new BufferedWriter(new FileWriter(file, true));
-                output.write(text);
-            } catch ( IOException e ) {
-                e.printStackTrace();
-            } finally {
-                if ( output != null ) {
-                    try {
-                        output.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-    }
+   
     /*
      * Initialize items in inventory
      * make items visible in GUI inventory if they exist in Game inventory
