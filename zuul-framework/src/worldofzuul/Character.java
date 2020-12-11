@@ -13,7 +13,6 @@ public class Character extends InteractiveObjects {
     private ArrayList<String> wantedItems;
     private ArrayList<String> lessWantedItems;
 
-    //Constructor
     public Character(String name, String info, ArrayList<String> wantedItems, ArrayList<String> lessWantedItems) {
         super (name, info);
         this.wantedItems = wantedItems;
