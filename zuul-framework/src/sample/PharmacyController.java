@@ -3,8 +3,6 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import worldofzuul.Command;
-import worldofzuul.CommandWord;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,7 +15,7 @@ public class PharmacyController extends Main implements Initializable {
     // CHARACTER INTERACTION
     public void talkDoctor() {
         if (!getUsedItems().contains("medicin") && !checkInventory("medicin")) {
-            text.setText("Hej, jeg har set en syg dreng der virklig godt kunne broge noget medicin, men han har ikke råd til det, " +
+            text.setText("Hej, jeg har set en syg dreng, der virklig godt kunne bruge noget medicin, men han har ikke råd til det, " +
                     " kan du give det til ham? ");
             pickMedicine();
         } else if (getUsedItems().contains("medicin")) {
@@ -27,7 +25,7 @@ public class PharmacyController extends Main implements Initializable {
 
 
     public void talkMan() {
-        text.setText("Jeg har mistet alt og nu bor jeg her på gaden... Har du måske lidt penge du kan undvære?");
+        text.setText("Jeg har mistet alt og nu bor jeg på gaden... Har du måske lidt penge du kan undvære?");
     }
 
     // INVENTORY MANAGEMENT

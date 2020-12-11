@@ -52,7 +52,7 @@ public class Main extends Application {
     public static void addUsedItem(String itemName) {
         usedItems.add(itemName);
     }
-   
+
     /*
      * Initialize items in inventory
      * make items visible in GUI inventory if they exist in Game inventory
@@ -137,11 +137,6 @@ public class Main extends Application {
         return false;
     }
 
-    // OBJECT INTERACTION
-    /*
-     * We can use the same method to pick up items in all controllers.
-     * They are inherited from main.
-     */
 
     //PICKUP
     public void pickItem(ImageView item, ImageView itemInv, String itemName) {
@@ -229,11 +224,8 @@ public class Main extends Application {
         appleChoice.setVisible(false);
     }
 
-    /*
-     *Create .txt file to add name and highscore
-     *
-     *
-     */
+
+     //Create .txt file to add name and highscore
     public void writer(String text, String fileName) {
         BufferedWriter output = null;
         try {
