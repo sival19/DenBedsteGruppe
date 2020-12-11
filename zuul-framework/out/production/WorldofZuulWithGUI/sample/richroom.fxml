@@ -30,7 +30,7 @@
     </Text>
 
     <!-- Items in room -->
-    <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="881.0" layoutY="536.0" onMouseClicked="#pickMoney">
+    <ImageView fx:id="money" fitHeight="87.0" fitWidth="104.0" layoutX="881.0" layoutY="536.0"  visible="false">
         <Image url="@../images/money.png" />
     </ImageView>
     <ImageView fx:id="apple" fitHeight="87.0" fitWidth="104.0" layoutX="497.0" layoutY="378.0" onMouseClicked="#pickApple">

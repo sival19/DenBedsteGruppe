@@ -16,7 +16,6 @@ public class RichroomController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        money.setVisible(!checkInventory("penge") && !getUsedItems().contains("penge"));
         apple.setVisible(!checkInventory("æble") && !getUsedItems().contains("æble"));
         init();
     }
@@ -75,7 +74,12 @@ public class RichroomController extends Main implements Initializable {
 
     // CHARACTER INTERACTION
     public void talkRichman() {
-        text.setText("Jeg er sulten DET HER SKAL ÆNDRES");
+        if (!getUsedItems().contains("penge") && !checkInventory("penge")) {
+            text.setText("Hej! jeg har masser penge, her du må få nogen af dem" );
+            pickMoney();
+        } else if (getUsedItems().contains("penge")) {
+            text.setText("Jeg håber at nogen får gavn af dem!");
+        }
     }
 
     @FXML
