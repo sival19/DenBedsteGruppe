@@ -47,22 +47,22 @@ public class EndScreenController extends Main implements Initializable {
 
 
         if (userScore <= 20) {
-            title.setText("Det var fandme ringe, " + getName());
+            title.setText("Vi troede på dig, men vi tog fejl..., " + getName());
 
         } else if (userScore <= 40) {
-            title.setText("Det var ikke så godt, " + getName());
+            title.setText("Prøvede du overhovedet " + getName()+ " ?");
 
         } else if (userScore <= 60) {
-            title.setText("meh, " + getName());
+            title.setText("Det var ikke så godt, " + getName());
 
         } else if (userScore <= 80) {
             title.setText("Det var godt gået!, "+ getName());
 
         } else if (userScore <= 100) {
-            title.setText("Fantastisk!, "+ getName());
+            title.setText("Fantastisk, "+ getName() + "!");
 
         } else {
-            title.setText("Fantastisk! Du er vist lidt af en helt!, " + getName());
+            title.setText("Fantastisk! Du er vist lidt af en helt " + getName() + "!");
         }
     }
 }

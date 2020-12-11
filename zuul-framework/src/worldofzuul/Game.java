@@ -201,14 +201,14 @@ public class Game implements ZuulGame {
         // Create characters
         Character poorBoy, poorLady, schoolGirl, schoolBoy, richMan, wizard, knittingLady, homelessMan, sickMan;
 
-        poorBoy = new Character("fattigDreng", "lille stakkel", new ArrayList<>(Arrays.asList("æble", "halsterklæde")), new ArrayList<>(Arrays.asList("tegning", "medicin")));
+        poorBoy = new Character("fattigDreng", "lille stakkel", new ArrayList<>(Arrays.asList("æble", "halstørklæde")), new ArrayList<>(Arrays.asList("tegning", "medicin")));
         poorLady = new Character("fattigDame", "Hun fryser", new ArrayList<>(Arrays.asList("halstørklæde", "penge")), new ArrayList<>(Arrays.asList("bog", "medicin")));
         schoolBoy = new Character("skoleDreng", "han er ked af det", new ArrayList<>(Arrays.asList("bog", "penge")), new ArrayList<>(Arrays.asList("tegning", "medicin")));
-        schoolGirl = new Character("skolePige", "hun ser glad ud", new ArrayList<>(Arrays.asList("bog", "halsterklæde")), new ArrayList<>(Arrays.asList("tegning","æble" )));
+        schoolGirl = new Character("skolePige", "hun ser glad ud", new ArrayList<>(Arrays.asList("bog", "halstørklæde")), new ArrayList<>(Arrays.asList("tegning","æble" )));
         wizard = new Character("troldmand", "Han er mystisk", new ArrayList<>(), new ArrayList<>());
         homelessMan = new Character("hjemløsMand", "han ser hjemløs ud", new ArrayList<>(Arrays.asList("penge", "æble")), new ArrayList<>(Arrays.asList("tegning", "bog")));
-        richMan = new Character("rigmand", "lidt for rig", new ArrayList<>(Arrays.asList("tegning")), new ArrayList<>(Arrays.asList("halsterklæde", "penge", "æble", "medicin")));
-        knittingLady = new Character("strikkeDame", "Hun strikker halstørklæder", new ArrayList<>(Arrays.asList("tegning", "medicin" )), new ArrayList<>(Arrays.asList("penge", "bog", "halsterklæde")));
+        richMan = new Character("rigmand", "lidt for rig", new ArrayList<>(Arrays.asList("tegning")), new ArrayList<>(Arrays.asList("halstørklæde", "penge", "æble", "medicin", "bog")));
+        knittingLady = new Character("strikkeDame", "Hun strikker halstørklæder", new ArrayList<>(Arrays.asList("tegning", "medicin" )), new ArrayList<>(Arrays.asList("penge", "bog", "halstørklæde")));
         sickMan = new Character("sygMand", "Han ser syg ud", new ArrayList<>(Arrays.asList("medicin", "penge")), new ArrayList<>(Arrays.asList("bog", "tegning")));
 
         //add characters to rooms
