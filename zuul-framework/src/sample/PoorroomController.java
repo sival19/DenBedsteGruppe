@@ -29,11 +29,11 @@ public class PoorroomController extends Main implements Initializable {
 
     // CHARACTER INTERACTION
     public void talkPoorChild() {
-        text.setText("Jeg er sulten");
+        text.setText("Jeg er så sulten, jeg har ikke spist i flere dage...");
     }
 
     public void talkPoorWoman() {
-        text.setText("Åh hvor jeg fryser");
+        text.setText("Åh hvor jeg fryser... Det kunne være rart med noget varmt");
     }
 
 
@@ -67,11 +67,11 @@ public class PoorroomController extends Main implements Initializable {
 
     public void giveMoneyBoy(){
         giveItem(moneyInv, moneyChoice, "penge", "fattigDreng");
-        text.setText("Tak "+getName()+", jeg bruger penge til at købe mad!.");
+        text.setText("Tak "+getName()+", jeg kan bruge pengene til at købe mad!.");
     }
     public void giveMoneyLady() {
         giveItem(moneyInv, moneyChoice, "penge", "fattigDame");
-        text.setText("Tak "+getName()+", jeg bruger penge til at købe varme trøj!.");
+        text.setText("Tak "+getName()+", jeg kan bruge pengene til at købe varme trøj!.");
     }
 
     public void giveScarfBoy(){
@@ -81,27 +81,27 @@ public class PoorroomController extends Main implements Initializable {
 
     public void giveScarfLady(){
         giveItem(scarfInv, scarfChoice,"halstørklæde", "fattigDame");
-        text.setText("Tak " +getName()+", nu er jeg endelig varm!.");
+        text.setText("Tak " +getName()+", nu er jeg endelig varm! Hvor er det rart!");
     }
 
     public void giveDrawingBoy(){
         giveItem(drawingInv, drawingChoice,"tegning", "fattigDreng");
-        text.setText("Tak "+getName()+", men jeg er stadig sulten!");
+        text.setText("Tak "+getName()+", men jeg er stadig sulten...");
     }
 
     public void giveDrawingLady(){
         giveItem(drawingInv, drawingChoice,"tegning", "fattigDame");
-        text.setText("Tak "+getName()+", men jeg fryser stadig.");
+        text.setText("Tak "+getName()+", men jeg fryser stadig...");
     }
 
     public void giveBookBoy(){
         giveItem(bookInv, bookChoice,"bog", "fattigDreng");
-        text.setText("Tak "+getName()+", men jeg er stadig sulten!");
+        text.setText("Tak "+getName()+", men jeg er stadig sulten...");
     }
 
     public void giveBookLady(){
         giveItem(bookInv, bookChoice,"bog", "fattigDame");
-        text.setText("Tak "+getName()+", men jeg fryser stadig.");
+        text.setText("Tak "+getName()+", men jeg fryser stadig...");
     }
 
 
