@@ -22,7 +22,7 @@ public class RichroomController extends Main implements Initializable {
 
     // NAVIGATION
     public void goPoorroom() throws IOException {
-        changeRooms("fattiggården", "poorroom.fxml");
+        changeRooms("gaden", "poorroom.fxml");
     }
 
     public void goLibrary() throws IOException {

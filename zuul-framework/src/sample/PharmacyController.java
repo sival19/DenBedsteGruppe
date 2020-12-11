@@ -75,7 +75,7 @@ public class PharmacyController extends Main implements Initializable {
 
     // NAVIGATION
     public void goPoorroom() throws IOException {
-        changeRooms("fattiggården", "poorroom.fxml");
+        changeRooms("gaden", "poorroom.fxml");
     }
 
 }

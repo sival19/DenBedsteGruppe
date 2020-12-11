@@ -150,18 +150,18 @@ public class Game implements ZuulGame {
         station = new Room("på stationen");
         school = new Room("på skolen");
         library = new Room("på biblioteket");
-        poorroom = new Room("på fattiggården");
+        poorroom = new Room("på gaden");
         richroom = new Room("på rigmandsrum");
         pharmacy = new Room("på apoteket");
 
         // Create room relationships
         //added all exits to station, to make it work in GUI
         station.setExit("skolen", school);
-        station.setExit("fattiggården", poorroom);
+        station.setExit("gaden", poorroom);
 
         school.setExit("stationen", station);
         school.setExit("biblioteket", library);
-        school.setExit("fattiggården", poorroom);
+        school.setExit("gaden", poorroom);
 
         library.setExit("rigmandsrum", richroom);
         library.setExit("skolen", school);
@@ -172,10 +172,10 @@ public class Game implements ZuulGame {
         poorroom.setExit("apoteket", pharmacy);
         poorroom.setExit("rigmandsrum", richroom);
 
-        richroom.setExit("fattiggården", poorroom);
+        richroom.setExit("gaden", poorroom);
         richroom.setExit("biblioteket", library);
 
-        pharmacy.setExit("fattiggården", poorroom);
+        pharmacy.setExit("gaden", poorroom);
 
 
         currentRoom = station;
