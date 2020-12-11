@@ -45,19 +45,22 @@ public class LibraryController extends Main implements Initializable {
 
     public void giveAppleNiceLady(){
         giveItem(appleInv, appleChoice, "æble", "strikkeDame");
+        text.setText("Tak "+getName()+"! Men jeg er ikke sulten.");
     }
 
     public void giveBookNiceLady(){
         giveItem(bookInv, bookChoice, "bog", "strikkeDame");
+        text.setText("Tak "+getName()+"! Men jeg sidder på et bibliotek.");
     }
 
     public void giveMoneyNiceLady(){
         giveItem(moneyInv, moneyChoice, "penge", "strikkeDame");
+        text.setText("Tak "+getName()+"! Men jeg har ikke brug for flere penge.");
     }
 
     public void giveMedicineNiceLady(){
         giveItem(medicineInv, medicineChoice, "medicin", "strikkeDame");
-        text.setText("Tak "+getName()+"!");
+        text.setText("Tak "+getName()+"! Jeg elsker medicin.");
     }
 
     public void giveDrawingNiceLady(){
