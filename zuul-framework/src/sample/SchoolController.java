@@ -46,57 +46,57 @@ public class SchoolController extends Main implements Initializable {
     // CHARACTER ITEM INTERACTION
     public void giveAppleBoy() {
         giveItem(appleInv, appleChoice, "æble", "skoleDreng");
-        text.setText("Tak,men jeg er ikke så sulten lige nu.");
+        text.setText("Tak " + getName() + ", men jeg er ikke så sulten lige nu.");
     }
 
     public void giveAppleGirl() {
         giveItem(appleInv, appleChoice, "æble", "skolePige");
-        text.setText("Tak, men jeg er ikke så sulten lige nu.");
+        text.setText("Tak " +getName() + ", men jeg er ikke så sulten lige nu.");
     }
 
     public void giveBookBoy() {
         giveItem(bookInv, bookChoice, "bog", "skoleDreng");
-        text.setText("Tak, nu kan jeg endelig følge med i skolen!");
+        text.setText("Tak " + getName() + ", nu kan jeg endelig følge med i skolen!");
     }
 
     public void giveBookGirl() {
         giveItem(bookInv, bookChoice, "bog", "skolePige");
-        text.setText("Tak, men jeg har masser af bøger jeg kan læse i.");
+        text.setText("Tak " +getName() + " , men jeg har masser af bøger jeg kan læse i.");
     }
 
     public void giveScarfBoy() {
         giveItem(scarfInv, scarfChoice, "halstørklæde", "skoleDreng");
-        text.setText("Tak, det er fint.");
+        text.setText("Tak " +getName()+ ", det er fint.");
     }
 
     public void giveScarfGirl() {
         giveItem(scarfInv, scarfChoice, "halstørklæde", "skolePige");
-        text.setText("Tak, det er fint.");
+        text.setText("Tak " +getName() +", det er fint.");
     }
 
     public void giveMoneyBoy() {
         giveItem(moneyInv, moneyChoice, "penge", "skoleDreng");
-        text.setText("Tak, dem vil jeg bruge på at købe bøger!");
+        text.setText("Tak " +getName()+ ", dem vil jeg bruge på at købe bøger!");
     }
 
     public void giveMoneyGirl() {
         giveItem(moneyInv, moneyChoice, "penge", "skolePige");
-        text.setText("Tak, men jeg mangler ikke noget lige nu.");
+        text.setText("Tak " +getName()+ ", men jeg mangler ikke noget lige nu.");
     }
 
     public void giveDrawingBoy() {
         giveItem(drawingInv, drawingChoice, "tegning", "skoleDreng");
-        text.setText("Tak, den er fin!");
+        text.setText("Tak " +getName()+ ", den er fin!");
     }
 
     public void giveMedicineBoy() {
         giveItem(medicineInv, medicineChoice, "medicin", "skoleDreng");
-        text.setText("Tak, men jeg føler mig ikke syg nu.");
+        text.setText("Tak " +getName()+ ", men jeg føler mig ikke syg nu.");
     }
 
     public void giveMedicineGirl() {
         giveItem(medicineInv, medicineChoice, "medicin", "skolePige");
-        text.setText("Tak, men jeg føler mig ikke syg nu.");
+        text.setText("Tak " +getName()+ ", men jeg føler mig ikke syg nu.");
     }
 
     // NAVIGATION

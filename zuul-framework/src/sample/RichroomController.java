@@ -75,10 +75,10 @@ public class RichroomController extends Main implements Initializable {
     // CHARACTER INTERACTION
     public void talkRichman() {
         if (!getUsedItems().contains("penge") && !checkInventory("penge")) {
-            text.setText("Hej! jeg har masser penge, her du må få nogen af dem" );
+            text.setText("Hej! jeg har mega mange penge, og aner ikke hvad jeg skal bruge dem til, jeg har hellere ingen venner " );
             pickMoney();
         } else if (getUsedItems().contains("penge")) {
-            text.setText("Jeg håber at nogen får gavn af dem!");
+            text.setText("Jeg håber at nogen fik gavn af pengene");
         }
     }
 
