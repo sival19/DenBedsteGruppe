@@ -24,7 +24,7 @@
                 <Font size="84.0" />
             </font>
         </Label>
-        <Label fx:id="title" alignment="CENTER" prefHeight="135.0" prefWidth="1129.0" text="Titel som røvhul">
+        <Label fx:id="title" alignment="CENTER" prefHeight="135.0" prefWidth="1129.0" text="Title">
             <font>
                 <Font size="33.0" />
             </font>
