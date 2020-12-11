@@ -1,9 +1,16 @@
 package worldofzuul;
 
 import sample.ZuulGame;
-
 import java.util.ArrayList;
 import java.util.Arrays;
+
+/*
+ * This class is basically the whole game: in this class
+ * all instances of objects are created.
+ * Game also deals with the commands which are used to
+ * move around and play the game.
+ *
+ */
 
 public class Game implements ZuulGame {
     private Parser parser;
@@ -17,22 +24,18 @@ public class Game implements ZuulGame {
         player = new Player(0, "Palle");
     }
 
-    //see characters
     private void seeCharacters() {
         System.out.println(currentRoom.getCharacters());
     }
 
-    // See items
     private void seeItems() {
         System.out.println(currentRoom.getItems());
     }
 
-    // See player
     public Player getPlayer() {
         return this.player;
     }
 
-    // See inventory
     public void seeInventory() {
         player.seeInventory();
     }
@@ -245,7 +248,7 @@ public class Game implements ZuulGame {
         System.out.println(currentRoom.getLongDescription());
     }
 
-    //makes it possible to simply write what command and what to do in it in GUI
+    // Makes it possible to simply write what command and what to do in it in GUI
     public void processCommand(CommandWord commandWord, String secondWord, String thirdWord) {
         processCommand(new Command(commandWord, secondWord, thirdWord));
     }

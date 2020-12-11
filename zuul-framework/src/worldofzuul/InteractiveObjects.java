@@ -1,16 +1,21 @@
 package worldofzuul;
 
+/*
+* This class is extended by Item and Character
+* InteractiveObjects hold name and info as attributes
+* which are used by Item and Character
+*
+ */
+
 public abstract class InteractiveObjects {
     String name;
     String info;
 
-    //Constructor
     public InteractiveObjects(String name, String info) {
         this.name = name;
         this.info = info;
     }
 
-    //Get methods
     public String getInfo() {
         return info;
     }
