@@ -38,9 +38,18 @@
     </ImageView>
 
     <!-- Navigation -->
-    <Button layoutX="469.0" layoutY="33.0" mnemonicParsing="false" onAction="#goLibrary" text="Bibliotek" />
-    <Button layoutX="15.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" />
-    <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#goPharmacy" text="Apotek" />
+    <Button layoutX="469.0" layoutY="33.0" mnemonicParsing="false" onAction="#goLibrary" prefHeight="51.0" prefWidth="113.0" text="Bibliotek">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button layoutX="15.0" layoutY="396.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#goPharmacy" prefHeight="51.0" prefWidth="113.0" text="Apotek">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
 
     <!-- Speech and interaction area -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
@@ -79,7 +88,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveAppleRich" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" />
+        <Button mnemonicParsing="false" onAction="#giveAppleRich" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -89,7 +98,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveBookRich" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" />
+        <Button mnemonicParsing="false" onAction="#giveBookRich" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -99,7 +108,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveScarfRich" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" />
+        <Button mnemonicParsing="false" onAction="#giveScarfRich" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -118,7 +127,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onMouseClicked="#giveDrawingRich" prefHeight="35.0" prefWidth="97.0" text="Giv til den rige mand" />
+        <Button mnemonicParsing="false" onMouseClicked="#giveDrawingRich" prefHeight="35.0" prefWidth="97.0" text="Giv til den rige" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 
@@ -128,7 +137,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button mnemonicParsing="false" onAction="#giveMedicineRich" prefHeight="35.0" prefWidth="105.0" text="Giv til den rige mand" />
+        <Button mnemonicParsing="false" onAction="#giveMedicineRich" prefHeight="35.0" prefWidth="123.0" text="Giv til den rige" />
         <Button mnemonicParsing="false" onAction="#clearMenu" prefHeight="35.0" prefWidth="113.0" text="Annuller" />
     </HBox>
 

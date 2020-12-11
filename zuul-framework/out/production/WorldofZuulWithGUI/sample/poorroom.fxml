@@ -33,8 +33,14 @@
     </Text>
 
     <!-- Navigation -->
-    <Button layoutX="70.0" layoutY="370.0" mnemonicParsing="false" onAction="#goStation" text="Station" />
-    <Button layoutX="1028.0" layoutY="369.0" mnemonicParsing="false" onAction="#goSchool" text="Skolen" />
+    <Button layoutX="42.0" layoutY="344.0" mnemonicParsing="false" onAction="#goStation" prefHeight="51.0" prefWidth="113.0" text="Station">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button layoutX="1020.0" layoutY="344.0" mnemonicParsing="false" onAction="#goSchool" prefHeight="51.0" prefWidth="113.0" text="Skolen">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
 
     <!-- Speech and interaction area -->
     <Label fx:id="text" layoutX="8.0" layoutY="640.0" prefHeight="38.0" prefWidth="1135.0">
