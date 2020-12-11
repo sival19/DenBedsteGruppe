@@ -32,6 +32,7 @@ public class Game implements ZuulGame {
         return this.player;
     }
 
+    // See inventory
     public void seeInventory() {
         player.seeInventory();
     }
@@ -87,7 +88,7 @@ public class Game implements ZuulGame {
         }
     }
 
-    //remove items from inventory
+    // Method to remove items from inventory
     private void remove(Command c) {
         if (!c.hasSecondWord()) {
             System.out.println("Hvad vil du fjerne?");
@@ -115,14 +116,14 @@ public class Game implements ZuulGame {
         }
     }
 
-    //A method to pickup
+    // Method to pickup
     public void pickUp(Command c) {
         if (!c.hasSecondWord()) {
             System.out.println("Hvad vil du samle op??");
             return;
         }
 
-        //Acts on a second word
+        // Acts on a second word
         String secondWord = c.getSecondWord();
         Item itemToadd = null;
         for (Item i : this.currentRoom.getItems()) {
@@ -144,7 +145,6 @@ public class Game implements ZuulGame {
     }
 
     public void createRooms() {
-        // Create rooms
         Room station, school, library, poorroom, richroom, pharmacy;
 
         station = new Room("på stationen");
@@ -155,7 +155,6 @@ public class Game implements ZuulGame {
         pharmacy = new Room("på apoteket");
 
         // Create room relationships
-        //added all exits to station, to make it work in GUI
         station.setExit("skolen", school);
         station.setExit("gaden", poorroom);
 
@@ -176,7 +175,6 @@ public class Game implements ZuulGame {
         richroom.setExit("biblioteket", library);
 
         pharmacy.setExit("gaden", poorroom);
-
 
         currentRoom = station;
 
