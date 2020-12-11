@@ -15,11 +15,10 @@ public class LibraryController extends Main implements Initializable {
     //CHARACTER INTERACTION
     public void talkOldLady() {
         if (!getUsedItems().contains("halstørklæde") && !checkInventory("halstørklæde")) {
-            text.setText("Hej! Mig og nogle andre har tegnet en tegning til den rige mand, vil du give den til ham?" +
-                    " Vi må ikke gå ind på slottet...");
+            text.setText("Hej! Jeg har strukket mange halstørklæder kan du finde nogen der kunne bruge en ekstra?");
             pickScarf();
         } else if (getUsedItems().contains("halstørklæde")) {
-            text.setText("Jeg håber den rige mand blev glad!");
+            text.setText("Jeg håber at nogen fik varmen");
         }
     }
 
