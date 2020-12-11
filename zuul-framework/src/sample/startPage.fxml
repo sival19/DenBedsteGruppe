@@ -10,42 +10,38 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-       fx:controller="sample.StartPageController">
+<Stage xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartPageController">
     <scene>
         <Scene>
             <AnchorPane prefHeight="760.0" prefWidth="1150.0">
                 <ImageView fitHeight="760.0" fitWidth="1150.0">
-                    <Image url="@../images/inequality.png"/>
+                    <Image url="@../images/inequality.png" />
                 </ImageView>
                 <Label layoutX="451.0" layoutY="443.0" text="FN Helten">
                     <font>
-                        <Font size="60.0"/>
+                        <Font size="60.0" />
                     </font>
                 </Label>
-                <Label layoutX="319.0" layoutY="554.0" prefHeight="20.0" prefWidth="552.0"
-                       text="FN er en verdensorganisation som arbejder på at skabe en mere sikker verden for os alle.">
+                <Label layoutX="319.0" layoutY="554.0" prefHeight="20.0" prefWidth="552.0" text="FN er en verdensorganisation som arbejder på at skabe en mere sikker verden for os alle.">
                     <font>
-                        <Font size="13.0"/>
+                        <Font size="13.0" />
                     </font>
                 </Label>
-                <TextField fx:id="nameInput" layoutX="510.0" layoutY="413.0" onKeyTyped="#checkName"
-                           promptText="Hvad hedder du?"/>
-                <Label layoutX="333.0" layoutY="574.0" prefHeight="19.0" prefWidth="484.0"
-                       text="Og de har valgt at sende DIG ud på en mission! Kan du forvandle ulighed til lighed?">
+            <Label layoutX="528.0" layoutY="389.0" text="Hvad hedder helten?" />
+                <TextField fx:id="nameInput" layoutX="510.0" layoutY="413.0" onKeyTyped="#checkName" />
+                <Label layoutX="333.0" layoutY="574.0" prefHeight="19.0" prefWidth="484.0" text="Og de har valgt at sende DIG ud på en mission! Kan du forvandle ulighed til lighed?">
                     <font>
-                        <Font size="13.0"/>
+                        <Font size="13.0" />
                     </font>
                 </Label>
                 <Label layoutX="466.0" layoutY="593.0" text="Og formindske fattigdom? Vi tror på dig!">
                     <font>
-                        <Font size="13.0"/>
+                        <Font size="13.0" />
                     </font>
                 </Label>
-                <Button fx:id="start" layoutX="517.0" layoutY="651.0" mnemonicParsing="false" onAction="#startGame"
-                        prefHeight="43.0" prefWidth="115.0" text="Start Spil" disable="true">
+                <Button fx:id="start" disable="true" layoutX="517.0" layoutY="651.0" mnemonicParsing="false" onAction="#startGame" prefHeight="43.0" prefWidth="115.0" text="Start Spil">
                     <font>
-                        <Font size="19.0"/>
+                        <Font size="19.0" />
                     </font>
                 </Button>
             </AnchorPane>
