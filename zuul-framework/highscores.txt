@@ -1,1 +1,1 @@
-j: 20;j: 10;k: 20;j: 10;j: 20;Gres: 120;
+simon1: 70;test: 110;test2222: 120;hey: 100;ringe: 60;ringetest3: 60;Simon: 80;halløsauce: 80;testingplease: 60;

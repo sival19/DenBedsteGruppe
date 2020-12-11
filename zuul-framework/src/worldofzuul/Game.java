@@ -42,7 +42,6 @@ public class Game implements ZuulGame {
             if (c.hasThirdWord()) {
 
                 String secondWord = c.getSecondWord();
-                //what is third word for?
                 String thirdWord = c.getThirdWord();
 
                 // Checks for the specific item (typed by the player) in the players inventory
