@@ -16,10 +16,16 @@ public class PharmacyController extends Main implements Initializable {
 
     // CHARACTER INTERACTION
     public void talkDoctor() {
-        text.setText("Jeg er læge");
+        if (!getUsedItems().contains("medicin") && !checkInventory("medicin")) {
+            text.setText("Hej, jeg har set en syg dreng der virkeligt kunne broge noget medicin men har ikke råd til det, " +
+                    " kan du give det til ham? ");
+            pickMedicine();
+        } else if (getUsedItems().contains("medicin")) {
+            text.setText("Jeg håber den rige mand blev glad!");
+        }
     }
 
-    // CHARACTER INTERACTION
+
     public void talkSickboy() {
         text.setText("Jeg er syg, men jeg har ikke råd til medicin. ");
     }
@@ -27,7 +33,6 @@ public class PharmacyController extends Main implements Initializable {
     // INVENTORY MANAGEMENT
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        medicine.setVisible(!checkInventory("medicin") && !getUsedItems().contains("medicin"));
         init();
     }
 
