@@ -3,6 +3,8 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+
 import java.awt.*;
 import java.net.URL;
 import java.util.*;
@@ -11,6 +13,10 @@ public class EndScreenController extends Main implements Initializable {
 
     @FXML
     Label endScore, title, highscore1, highscore2, highscore3, highscore4, highscore5;
+
+    @FXML
+    ImageView angryback;
+    
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -48,12 +54,15 @@ public class EndScreenController extends Main implements Initializable {
 
         if (userScore <= 20) {
             title.setText("Vi troede på dig, men vi tog fejl..., " + getName());
+            angryback.setVisible(true);
 
         } else if (userScore <= 40) {
             title.setText("Prøvede du overhovedet " + getName()+ " ?");
+            angryback.setVisible(true);
 
         } else if (userScore <= 60) {
             title.setText("Det var ikke så godt, " + getName());
+            angryback.setVisible(true);
 
         } else if (userScore <= 80) {
             title.setText("Det var godt gået!, "+ getName());
