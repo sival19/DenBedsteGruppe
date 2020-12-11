@@ -16,14 +16,13 @@ public class StationController extends Main implements Initializable {
 
     // CHARACTER INTERACTION
     public void talkWizard() {
-        text.setText("Godt du klikkede, " + getName() + "! Tænk dig om når du spiller, hvem har brug for hvad? Klik på manden til højre. Mon han har brug for hjælp?");
+        text.setText("Godt du klikkede, " + getName() + "! Husk at tænk dig om når du spiller, hvem har brug for hvad? Klik på manden til venstre. Mon han har brug for hjælp?");
     }
 
     // CHARACTER INTERACTION
     public void talkSickboy() {
         text.setText("Jeg er syg, men jeg har ikke råd til medicin. ");
     }
-
 
 
     // INVENTORY MANAGEMENT
